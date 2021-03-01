@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Header = () => {
+const Header = ({ round }) => {
     return (
         <div className="header">
-            <h1 className="eredivisie">Eredivisie 2020-2021</h1>
+            <div className="eredivisie">Stand Eredivisie 2020-2021</div>
+            <div className="round">Speelronde {round}</div>
         </div>
     )
 }
