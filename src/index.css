@@ -27,22 +27,31 @@ body {
 }
 
 .round {
+  margin-top: 10px;
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
 }
 
-/* listcontainer*/
-.container {
-  margin: 0 auto;
-  padding: 180px 20px 0 20px;
+.date {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  margin-top: 10px;
+  width: 400px;
+  color: white;
+}
+
+/* list container / pagination container*/
+.container {
+  margin: 180px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   max-width: 1000px;
   height: auto;
-   background-color: rgb(36, 79, 143);
+  background-color: rgb(36, 79, 143);
 }
 
 @media only screen and (max-width: 650px) {
@@ -162,3 +171,101 @@ body {
   }
 }
 
+.error {
+  margin: 100px auto;
+  width: 100%;
+  color: white;
+  font-size: 1.8rem;
+}
+
+/* pagination */
+.matches {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 430px;
+}
+
+.match {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  color: white;
+  font-size: 2rem;
+}
+
+.teams {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.hometeam {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.awayteam {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.scores {
+  width: 10%;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.pagination {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ .buttonNumbers {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   flex-wrap: wrap;
+   width: 45%;
+ }
+
+.speelronde{
+  margin: 15px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.btn {
+  width: 2rem;
+  height: 2rem;
+  margin: 5px;
+  border-style: none;
+  outline: none;
+  color: rgb(24, 86, 145);
+}
+
+.active {
+  background-color: rgb(214, 139, 0);
+}

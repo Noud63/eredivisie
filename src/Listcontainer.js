@@ -1,84 +1,110 @@
-import React, { useState, useEffect } from 'react'
-import Header from './Header';
+// import React, { useState, useEffect, useCallback } from 'react'
+// import Header from './Header';
+// import Error from './Error';
 
-const url = "https://api.football-data.org/v2/competitions/DED/standings"; //https://cors-anywhere.herokuapp.com/
+// const url = "https://api.football-data.org/v2/competitions/DED/standings"; //https://cors-anywhere.herokuapp.com/
 
-const Listcontainer = () => {
+// export const RoundContext = React.createContext()
 
-    const [standings, setstandings] = useState([])
-    const [round, setRound] = useState(0)
-    const [leftRow, setLeftRow] = useState([])
-    const [rightRow, setRightRow] = useState([])
+// const initialState = {
+//     standings: [],
+//     round: 0,
+//     leftRow: [],
+//     rightRow: []
+// }
 
-    const getStandings = async () => {
+// const Listcontainer = () => {
 
-        try {
-            const res = await fetch(url, {
-                method: "GET",
-                headers: { "X-Auth-Token": "7bf5e57cdcd34e03826e0fb2b4620aa4" }
-            })
-            const data = await res.json()
-            const rank = data.standings[0].table
-            for (let club of rank) {
-                club.team.name = club.team.name
-                    .replace("Rotterdam", "")
-                    .replace("'65", "")
-                    .replace("Almelo", "")
-                    .replace("AFC", "")
-                    .replace("Tilburg", "")
-                    .replace("SBV", "")
-            }
+//     const [state, setState] = useState(initialState)
 
-            const matchday = data.season.currentMatchday
-            const left = rank.slice(0, 9)
-            const right = rank.slice(9, 18)
-            setLeftRow(left)
-            setRightRow(right)
-            setstandings(rank)
-            setRound(matchday)
-        } catch (error) {
-            console.log(error)
-        }
-    }
+//     /** Instead of an object use separate useStates **/
+//     // const [standings, setstandings] = useState([])
+//     // const [round, setRound] = useState(0)
+//     // const [leftRow, setLeftRow] = useState([])
+//     // const [rightRow, setRightRow] = useState([])
 
-    useEffect(() => {
-        getStandings()
-    }, [standings])
+//     const getStandings = useCallback(async () => {
+
+//         try {
+//             const res = await fetch(url, {
+//                 method: "GET",
+//                 headers: { "X-Auth-Token": "7bf5e57cdcd34e03826e0fb2b4620aa4" }
+//             })
+//             const data = await res.json()
+//             console.log(data)
+//             const table = data.standings[0].table
+//             for (let club of table) {
+//                 club.team.name = club.team.name
+//                     .replace("Rotterdam", "")
+//                     .replace("'65", "")
+//                     .replace("Almelo", "")
+//                     .replace("AFC", "")
+//                     .replace("Tilburg", "")
+//                     .replace("SBV", "")
+//             }
+
+//             const matchday = data.season.currentMatchday
+//             const left = table.slice(0, 9)
+//             const right = table.slice(9, 18)
+//             setState({ ...state, leftRow: left, rightRow: right, standings: table, round: matchday })
+
+//             // setLeftRow(left)
+//             // setRightRow(right)
+//             // setstandings(table)
+//             // setRound(matchday)
+
+//         } catch (error) {
+//             console.log(error)
+//         }
+//     }, [state])
 
 
-    return (
-        <div>
-            <Header round={round} />
-            <div className="container">
-                <div className="leftRow">
-                    {leftRow.map((place, index) => {
-                        const { team, position } = place
-                        return (
-                            <div className="teamWrapper" key={index}>
-                                <div className="position">{position}.</div>
-                                <div className="icon"><img src={team.crestUrl} alt="logo" className="clubIcon" /></div>
-                                <div key={index} className="team">{team.name}</div>
-                            </div>
-                        )
-                    })}
-                </div>
+//     useEffect(() => {
+//         getStandings()
+//     }, [state, getStandings])
 
-                <div className="rightRow">
-                    {rightRow.map((place, index) => {
-                        const { team, position } = place
-                        return (
-                            <div className="teamWrapper" key={index}>
-                                <div className="position2">{position}.</div>
-                                <div className="icon"><img src={team.crestUrl} alt="logo" className="clubIcon" /></div>
-                                <div key={index} className="team">{team.name}</div>
-                            </div>
-                        )
-                    })}
-                </div>
 
-            </div>
-        </div>
-    )
-}
+//     return (
+//         <div>
+//             <RoundContext.Provider value={{ ...state }}>
+//                 <Header />
+//             </RoundContext.Provider>
 
-export default Listcontainer
+//             <div className="container">
+
+//                 {state.round === 0 ? <Error /> :
+//                     <>
+//                         <div className="leftRow">
+//                             {state.leftRow.map((place, index) => {
+//                                 const { team, position } = place
+//                                 return (
+//                                     <div className="teamWrapper" key={index}>
+//                                         <div className="position">{position}.</div>
+//                                         <div className="icon"><img src={team.crestUrl} alt="logo" className="clubIcon" /></div>
+//                                         <div key={index} className="team">{team.name}</div>
+//                                     </div>
+//                                 )
+//                             })}
+//                         </div>
+
+//                         <div className="rightRow">
+//                             {state.rightRow.map((place, index) => {
+//                                 const { team, position } = place
+//                                 return (
+//                                     <div className="teamWrapper" key={index}>
+//                                         <div className="position2">{position}.</div>
+//                                         <div className="icon"><img src={team.crestUrl} alt="logo" className="clubIcon" /></div>
+//                                         <div key={index} className="team">{team.name}</div>
+//                                     </div>
+//                                 )
+//                             })}
+//                         </div>
+//                     </>
+//                 }
+
+//             </div>
+//         </div>
+//     )
+// }
+
+// export default Listcontainer

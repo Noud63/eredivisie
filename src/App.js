@@ -1,10 +1,13 @@
 import './App.css';
-import Listcontainer from './Listcontainer'
+// import Listcontainer from './Listcontainer'
+import Header from './Header'
+import AllMatches from './AllMatches'
 
 function App() {
   return (
     <div>
-      <Listcontainer />
+      <Header />
+      <AllMatches />
     </div>
   );
 }
