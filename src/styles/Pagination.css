@@ -1,0 +1,30 @@
+.pagination {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ .buttonNumbers {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   flex-wrap: wrap;
+   width: 55%;
+ }
+
+
+
+.btn {
+  width: 2rem;
+  height: 2rem;
+  margin: 5px;
+  border-style: none;
+  outline: none;
+  color: rgb(24, 86, 145);
+}
+
+.active {
+  background-color: rgb(214, 139, 0);
+}

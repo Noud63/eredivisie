@@ -1,7 +1,8 @@
 import React from 'react'
+import './styles/Pagination.css'
 
-const Pagination = ({ paginate, currentday }) => {
-    const total = 34;
+const Pagination = ({ paginate, currentday, total }) => {
+
     const pageNumbers = []
     for (let i = 1; i <= total; i++) {
         pageNumbers.push(i)
@@ -10,14 +11,12 @@ const Pagination = ({ paginate, currentday }) => {
     return (
         <div className="pagination">
             <div className="buttonNumbers">
-                {pageNumbers.map( (number) => {
-
+                {pageNumbers.map((number) => {
                     return (number === currentday) ? <button type="button" key={number} onClick={() => paginate(number)} className="btn active">{number}</button> :
                         <button type="button" key={number} onClick={() => paginate(number)} className="btn">{number}</button>
                 }
                 )}
             </div>
-
         </div>
     )
 }

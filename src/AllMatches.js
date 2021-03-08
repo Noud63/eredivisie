@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import Pagination from './Pagination';
 import Error from './Error';
-// import Header from './Header';
+import './styles/AllMatches.css'
 
-const url = "https://api.football-data.org/v2/competitions/DED/matches"; //https://cors-anywhere.herokuapp.com/
+const url = "https://api.football-data.org/v2/competitions/DED/matches";
 
 const AllMatches = () => {
 
@@ -21,7 +21,7 @@ const AllMatches = () => {
             })
             const data = await res.json()
 
-            //Group objects by matchday value, create array of array of objects [ [obj, obj (matchday 1)], [obj, obj], ...........]
+            //Group objects by matchday value, create array of array of objects [ [obj, obj (matchday 1)], [obj, obj (matchday 2)], ...........]
             let result = Object.values(
                 data.matches.reduce((acc, m) => {
                     acc[m.matchday] = acc[m.matchday] || [];
@@ -31,7 +31,7 @@ const AllMatches = () => {
             );
 
             for (let week of result) {
-                for (let m of week) {                              // m = single match
+                for (let m of week) {                   // m = single match
                     m.homeTeam.name = m.homeTeam.name
                         .replace("Rotterdam", "")
                         .replace("'65", "")
@@ -60,32 +60,30 @@ const AllMatches = () => {
 
             setState(result)
             setTotalMatches(result.length)
-            const defaultPost = result[currentDay - 1]
+            const defaultPost = result[0]
             setMatchDays(defaultPost)
 
         } catch (error) {
             console.log(error)
         }
-    }, [currentDay])
+    }, [])
 
 
     useEffect(() => {
         getMatches()
-    }, [state, getMatches])
-
-
+    }, [getMatches])
 
     const paginate = (number) => {
         setCurrentDay(number)
         setMatchDays(state[number - 1])
     }
 
-    return (
-        <div>
+    const currentday = currentDay
 
+    return (
+        <>
             <div className="container">
                 <div className="matches">
-
                     <div className="speelronde">Speelronde {currentDay}</div>
                     {totalMatches === 0 ? <Error /> :
                         matchDays.map((game, index) => {
@@ -94,15 +92,13 @@ const AllMatches = () => {
                                 <div className="teams"><div className="hometeam">{homeTeam.name}</div>
                                     <div className="scores">{score.fullTime.homeTeam} : {score.fullTime.awayTeam}</div>
                                     <div className="awayteam">{awayTeam.name}</div></div>
-
                             </div>
                         })
                     }
                 </div>
-                <Pagination paginate={paginate} currentday={currentDay} />
+                <Pagination paginate={paginate} currentday={currentday} total={totalMatches} />
             </div>
-        </div>
-
+        </>
     )
 }
 

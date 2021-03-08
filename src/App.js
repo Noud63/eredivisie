@@ -1,13 +1,14 @@
-import './App.css';
-// import Listcontainer from './Listcontainer'
+import Standings from './Standings'
 import Header from './Header'
 import AllMatches from './AllMatches'
+import './styles/index.css'
 
 function App() {
   return (
     <div>
       <Header />
-      <AllMatches />
+      {/* <AllMatches /> */}
+      <Standings />
     </div>
   );
 }
