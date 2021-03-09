@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect, useCallback } from 'react'
 import './styles/Header.css'
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -22,7 +23,21 @@ const Header = () => {
     return (
         <div className="header">
             <div className="eredivisie">Eredivisie 2020-2021</div>
-            <div className="date">{date}</div>
+            {/* <div className="date">{date}</div> */}
+            <div className="links">
+                <Link to="/" className="link">
+                    <div >Home</div>
+                </Link>
+
+                <Link to='/standings' className="link">
+                    <div >Stand</div>
+                </Link>
+
+                <Link to='/allmatches' className="link">
+                    <div>Wedstrijden</div>
+                </Link>
+
+            </div>
         </div>
     )
 }

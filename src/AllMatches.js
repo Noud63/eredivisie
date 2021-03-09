@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import Pagination from './Pagination';
 import Error from './Error';
+import Loader from './Loader';
 import './styles/AllMatches.css'
 
 const url = "https://api.football-data.org/v2/competitions/DED/matches";
@@ -85,7 +86,7 @@ const AllMatches = () => {
             <div className="container">
                 <div className="matches">
                     <div className="speelronde">Speelronde {currentDay}</div>
-                    {totalMatches === 0 ? <Error /> :
+                    {totalMatches === 0 ? <Loader /> :
                         matchDays.map((game, index) => {
                             const { homeTeam, awayTeam, score } = game
                             return <div className="match" key={index}>

@@ -14,33 +14,64 @@ body {
   top: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
-  width: 100%;
-  height: 150px;
+  width: 100vw;
+  height: 11rem;
   background-color: rgb(36, 79, 143);
   box-shadow: 0px 0px 10px black;
 }
 
 .eredivisie {
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 9rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: calc(22px + (36 - 22) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(28px + (44 - 28) * ((100vw - 320px) / (1920 - 320)));
   font-weight: bold;
 }
 
-.round {
+/* .round {
   margin-top: 10px;
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
-}
+} */
 
-.date {
+/* .date {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 10px;
   width: 400px;
   color: white;
+} */
+
+
+.links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.link {
+    width: 33.33%;
+   height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    color: white;
+    font-size: 1.4rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+}
+
+.link:hover {
+  background-color: rgb(72, 117, 184);
 }

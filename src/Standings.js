@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import Error from './Error';
+import Loader from './Loader';
 import './styles/Standings.css'
 
 const url = "https://api.football-data.org/v2/competitions/DED/standings";
@@ -64,7 +65,7 @@ const Standings = () => {
 
     return (
         <div className="container2">
-            {state.round === 0 ? <Error /> :
+            {state.round === 0 ? <Loader /> :
                 <>
                     <div className="leftRow">
                         {state.leftRow.map((place, index) => {
@@ -72,7 +73,7 @@ const Standings = () => {
                             return (
                                 <div className="teamWrapper" key={index}>
                                     <div className="position">{position}.</div>
-                                    <div className="iconBox"><img src={team.crestUrl} alt="logo" className="clubIcon" /></div>
+                                    <img src={team.crestUrl} alt="logo" className="clubIcon" />
                                     <div key={index} className="team">{team.name}</div>
                                 </div>
                             )
@@ -85,7 +86,7 @@ const Standings = () => {
                             return (
                                 <div className="teamWrapper" key={index}>
                                     <div className="position2">{position}.</div>
-                                    <div className="iconBox"><img src={team.crestUrl} alt="logo" className="clubIcon" /></div>
+                                    <img src={team.crestUrl} alt="logo" className="clubIcon" />
                                     <div key={index} className="team">{team.name}</div>
                                 </div>
                             )
@@ -93,7 +94,6 @@ const Standings = () => {
                     </div>
                 </>
             }
-
         </div>
     )
 }
