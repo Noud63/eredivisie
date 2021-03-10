@@ -62,36 +62,40 @@ const Standings = () => {
         getStandings()
     }, [getStandings])
 
-
+    
     return (
         <div className="container2">
+            <div className="round">Stand na {state.round} speelrondes</div>
             {state.round === 0 ? <Loader /> :
                 <>
-                    <div className="leftRow">
-                        {state.leftRow.map((place, index) => {
-                            const { team, position } = place
-                            return (
-                                <div className="teamWrapper" key={index}>
-                                    <div className="position">{position}.</div>
-                                    <img src={team.crestUrl} alt="logo" className="clubIcon" />
-                                    <div key={index} className="team">{team.name}</div>
-                                </div>
-                            )
-                        })}
-                    </div>
+                <div className="leftRightRow">
+                        <div className="leftRow">
+                            {state.leftRow.map((place, index) => {
+                                const { team, position } = place
+                                return (
+                                    <div className="teamWrapper" key={index}>
+                                        <div className="position">{position}.</div>
+                                        <img src={team.crestUrl} alt="logo" className="clubIcon" />
+                                        <div key={index} className="team">{team.name}</div>
+                                    </div>
+                                )
+                            })}
+                        </div>
 
-                    <div className="rightRow">
-                        {state.rightRow.map((place, index) => {
-                            const { team, position } = place
-                            return (
-                                <div className="teamWrapper" key={index}>
-                                    <div className="position2">{position}.</div>
-                                    <img src={team.crestUrl} alt="logo" className="clubIcon" />
-                                    <div key={index} className="team">{team.name}</div>
-                                </div>
-                            )
-                        })}
-                    </div>
+                        <div className="rightRow">
+                            {state.rightRow.map((place, index) => {
+                                const { team, position } = place
+                                return (
+                                    <div className="teamWrapper" key={index}>
+                                        <div className="position2">{position}.</div>
+                                        <img src={team.crestUrl} alt="logo" className="clubIcon" />
+                                        <div key={index} className="team">{team.name}</div>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                </div>
+                    
                 </>
             }
         </div>
