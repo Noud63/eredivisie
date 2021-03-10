@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/%20//noud63.github.io/eredivisie/static/css/main.55c9e84a.chunk.css",
+    "main.js": "/%20//noud63.github.io/eredivisie/static/js/main.b03385de.chunk.js",
+    "main.js.map": "/%20//noud63.github.io/eredivisie/static/js/main.b03385de.chunk.js.map",
+    "runtime-main.js": "/%20//noud63.github.io/eredivisie/static/js/runtime-main.7a648c48.js",
+    "runtime-main.js.map": "/%20//noud63.github.io/eredivisie/static/js/runtime-main.7a648c48.js.map",
+    "static/js/2.c44c1e41.chunk.js": "/%20//noud63.github.io/eredivisie/static/js/2.c44c1e41.chunk.js",
+    "static/js/2.c44c1e41.chunk.js.map": "/%20//noud63.github.io/eredivisie/static/js/2.c44c1e41.chunk.js.map",
+    "index.html": "/%20//noud63.github.io/eredivisie/index.html",
+    "static/css/main.55c9e84a.chunk.css.map": "/%20//noud63.github.io/eredivisie/static/css/main.55c9e84a.chunk.css.map",
+    "static/js/2.c44c1e41.chunk.js.LICENSE.txt": "/%20//noud63.github.io/eredivisie/static/js/2.c44c1e41.chunk.js.LICENSE.txt",
+    "static/media/eredivisielogo.d602a5bd.png": "/%20//noud63.github.io/eredivisie/static/media/eredivisielogo.d602a5bd.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7a648c48.js",
+    "static/js/2.c44c1e41.chunk.js",
+    "static/css/main.55c9e84a.chunk.css",
+    "static/js/main.b03385de.chunk.js"
+  ]
+}
