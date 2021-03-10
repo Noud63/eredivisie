@@ -15,7 +15,6 @@ function App() {
     <Router>
       <div>
         <Header />
-        <Home />
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/standings' component={Standings} />
