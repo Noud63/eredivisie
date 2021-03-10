@@ -12,7 +12,7 @@ import './styles/index.css'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/eredivisie">
       <div>
         <Header />
         <Switch>
