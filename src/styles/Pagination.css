@@ -17,9 +17,10 @@
 .btn {
   width: 2rem;
   height: 2rem;
-  /* margin-left: 5px;
-  margin-bottom: 5px; */
-  border: 2px solid rgb(106, 171, 255);
+  margin-left: 5px;
+  margin-bottom: 5px;
+  /* border: 2px solid rgb(106, 171, 255); */
+  border-style: none;
   outline: none;
   color: rgb(24, 86, 145);
   font-size: calc(14px + (14 - 14) * ((100vw - 320px) / (1920 - 320)));
@@ -34,5 +35,23 @@
 @media only screen and (max-width: 500px) {
   .buttonNumbers {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .buttonNumbers {
+    width:90%;
+  }
+}
+
+@media only screen and (max-width: 391px) {
+  .buttonNumbers {
+    width: 92%;
+  }
+}
+
+@media only screen and (max-width: 347px) {
+  .buttonNumbers {
+    width: 81%;
   }
 }
