@@ -1,7 +1,9 @@
+import React from 'react'
 import Standings from './Standings'
 import Header from './Header'
 import AllMatches from './AllMatches'
 import Home from './Home'
+import Uitslagen from './Uitslagen'
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,18 +13,23 @@ import {
 import './styles/index.css'
 
 function App() {
+
+
   return (
+
     <Router basename="/eredivisie">
       <div>
         <Header />
         <Switch>
           <Route path='/' exact component={Home} />
+          <Route path='/uitslagen' component={Uitslagen} />
           <Route path='/standings' component={Standings} />
           <Route path='/allmatches' component={AllMatches} />
         </Switch>
 
       </div>
     </Router>
+
 
   );
 }

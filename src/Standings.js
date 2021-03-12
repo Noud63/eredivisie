@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react'
-import Error from './Error';
 import Loader from './Loader';
 import './styles/Standings.css'
 
@@ -42,10 +41,19 @@ const Standings = () => {
                     .replace("SBV", "")
             }
 
-            const matchday = data.season.currentMatchday
+            const matchday = data.season.currentMatchday - 1
             const left = table.slice(0, 9)
             const right = table.slice(9, 18)
-            setState({ ...state, leftRow: left, rightRow: right, standings: table, round: matchday })
+            // const playedGames = table.playedGames
+
+            setState({
+                ...state,
+                leftRow: left,
+                rightRow: right,
+                standings: table,
+                round: matchday
+                // playedGames: playedGames
+            })
 
             // setLeftRow(left)
             // setRightRow(right)
@@ -62,40 +70,80 @@ const Standings = () => {
         getStandings()
     }, [getStandings])
 
-    
+
     return (
         <div className="container2">
             <div className="round">Stand na {state.round} speelrondes</div>
             {state.round === 0 ? <Loader /> :
                 <>
-                <div className="leftRightRow">
+                    <div className="leftRightRow">
+
                         <div className="leftRow">
+
+                            < span className="left" >
+                                <span className="stats">
+                                    <span className="gs">GS</span>
+                                    <span className="wgv">W|G|V</span>
+                                    <span className="p">P</span>
+                                    <span className="vt">V-T</span>
+                                </span>
+                            </span >
+
                             {state.leftRow.map((place, index) => {
-                                const { team, position } = place
+                                const { team, position, playedGames, won, draw, lost, points, goalsAgainst, goalsFor } = place
                                 return (
                                     <div className="teamWrapper" key={index}>
-                                        <div className="position">{position}.</div>
-                                        <img src={team.crestUrl} alt="logo" className="clubIcon" />
-                                        <div key={index} className="team">{team.name}</div>
+                                        <div className="leftTeam">
+                                            <div className="position">{position}</div>
+                                            <img src={team.crestUrl} alt="logo" className="clubIcon" />
+                                            <div key={index} className="team">{team.name}</div>
+                                        </div>
+
+                                        <span className="stats2">
+                                            <span>{playedGames}</span>
+                                            <span>{won}|{draw}|{lost}</span>
+                                            <span>{points}</span>
+                                            <span>{goalsFor}-{goalsAgainst}</span>
+                                        </span>
                                     </div>
                                 )
                             })}
                         </div>
 
                         <div className="rightRow">
+
+                            < span className="right" >
+                                <span className="stats">
+                                    <span className="gs">GS</span>
+                                    <span className="wgv">W|G|V</span>
+                                    <span className="p">P</span>
+                                    <span className="vt">V-T</span>
+                                </span>
+                            </span >
+
                             {state.rightRow.map((place, index) => {
-                                const { team, position } = place
+                                const { team, position, playedGames, won, draw, lost, points, goalsAgainst, goalsFor } = place
                                 return (
                                     <div className="teamWrapper" key={index}>
-                                        <div className="position2">{position}.</div>
-                                        <img src={team.crestUrl} alt="logo" className="clubIcon" />
-                                        <div key={index} className="team">{team.name}</div>
+                                        <div className="rightTeam">
+                                            <div className="position2">{position}</div>
+                                            <img src={team.crestUrl} alt="logo" className="clubIcon" />
+                                            <div key={index} className="team">{team.name}</div>
+                                        </div>
+
+                                        <span className="stats2">
+                                            <span>{playedGames}</span>
+                                            <span>{won}|{draw}|{lost}</span>
+                                            <span>{points}</span>
+                                            <span>{goalsFor}-{goalsAgainst}</span>
+                                        </span>
                                     </div>
                                 )
                             })}
+
                         </div>
-                </div>
-                    
+                    </div>
+
                 </>
             }
         </div>

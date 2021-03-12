@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import Pagination from './Pagination';
-import Error from './Error';
 import Loader from './Loader';
 import './styles/AllMatches.css'
 
@@ -74,6 +73,7 @@ const AllMatches = () => {
         getMatches()
     }, [getMatches])
 
+
     const paginate = (number) => {
         setCurrentDay(number)
         setMatchDays(state[number - 1])
@@ -97,7 +97,7 @@ const AllMatches = () => {
                         })
                     }
                 </div>
-                <Pagination paginate={paginate} currentday={currentday} total={totalMatches} />
+                <Pagination paginate={paginate} currentday={currentday} total={totalMatches} result={state} />
             </div>
         </>
     )

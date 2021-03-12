@@ -26,16 +26,22 @@ const Header = () => {
             {/* <div className="date">{date}</div> */}
             <div className="links">
                 <Link to="/" className="link">
-                    <div >Home</div>
+                    <div>Home</div>
+                </Link>
+
+                <Link to='/allmatches' className="link">
+                    <div>Wedstrijden</div>
+                </Link>
+
+                <Link to="/uitslagen" className="link">
+                    <div >Uitslagen</div>
                 </Link>
 
                 <Link to='/standings' className="link">
                     <div >Stand</div>
                 </Link>
 
-                <Link to='/allmatches' className="link">
-                    <div>Wedstrijden</div>
-                </Link>
+
 
             </div>
         </div>
