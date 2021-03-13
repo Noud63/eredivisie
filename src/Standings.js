@@ -29,7 +29,6 @@ const Standings = () => {
                 headers: { "X-Auth-Token": "7bf5e57cdcd34e03826e0fb2b4620aa4" }
             })
             const data = await res.json()
-            console.log(data)
             const table = data.standings[0].table
             for (let club of table) {
                 club.team.name = club.team.name

@@ -14,24 +14,18 @@ import './styles/index.css'
 
 function App() {
 
-
-  return (
+return (
 
     <Router basename="/eredivisie">
-      <div>
-        <Header />
-        <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/uitslagen' component={Uitslagen} />
-          <Route path='/standings' component={Standings} />
-          <Route path='/allmatches' component={AllMatches} />
-        </Switch>
-
-      </div>
+      <Header />
+      <Switch>
+        <Route path='/' exact component={Home} />
+        <Route path='/uitslagen' component={Uitslagen} />
+        <Route path='/standings' component={Standings} />
+        <Route path='/allmatches' component={AllMatches} />
+      </Switch>
     </Router>
-
-
-  );
+    );
 }
 
 export default App;

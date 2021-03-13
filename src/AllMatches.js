@@ -5,12 +5,16 @@ import './styles/AllMatches.css'
 
 const url = "https://api.football-data.org/v2/competitions/DED/matches";
 
-const AllMatches = () => {
+// const RecentMatches = React.createContext()
+
+const AllMatches = ({ children }) => {
+
 
     const [state, setState] = useState([])
     const [matchDays, setMatchDays] = useState([])
-    const [currentDay, setCurrentDay] = useState(1)
-    const [totalMatches, setTotalMatches] = useState(0)
+    const [currentDay, setCurrentDay] = useState(1)       // 1 t/m 34
+    const [totalMatches, setTotalMatches] = useState(0)   // 34
+    const [date, setDate] = useState("")
 
     const getMatches = useCallback(async () => {
 
@@ -31,6 +35,7 @@ const AllMatches = () => {
             );
 
             for (let week of result) {
+
                 for (let m of week) {                   // m = single match
                     m.homeTeam.name = m.homeTeam.name
                         .replace("Rotterdam", "")
@@ -79,21 +84,30 @@ const AllMatches = () => {
         setMatchDays(state[number - 1])
     }
 
+
     const currentday = currentDay
 
     return (
         <>
+            {/* <RecentMatches.Provider value={{ state, matchDays }}>{children}</RecentMatches.Provider> */}
             <div className="container">
                 <div className="matches">
-                    <div className="speelronde">Speelronde {currentDay}</div>
+                    < div className="speelronde" > Speelronde {currentday}</div>
                     {totalMatches === 0 ? <Loader /> :
+
                         matchDays.map((game, index) => {
                             const { homeTeam, awayTeam, score } = game
-                            return <div className="match" key={index}>
-                                <div className="teams"><div className="hometeam">{homeTeam.name}</div>
-                                    <div className="scores">{score.fullTime.homeTeam} : {score.fullTime.awayTeam}</div>
-                                    <div className="awayteam">{awayTeam.name}</div></div>
-                            </div>
+
+                            return <>
+
+                                <div className="match" key={index}>
+                                    <div className="teams">
+                                        <div className="hometeam">{homeTeam.name}</div>
+                                        <div className="scores">{score.fullTime.homeTeam} : {score.fullTime.awayTeam}</div>
+                                        <div className="awayteam">{awayTeam.name}</div>
+                                    </div>
+                                </div>
+                            </>
                         })
                     }
                 </div>
@@ -103,5 +117,11 @@ const AllMatches = () => {
     )
 }
 
+// export const useGlobalContext = () => {
+//     return useContext(RecentMatches)
+// }
+
+
 export default AllMatches
+// export { RecentMatches, AllMatches }
 

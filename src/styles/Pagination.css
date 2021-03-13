@@ -12,14 +12,14 @@
    justify-content: flex-start;
    flex-wrap: wrap;
    width: 100%;
+   padding-right: 5px;
  }
 
 .btn {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
   margin-left: 5px;
   margin-bottom: 5px;
-  /* border: 2px solid rgb(106, 171, 255); */
   border-style: none;
   outline: none;
   color: rgb(24, 86, 145);
