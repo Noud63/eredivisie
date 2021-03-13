@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/eredivisie/static/css/main.e1fdfdbe.chunk.css",
-    "main.js": "/eredivisie/static/js/main.e11753cf.chunk.js",
-    "main.js.map": "/eredivisie/static/js/main.e11753cf.chunk.js.map",
+    "main.css": "/eredivisie/static/css/main.98e81e15.chunk.css",
+    "main.js": "/eredivisie/static/js/main.830ce04b.chunk.js",
+    "main.js.map": "/eredivisie/static/js/main.830ce04b.chunk.js.map",
     "runtime-main.js": "/eredivisie/static/js/runtime-main.2a7d2813.js",
     "runtime-main.js.map": "/eredivisie/static/js/runtime-main.2a7d2813.js.map",
     "static/js/2.14f897bd.chunk.js": "/eredivisie/static/js/2.14f897bd.chunk.js",
     "static/js/2.14f897bd.chunk.js.map": "/eredivisie/static/js/2.14f897bd.chunk.js.map",
     "index.html": "/eredivisie/index.html",
-    "static/css/main.e1fdfdbe.chunk.css.map": "/eredivisie/static/css/main.e1fdfdbe.chunk.css.map",
+    "static/css/main.98e81e15.chunk.css.map": "/eredivisie/static/css/main.98e81e15.chunk.css.map",
     "static/js/2.14f897bd.chunk.js.LICENSE.txt": "/eredivisie/static/js/2.14f897bd.chunk.js.LICENSE.txt",
+    "static/media/bg2.c8d7b306.jpg": "/eredivisie/static/media/bg2.c8d7b306.jpg",
     "static/media/eredivisielogo.d602a5bd.png": "/eredivisie/static/media/eredivisielogo.d602a5bd.png"
   },
   "entrypoints": [
     "static/js/runtime-main.2a7d2813.js",
     "static/js/2.14f897bd.chunk.js",
-    "static/css/main.e1fdfdbe.chunk.css",
-    "static/js/main.e11753cf.chunk.js"
+    "static/css/main.98e81e15.chunk.css",
+    "static/js/main.830ce04b.chunk.js"
   ]
 }
