@@ -1,17 +1,39 @@
 import React from 'react'
-import './styles/Uitslagen.css'
-// import { useGlobalContext } from './AllMatches'
+import { useGlobalContext } from './Context'
+import Loader from './Loader';
+import Pagination from './Pagination'
+import './styles/AllMatches.css'
 
 const Uitslagen = () => {
 
-    // const { state, matchDays } = useGlobalContext()
-    // console.log(matchDays)
-
-
+    const { state, matchDays, currentday, totalMatches, paginate } = useGlobalContext()
 
     return (
-        <div className="uitslagen">
-            Uitslagen
+        <div className="container">
+            <div className="matches">
+                <div className="gamesnRound">
+                    <div className="alleWedstrijden">Alle gespeelde wedstrijden</div>
+                    < div className="speelrondes" > Speelronde <div className="dayNumber">{currentday}</div></ div>
+                </div>
+
+                {totalMatches === 0 ? <Loader /> :
+
+                    matchDays.map((game) => {
+                        const { homeTeam, awayTeam, score, id } = game
+
+                        return <>
+                            <div className="match" key={id}>
+                                <div className="teams">
+                                    <div className="hometeam">{homeTeam.name}</div>
+                                    <div className="scores">{score.fullTime.homeTeam} : {score.fullTime.awayTeam}</div>
+                                    <div className="awayteam">{awayTeam.name}</div>
+                                </div>
+                            </div>
+                        </>
+                    })
+                }
+            </div>
+            <Pagination paginate={paginate} currentday={currentday} total={totalMatches} result={state} />
         </div>
     )
 }

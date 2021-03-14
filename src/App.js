@@ -1,9 +1,9 @@
 import React from 'react'
 import Standings from './Standings'
 import Header from './Header'
-import AllMatches from './AllMatches'
 import Home from './Home'
 import Uitslagen from './Uitslagen'
+import Recent from './Recent'
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,18 +14,18 @@ import './styles/index.css'
 
 function App() {
 
-return (
+  return (
 
     <Router basename="/eredivisie">
       <Header />
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/uitslagen' component={Uitslagen} />
+        <Route path='/recent' component={Recent} />
         <Route path='/standings' component={Standings} />
-        <Route path='/allmatches' component={AllMatches} />
       </Switch>
     </Router>
-    );
+  );
 }
 
 export default App;

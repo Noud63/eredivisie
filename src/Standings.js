@@ -43,16 +43,16 @@ const Standings = () => {
             const matchday = data.season.currentMatchday - 1
             const left = table.slice(0, 9)
             const right = table.slice(9, 18)
-            // const playedGames = table.playedGames
 
-            setState({
-                ...state,
-                leftRow: left,
-                rightRow: right,
-                standings: table,
-                round: matchday
-                // playedGames: playedGames
-            })
+            setState((state) => (    // functional update prev => { ...prev, leftRow: left etc }
+                {
+                    ...state,
+                    leftRow: left,
+                    rightRow: right,
+                    standings: table,
+                    round: matchday
+                }
+            ))
 
             // setLeftRow(left)
             // setRightRow(right)

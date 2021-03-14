@@ -1,23 +1,24 @@
-import React, { useContext, useState, useEffect, useCallback } from 'react'
+import React from 'react'
 import './styles/Header.css'
+import bg from './images/bg2.jpg'
 import { Link } from "react-router-dom";
 
 const Header = () => {
 
-    const [date, setDate] = useState()
+    // const [date, setDate] = useState()
 
-    const getDate = () => {
-        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        const months = ["January", "February", "March", "April", "May", "June", "July",
-            "August", "September", "October", "November", "December"];
-        const day = `${days[new Date().getDay()]}, ${months[new Date().getMonth()]} ${new Date().getDate()}`
-        setDate(day)
-    }
+    // const getDate = () => {
+    //     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    //     const months = ["January", "February", "March", "April", "May", "June", "July",
+    //         "August", "September", "October", "November", "December"];
+    //     const day = `${days[new Date().getDay()]}, ${months[new Date().getMonth()]} ${new Date().getDate()}`
+    //     setDate(day)
+    // }
 
-    useEffect(() => {
-        getDate()
+    // useEffect(() => {
+    //     getDate()
 
-    }, [])
+    // }, [])
 
 
     return (
@@ -29,20 +30,18 @@ const Header = () => {
                     <div>Home</div>
                 </Link>
 
-                <Link to='/allmatches' className="link">
-                    <div>Wedstrijden</div>
+                <Link to="/uitslagen" className="link">
+                    <div >Alle wedstrijden</div>
                 </Link>
 
-                <Link to="/uitslagen" className="link">
+                <Link to="/recent" className="link">
                     <div >Uitslagen</div>
                 </Link>
+
 
                 <Link to='/standings' className="link">
                     <div >Stand</div>
                 </Link>
-
-
-
             </div>
         </div>
     )

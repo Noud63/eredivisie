@@ -1,20 +1,17 @@
-import React, { useState, useEffect, useCallback } from 'react'
-import Pagination from './Pagination';
-import Loader from './Loader';
-import './styles/AllMatches.css'
+import React, { useState, useEffect, useCallback, useContext } from 'react'
+
 
 const url = "https://api.football-data.org/v2/competitions/DED/matches";
 
-// const RecentMatches = React.createContext()
+const RecentMatches = React.createContext()
 
-const AllMatches = ({ children }) => {
+const AllGames = ({ children }) => {
 
 
     const [state, setState] = useState([])
     const [matchDays, setMatchDays] = useState([])
     const [currentDay, setCurrentDay] = useState(1)       // 1 t/m 34
     const [totalMatches, setTotalMatches] = useState(0)   // 34
-    const [date, setDate] = useState("")
 
     const getMatches = useCallback(async () => {
 
@@ -24,7 +21,7 @@ const AllMatches = ({ children }) => {
                 headers: { "X-Auth-Token": "7bf5e57cdcd34e03826e0fb2b4620aa4" }
             })
             const data = await res.json()
-
+            console.log(data)
             //Group objects by matchday value, create array of array of objects [ [obj, obj (matchday 1)], [obj, obj (matchday 2)], ...........]
             let result = Object.values(
                 data.matches.reduce((acc, m) => {
@@ -89,39 +86,16 @@ const AllMatches = ({ children }) => {
 
     return (
         <>
-            {/* <RecentMatches.Provider value={{ state, matchDays }}>{children}</RecentMatches.Provider> */}
-            <div className="container">
-                <div className="matches">
-                    < div className="speelronde" > Speelronde {currentday}</div>
-                    {totalMatches === 0 ? <Loader /> :
-
-                        matchDays.map((game, index) => {
-                            const { homeTeam, awayTeam, score } = game
-
-                            return <>
-
-                                <div className="match" key={index}>
-                                    <div className="teams">
-                                        <div className="hometeam">{homeTeam.name}</div>
-                                        <div className="scores">{score.fullTime.homeTeam} : {score.fullTime.awayTeam}</div>
-                                        <div className="awayteam">{awayTeam.name}</div>
-                                    </div>
-                                </div>
-                            </>
-                        })
-                    }
-                </div>
-                <Pagination paginate={paginate} currentday={currentday} total={totalMatches} result={state} />
-            </div>
+            <RecentMatches.Provider value={{ state, matchDays, currentday, totalMatches, paginate }}>{children}</RecentMatches.Provider>
         </>
     )
 }
 
-// export const useGlobalContext = () => {
-//     return useContext(RecentMatches)
-// }
+export const useGlobalContext = () => {
+    return useContext(RecentMatches)
+}
 
 
-export default AllMatches
-// export { RecentMatches, AllMatches }
+// export default AllMatches
+export { RecentMatches, AllGames }
 
