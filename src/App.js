@@ -16,7 +16,7 @@ function App() {
 
   return (
 
-    <Router>
+    <Router basename="/eredivisie">
       <Header />
       <Switch>
         <Route path='/' exact component={Home} />
