@@ -11,9 +11,10 @@ const Uitslagen = () => {
     return (
         <div className="container">
             <div className="matches">
+
                 <div className="gamesnRound">
-                    <div className="alleWedstrijden">Alle gespeelde wedstrijden</div>
-                    < div className="speelrondes" > Speelronde <div className="dayNumber">{currentday}</div></ div>
+                    <div className="alleWedstrijden">Alle wedstrijden</div>
+                    < div className="speelrondes" > Speelronde <div className="circle"><div className="dayNumber">{currentday}</div></div></ div>
                 </div>
 
                 {totalMatches === 0 ? <Loader /> :

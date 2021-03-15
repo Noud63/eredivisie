@@ -88,13 +88,13 @@
   padding: 0px 5px 0px 5px;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   .scores {
      width: 15%;
   }
 }
 
-@media only screen and (max-width: 347px) {
+@media only screen and (max-width: 330px) {
   .scores {
      width: 10%;
   }
@@ -152,15 +152,21 @@
   padding-left: 1rem;
 }
 
-.dayNumber {
+.circle {
+  position:relative;
   width: 2rem;
   height: 2rem;
   background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 50%;
-  font-size: 1rem;
-  color: rgb(36, 79, 143);
+  line-height: 2rem;
   margin-left: 1rem;
 }
+
+.dayNumber {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: rgb(36, 79, 143);
+   font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (1920 - 320)));
+ }

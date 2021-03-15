@@ -23,7 +23,7 @@ const Header = () => {
 
     return (
         <div className="header">
-            <div className="eredivisie">Eredivisie 2020-2021</div>
+            <div className="eredivisie">KNVB Eredivisie 2020-2021</div>
             {/* <div className="date">{date}</div> */}
             <div className="links">
                 <Link to="/" className="link">

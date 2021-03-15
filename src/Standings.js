@@ -40,7 +40,7 @@ const Standings = () => {
                     .replace("SBV", "")
             }
 
-            const matchday = data.season.currentMatchday - 1
+            const matchday = data.season.currentMatchday
             const left = table.slice(0, 9)
             const right = table.slice(9, 18)
 

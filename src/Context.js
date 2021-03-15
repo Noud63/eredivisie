@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback, useContext } from 'react'
 
-
 const url = "https://api.football-data.org/v2/competitions/DED/matches";
 
 const RecentMatches = React.createContext()
@@ -21,7 +20,7 @@ const AllGames = ({ children }) => {
                 headers: { "X-Auth-Token": "7bf5e57cdcd34e03826e0fb2b4620aa4" }
             })
             const data = await res.json()
-            console.log(data)
+
             //Group objects by matchday value, create array of array of objects [ [obj, obj (matchday 1)], [obj, obj (matchday 2)], ...........]
             let result = Object.values(
                 data.matches.reduce((acc, m) => {

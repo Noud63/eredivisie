@@ -16,7 +16,7 @@ const Home = () => {
                 <img src={logo} alt="logo" className="logoStyle" />
             </div>
 
-            <div className="borderMarker" style={{ backgroundImage: `url(${goal3})` }}></div>
+            <div className="borderMarker"><img src={goal} className="ballInGoal" /></div>
 
             <div className="allmatches">
                 <Uitslagen />
@@ -26,13 +26,13 @@ const Home = () => {
                 <Recent />
             </div>
 
-            <div className="borderMarker" style={{ backgroundImage: `url(${bg})` }}></div>
+            <div className="borderMarker"><img src={goal} className="ballInGoal" /></div>
 
             <div className="standings">
                 <Standings />
             </div>
 
-            <div className="borderMarker" style={{ backgroundImage: `url(${bg})` }}></div>
+            <div className="borderMarker"><img src={goal} className="ballInGoal" /></div>
 
         </>
     )
