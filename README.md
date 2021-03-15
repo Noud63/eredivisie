@@ -4,5 +4,5 @@ REST API  https://api.football-data.org<p>
 
 
 
-![eredivisie](https://user-images.githubusercontent.com/38325801/110756827-f8e6d400-824a-11eb-99a1-d2158b209cfa.png)
+![eredivisie2](https://user-images.githubusercontent.com/38325801/111155073-425d5900-8594-11eb-9c58-977f5209b531.png)
 
