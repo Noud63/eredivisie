@@ -35,6 +35,7 @@ const Uitslagen = () => {
                 }
             </div>
             <Pagination paginate={paginate} currentday={currentday} total={totalMatches} result={state} />
+
         </div>
     )
 }
