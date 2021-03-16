@@ -41,3 +41,4 @@ const Uitslagen = () => {
 }
 
 export default Uitslagen
+

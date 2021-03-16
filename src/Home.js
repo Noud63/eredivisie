@@ -2,6 +2,7 @@ import React from 'react'
 import logo from './images/eredivisielogo.png'
 import bg from './images/bg.jpg'
 import goal from './images/goal.jpg'
+import goal2 from './images/goal2.jpg'
 import goal3 from './images/goal3.jpg'
 import Uitslagen from './Uitslagen'
 import Standings from './Standings'
@@ -16,7 +17,7 @@ const Home = () => {
                 <img src={logo} alt="logo" className="logoStyle" />
             </div>
 
-            <div className="borderMarker"><img src={goal} className="ballInGoal" /></div>
+            <div className="borderMarker"><img src={goal3} className="ballInGoal" /></div>
 
             <div className="allmatches">
                 <Uitslagen />
@@ -32,7 +33,7 @@ const Home = () => {
                 <Standings />
             </div>
 
-            <div className="borderMarker"><img src={goal} className="ballInGoal" /></div>
+            <div className="borderMarker"><img src={goal2} className="ballInGoal" /></div>
 
         </>
     )
