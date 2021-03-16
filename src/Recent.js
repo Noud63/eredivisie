@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useCallback } from 'react'
 import './styles/Recent.css'
 import { useGlobalContext } from './Context'
 
@@ -6,26 +6,47 @@ const Recent = () => {
 
     const [lastGames, setLastGames] = React.useState([])
 
-    const { state, matchDays, currentday, totalMatches, paginate } = useGlobalContext()
-    const recent = state.slice(25, 26)
+    const { state } = useGlobalContext()
+    console.log(state)
 
-    useEffect(() => {
+    const currentMatchDay = 26
+    const recent = state.slice(currentMatchDay - 1, currentMatchDay)
+
+    const getLastGames = useCallback(() => {
         for (let games of recent) {
             setLastGames(games)
         }
-    })
+    }, [recent])
+
+    useEffect(() => {
+        getLastGames()
+    }, [getLastGames])
+
 
     return (
-        <div className="lastGames">
-            {lastGames.map(game => {
-                const { id, homeTeam, awayTeam, matchday, score } = game
-                return (
-                    <div className="recentGames" key={id}>
-                        <div className="gamebox"><div>{homeTeam.name}</div> <div>{score.fullTime.homeTeam}-{score.fullTime.awayTeam}</div><div>{awayTeam.name}</div></div>
-                    </div>
-                )
-            })}
+
+        <div className="wrapper">
+            <div className="lastGames">
+                <div className="gamesnRound">
+                    <div className="alleWedstrijden">Deze week</div>
+                    < div className="speelrondes" > Speelronde <div className="circle"><div className="dayNumber">26</div></div></ div>
+                </div>
+                {lastGames.map(game => {
+                    const { id, homeTeam, awayTeam, score } = game
+                    return (
+
+                        <div className="team2" key={id}>
+                            <div className="home">{homeTeam.name}</div>
+                            <div className="score">{score.fullTime.homeTeam} : {score.fullTime.awayTeam}</div>
+                            <div className="away">{awayTeam.name}</div>
+                        </div>
+
+                    )
+                })}
+            </div>
         </div>
+
+
     )
 }
 

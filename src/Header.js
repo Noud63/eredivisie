@@ -1,6 +1,5 @@
 import React from 'react'
 import './styles/Header.css'
-import bg from './images/bg2.jpg'
 import { Link } from "react-router-dom";
 
 const Header = () => {

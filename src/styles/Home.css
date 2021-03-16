@@ -16,7 +16,7 @@
     width: 100%;
     height: auto;
     background-color: rgb(36, 79, 143);
-    margin-top: 4rem;
+    margin-top: 5%
 }
 
 .ballInGoal {
@@ -29,7 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 4rem;
+    margin-top: 5%
 }
 
 .standings {
@@ -37,16 +37,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 6rem;
-    margin-bottom: 4rem;
+    margin-top: 4%;
+    margin-bottom: 5%;
 }
 
-.laatst{
+.dezeweek{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 6rem;
+    margin-top: 5%;
     color: white;
     font-size: calc(18px + (34 - 18) * ((100vw - 320px) / (1920 - 320)));
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;

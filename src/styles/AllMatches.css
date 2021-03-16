@@ -4,11 +4,10 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  max-width: 1189px;
+  max-width: 1200px;
   height: auto;
   background-color: rgb(36, 79, 143);
   margin: 0 10px 0 10px;
-  /* padding-top: 190px; */
 }
 
 .matches {
@@ -128,7 +127,7 @@
   box-shadow: 0px 2px 8px rgb(0, 33, 82);
   border-radius: .8rem;
   border: 2px solid rgb(101, 147, 216);
-   margin-bottom: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 
 @media only screen and (max-width: 400px) {
