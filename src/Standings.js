@@ -40,7 +40,7 @@ const Standings = () => {
                     .replace("SBV", "")
             }
 
-            const matchday = data.season.currentMatchday
+            const matchday = data.season.currentMatchday - 1
             const left = table.slice(0, 9)
             const right = table.slice(9, 18)
             setState((state) => (    // functional update prev => { ...prev, leftRow: left etc }
