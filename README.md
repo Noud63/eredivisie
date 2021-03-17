@@ -4,7 +4,7 @@ React Hooks<p>
 REST API  https://api.football-data.org<br><br>  
 
 
-![eredivisie2](https://user-images.githubusercontent.com/38325801/111155073-425d5900-8594-11eb-9c58-977f5209b531.png)<br><br><br>
+![eredivisie](https://user-images.githubusercontent.com/38325801/111489812-c3565500-873a-11eb-81d7-bb8ebb5d148d.png)<br><br><br>
   
 ![eredivisie](https://user-images.githubusercontent.com/38325801/111155148-5c973700-8594-11eb-8d8e-1ccc76fd6e72.png)<br><br><br>
 
