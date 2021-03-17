@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles/Header.css'
+import styles from './styles/Header.module.css'
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -21,24 +21,24 @@ const Header = () => {
 
 
     return (
-        <div className="header">
-            <div className="eredivisie">KNVB Eredivisie 2020-2021</div>
+        <div className={styles.header}>
+            <div className={styles.eredivisie}>KNVB Eredivisie 2020-2021</div>
             {/* <div className="date">{date}</div> */}
-            <div className="links">
-                <Link to="/" className="link">
+            <div className={styles.links}>
+                <Link to="/" className={styles.link}>
                     <div>Home</div>
                 </Link>
 
-                <Link to="/uitslagen" className="link">
+                <Link to="/uitslagen" className={styles.link}>
                     <div >Alle wedstrijden</div>
                 </Link>
 
-                <Link to="/recent" className="link">
+                <Link to="/recent" className={styles.link}>
                     <div >Uitslagen</div>
                 </Link>
 
 
-                <Link to='/standings' className="link">
+                <Link to='/standings' className={styles.link}>
                     <div >Stand</div>
                 </Link>
             </div>

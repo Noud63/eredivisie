@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import Loader from './Loader';
-import './styles/Standings.css'
+import styles from './styles/Standings.module.css'
 
 const url = "https://api.football-data.org/v2/competitions/DED/standings";
 
@@ -72,75 +72,81 @@ const Standings = () => {
 
 
     return (
-        <div className="container2">
-            <div className="round">Stand na {state.round} speelrondes</div>
+        <div className={styles.container2}>
+
             {state.round === 0 ? <Loader /> :
                 <>
-                    <div className="leftRightRow">
 
-                        <div className="leftRow">
 
-                            < span className="left" >
-                                <span className="stats">
-                                    <span className="gs">GS</span>
-                                    <span className="wgv">W|G|V</span>
-                                    <span className="p">P</span>
-                                    <span className="vt">V-T</span>
-                                </span>
-                            </span >
+                    <div className={styles.leftRightRow}>
+                        <div className={styles.round}>Stand na {state.round} speelrondes</div>
 
-                            {state.leftRow.map((place, index) => {
-                                const { team, position, playedGames, won, draw, lost, points, goalsAgainst, goalsFor } = place
-                                return (
-                                    <div className="teamWrapper" key={index}>
-                                        <div className="leftTeam">
-                                            <div className="position">{position}</div>
-                                            <img src={team.crestUrl} alt="logo" className="clubIcon" />
-                                            <div key={index} className="team">{team.name}</div>
+                        <div className={styles.rowWrap}>
+
+                            <div className={styles.leftRow}>
+
+                                < span className={styles.left}>
+                                    <span className={styles.stats}>
+                                        <span className={styles.gs}>GS</span>
+                                        <span className={styles.wgv}>W|G|V</span>
+                                        <span className={styles.p}>P</span>
+                                        <span className={styles.vt}>V-T</span>
+                                    </span>
+                                </span >
+
+                                {state.leftRow.map((place, index) => {
+                                    const { team, position, playedGames, won, draw, lost, points, goalsAgainst, goalsFor } = place
+                                    return (
+                                        <div className={styles.teamWrapper} key={index}>
+                                            <div className={styles.leftTeam}>
+                                                <div className={styles.position}>{position}</div>
+                                                <img src={team.crestUrl} alt="logo" className={styles.clubIcon} />
+                                                <div key={index} className={styles.team}>{team.name}</div>
+                                            </div>
+
+                                            <span className={styles.stats2}>
+                                                <span>{playedGames}</span>
+                                                <span>{won}|{draw}|{lost}</span>
+                                                <span>{points}</span>
+                                                <span>{goalsFor}-{goalsAgainst}</span>
+                                            </span>
                                         </div>
+                                    )
+                                })}
+                            </div>
 
-                                        <span className="stats2">
-                                            <span>{playedGames}</span>
-                                            <span>{won}|{draw}|{lost}</span>
-                                            <span>{points}</span>
-                                            <span>{goalsFor}-{goalsAgainst}</span>
-                                        </span>
-                                    </div>
-                                )
-                            })}
-                        </div>
+                            <div className={styles.rightRow}>
 
-                        <div className="rightRow">
+                                < span className={styles.right}>
+                                    <span className={styles.stats}>
+                                        <span className={styles.gs}>GS</span>
+                                        <span className={styles.wgv}>W|G|V</span>
+                                        <span className={styles.p}>P</span>
+                                        <span className={styles.vt}>V-T</span>
+                                    </span>
+                                </span >
 
-                            < span className="right" >
-                                <span className="stats">
-                                    <span className="gs">GS</span>
-                                    <span className="wgv">W|G|V</span>
-                                    <span className="p">P</span>
-                                    <span className="vt">V-T</span>
-                                </span>
-                            </span >
+                                {state.rightRow.map((place, index) => {
+                                    const { team, position, playedGames, won, draw, lost, points, goalsAgainst, goalsFor } = place
+                                    return (
+                                        <div className={styles.teamWrapper} key={index}>
+                                            <div className={styles.rightTeam}>
+                                                <div className={styles.position2}>{position}</div>
+                                                <img src={team.crestUrl} alt="logo" className={styles.clubIcon} />
+                                                <div key={index} className={styles.team}>{team.name}</div>
+                                            </div>
 
-                            {state.rightRow.map((place, index) => {
-                                const { team, position, playedGames, won, draw, lost, points, goalsAgainst, goalsFor } = place
-                                return (
-                                    <div className="teamWrapper" key={index}>
-                                        <div className="rightTeam">
-                                            <div className="position2">{position}</div>
-                                            <img src={team.crestUrl} alt="logo" className="clubIcon" />
-                                            <div key={index} className="team">{team.name}</div>
+                                            <span className={styles.stats2}>
+                                                <span>{playedGames}</span>
+                                                <span>{won}|{draw}|{lost}</span>
+                                                <span>{points}</span>
+                                                <span>{goalsFor}-{goalsAgainst}</span>
+                                            </span>
                                         </div>
+                                    )
+                                })}
 
-                                        <span className="stats2">
-                                            <span>{playedGames}</span>
-                                            <span>{won}|{draw}|{lost}</span>
-                                            <span>{points}</span>
-                                            <span>{goalsFor}-{goalsAgainst}</span>
-                                        </span>
-                                    </div>
-                                )
-                            })}
-
+                            </div>
                         </div>
                     </div>
 

@@ -1,10 +1,16 @@
 .eredivisieLogo {
-    width: 99vw;
+    width: 100%;
     margin-top: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+@media only screen and (max-width: 800px) {
+  .eredivisieLogo {
+     margin-top: 0rem;
+  }
 }
 
 .logoStyle {
@@ -15,13 +21,13 @@
 .borderMarker {
     width: 100%;
     height: auto;
-    background-color: rgb(36, 79, 143);
     margin-top: 5%
 }
 
 .ballInGoal {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 .allmatches {
@@ -42,12 +48,25 @@
 }
 
 .dezeweek{
-    width: 100%;
+    margin: 5% auto;
+}
+
+.footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 5%;
-    color: white;
-    font-size: calc(18px + (34 - 18) * ((100vw - 320px) / (1920 - 320)));
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   width: 100%;
+   height: 320px;
+   background-image: linear-gradient(rgb(36, 79, 143),rgb(3, 15, 34));
 }
+
+.links {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
+    color:rgb(227, 238, 255);
+}  

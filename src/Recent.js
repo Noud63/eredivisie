@@ -1,5 +1,5 @@
 import React, { useEffect, useCallback } from 'react'
-import './styles/Recent.css'
+import styles from './styles/Recent.module.css'
 import { useGlobalContext } from './Context'
 
 const Recent = () => {
@@ -25,25 +25,30 @@ const Recent = () => {
 
     return (
 
-        <div className="wrapper">
-            <div className="lastGames">
-                <div className="gamesnRound">
-                    <div className="alleWedstrijden">Deze week</div>
-                    < div className="speelrondes" > Speelronde <div className="circle"><div className="dayNumber">26</div></div></ div>
+        <div className={styles.container}>
+            <div className={styles.matches}>
+
+                <div className={styles.gamesnRound}>
+                    <div className={styles.alleWedstrijden}>Deze week gespeeld</div>
+                    < div className={styles.speelrondes} > Speelronde <div className={styles.circle}><div className={styles.dayNumber}>{currentMatchDay}</div></div></ div>
                 </div>
-                {lastGames.map(game => {
-                    const { id, homeTeam, awayTeam, score } = game
-                    return (
 
-                        <div className="team2" key={id}>
-                            <div className="home">{homeTeam.name}</div>
-                            <div className="score">{score.fullTime.homeTeam} : {score.fullTime.awayTeam}</div>
-                            <div className="away">{awayTeam.name}</div>
+                {lastGames.map((game) => {
+                    const { homeTeam, awayTeam, score, id } = game
+
+                    return <>
+                        <div className={styles.match} key={id}>
+                            <div className={styles.teams}>
+                                <div className={styles.hometeam}>{homeTeam.name}</div>
+                                <div className={styles.scores}>{score.fullTime.homeTeam} : {score.fullTime.awayTeam}</div>
+                                <div className={styles.awayteam}>{awayTeam.name}</div>
+                            </div>
                         </div>
-
-                    )
-                })}
+                    </>
+                })
+                }
             </div>
+
         </div>
 
 
