@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/eredivisie/static/css/main.1f7f7271.chunk.css",
-    "main.js": "/eredivisie/static/js/main.a63ee46c.chunk.js",
-    "main.js.map": "/eredivisie/static/js/main.a63ee46c.chunk.js.map",
+    "main.css": "/eredivisie/static/css/main.89886c14.chunk.css",
+    "main.js": "/eredivisie/static/js/main.6df7ad68.chunk.js",
+    "main.js.map": "/eredivisie/static/js/main.6df7ad68.chunk.js.map",
     "runtime-main.js": "/eredivisie/static/js/runtime-main.2a7d2813.js",
     "runtime-main.js.map": "/eredivisie/static/js/runtime-main.2a7d2813.js.map",
-    "static/js/2.ea0f9b4f.chunk.js": "/eredivisie/static/js/2.ea0f9b4f.chunk.js",
-    "static/js/2.ea0f9b4f.chunk.js.map": "/eredivisie/static/js/2.ea0f9b4f.chunk.js.map",
+    "static/js/2.e3cd32cb.chunk.js": "/eredivisie/static/js/2.e3cd32cb.chunk.js",
+    "static/js/2.e3cd32cb.chunk.js.map": "/eredivisie/static/js/2.e3cd32cb.chunk.js.map",
     "index.html": "/eredivisie/index.html",
-    "static/css/main.1f7f7271.chunk.css.map": "/eredivisie/static/css/main.1f7f7271.chunk.css.map",
-    "static/js/2.ea0f9b4f.chunk.js.LICENSE.txt": "/eredivisie/static/js/2.ea0f9b4f.chunk.js.LICENSE.txt",
+    "static/css/main.89886c14.chunk.css.map": "/eredivisie/static/css/main.89886c14.chunk.css.map",
+    "static/js/2.e3cd32cb.chunk.js.LICENSE.txt": "/eredivisie/static/js/2.e3cd32cb.chunk.js.LICENSE.txt",
     "static/media/eredivisielogo.d602a5bd.png": "/eredivisie/static/media/eredivisielogo.d602a5bd.png",
     "static/media/goal.d5be5ba6.jpg": "/eredivisie/static/media/goal.d5be5ba6.jpg",
     "static/media/goal2.89a77c40.jpg": "/eredivisie/static/media/goal2.89a77c40.jpg",
-    "static/media/goal3.cf0fd3d3.jpg": "/eredivisie/static/media/goal3.cf0fd3d3.jpg"
+    "static/media/goal3.cf0fd3d3.jpg": "/eredivisie/static/media/goal3.cf0fd3d3.jpg",
+    "static/media/goal4.50b4efbf.jpg": "/eredivisie/static/media/goal4.50b4efbf.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2a7d2813.js",
-    "static/js/2.ea0f9b4f.chunk.js",
-    "static/css/main.1f7f7271.chunk.css",
-    "static/js/main.a63ee46c.chunk.js"
+    "static/js/2.e3cd32cb.chunk.js",
+    "static/css/main.89886c14.chunk.css",
+    "static/js/main.6df7ad68.chunk.js"
   ]
 }
