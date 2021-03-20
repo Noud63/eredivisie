@@ -68,16 +68,11 @@ const Standings = () => {
         getStandings()
     }, [getStandings])
 
-
-
-
     return (
         <div className={styles.container2}>
 
             {state.round === 0 ? <Loader /> :
                 <>
-
-
                     <div className={styles.leftRightRow}>
                         <div className={styles.round}>Stand na {state.round} speelrondes</div>
 

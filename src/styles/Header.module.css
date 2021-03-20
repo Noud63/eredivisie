@@ -69,7 +69,7 @@ body {
 
 .link {
     width: 33.33%;
-    
+    height: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,6 +79,12 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-decoration: none;
    background-color: rgb(36, 79, 143);
+}
+
+@media only screen and (max-width: 400px) {
+  .links, .link {
+     height: 3rem;
+  }
 }
 
 .link:hover {

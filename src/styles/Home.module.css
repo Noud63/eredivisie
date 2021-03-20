@@ -21,7 +21,8 @@
 .borderMarker {
     width: 100%;
     height: auto;
-    margin-top: 5%
+    margin-top: 5%;
+    /* border: 3px solid white; */
 }
 
 .ballInGoal {
@@ -54,19 +55,55 @@
 .footer {
     display: flex;
     align-items: center;
-    justify-content: center;
-   width: 100%;
-   height: 320px;
-   background-image: linear-gradient(rgb(36, 79, 143),rgb(3, 15, 34));
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(rgb(36, 79, 143),rgb(3, 15, 34));
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+     height: 200px;
+  }
 }
 
 .links {
-    width: auto;
+    width: 30%;
     height: auto;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
     color:rgb(227, 238, 255);
 }  
+
+@media only screen and (max-width: 849px) {
+  .links {
+     width: 40%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .links {
+     width: 50%;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .links {
+     width: 65%;
+  }
+}
+
+.derbystar {
+    width: 30%;
+    height: auto;
+    margin-right: 50px;
+}
+
+.ds {
+    width: 100%;
+    height: auto;
+}

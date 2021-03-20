@@ -7,9 +7,8 @@ const Recent = () => {
     const [lastGames, setLastGames] = React.useState([])
 
     const { state } = useGlobalContext()
-    console.log(state)
 
-    const currentMatchDay = 26
+    const currentMatchDay = 27
     const recent = state.slice(currentMatchDay - 1, currentMatchDay)
 
     const getLastGames = useCallback(() => {
@@ -38,7 +37,7 @@ const Recent = () => {
 
                     return <>
                         <div className={styles.match} key={id}>
-                            <div className={styles.teams}>
+                            <div className={styles.teams} >
                                 <div className={styles.hometeam}>{homeTeam.name}</div>
                                 <div className={styles.scores}>{score.fullTime.homeTeam} : {score.fullTime.awayTeam}</div>
                                 <div className={styles.awayteam}>{awayTeam.name}</div>

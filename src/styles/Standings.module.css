@@ -87,6 +87,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .round {
+     margin-top: 1rem;
+  }
+}
+
 .teamWrapper {
   margin-bottom: .5rem;
   display: flex;
