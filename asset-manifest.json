@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/eredivisie/static/css/main.89886c14.chunk.css",
-    "main.js": "/eredivisie/static/js/main.50d4c459.chunk.js",
-    "main.js.map": "/eredivisie/static/js/main.50d4c459.chunk.js.map",
+    "main.css": "/eredivisie/static/css/main.b07daf9d.chunk.css",
+    "main.js": "/eredivisie/static/js/main.27dcf2c9.chunk.js",
+    "main.js.map": "/eredivisie/static/js/main.27dcf2c9.chunk.js.map",
     "runtime-main.js": "/eredivisie/static/js/runtime-main.2a7d2813.js",
     "runtime-main.js.map": "/eredivisie/static/js/runtime-main.2a7d2813.js.map",
-    "static/js/2.e3cd32cb.chunk.js": "/eredivisie/static/js/2.e3cd32cb.chunk.js",
-    "static/js/2.e3cd32cb.chunk.js.map": "/eredivisie/static/js/2.e3cd32cb.chunk.js.map",
+    "static/js/2.947ef86f.chunk.js": "/eredivisie/static/js/2.947ef86f.chunk.js",
+    "static/js/2.947ef86f.chunk.js.map": "/eredivisie/static/js/2.947ef86f.chunk.js.map",
     "index.html": "/eredivisie/index.html",
-    "static/css/main.89886c14.chunk.css.map": "/eredivisie/static/css/main.89886c14.chunk.css.map",
-    "static/js/2.e3cd32cb.chunk.js.LICENSE.txt": "/eredivisie/static/js/2.e3cd32cb.chunk.js.LICENSE.txt",
+    "static/css/main.b07daf9d.chunk.css.map": "/eredivisie/static/css/main.b07daf9d.chunk.css.map",
+    "static/js/2.947ef86f.chunk.js.LICENSE.txt": "/eredivisie/static/js/2.947ef86f.chunk.js.LICENSE.txt",
+    "static/media/derbystar.a8d9de33.png": "/eredivisie/static/media/derbystar.a8d9de33.png",
     "static/media/eredivisielogo.d602a5bd.png": "/eredivisie/static/media/eredivisielogo.d602a5bd.png",
     "static/media/goal.d5be5ba6.jpg": "/eredivisie/static/media/goal.d5be5ba6.jpg",
     "static/media/goal2.89a77c40.jpg": "/eredivisie/static/media/goal2.89a77c40.jpg",
@@ -18,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2a7d2813.js",
-    "static/js/2.e3cd32cb.chunk.js",
-    "static/css/main.89886c14.chunk.css",
-    "static/js/main.50d4c459.chunk.js"
+    "static/js/2.947ef86f.chunk.js",
+    "static/css/main.b07daf9d.chunk.css",
+    "static/js/main.27dcf2c9.chunk.js"
   ]
 }
