@@ -1,6 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react'
-import Loader from './Loader';
-import styles from './styles/Standings.module.css'
+import React, { useState, useEffect, useCallback, useContext } from 'react'
 
 const url = "https://api.football-data.org/v2/competitions/DED/standings";
 
@@ -11,9 +9,12 @@ const initialState = {
     rightRow: []
 }
 
-const Standings = () => {
+const MatchDay = React.createContext()
+
+const Standings = ({ children }) => {
 
     const [state, setState] = useState(initialState)
+    const [matchDay, setMatchDay] = useState(0)
 
     /** Instead of an object use separate useStates **/
     // const [standings, setstandings] = useState([])
@@ -40,7 +41,7 @@ const Standings = () => {
                     .replace("SBV", "")
             }
 
-            const matchday = data.season.currentMatchday - 1
+            setMatchDay(data.season.currentMatchday)
             const left = table.slice(0, 9)
             const right = table.slice(9, 18)
             setState((state) => (    // functional update prev => { ...prev, leftRow: left etc }
@@ -49,7 +50,7 @@ const Standings = () => {
                     leftRow: left,
                     rightRow: right,
                     standings: table,
-                    round: matchday
+                    round: matchDay
                 }
             ))
 
@@ -61,7 +62,7 @@ const Standings = () => {
         } catch (error) {
             console.log(error)
         }
-    }, [])
+    }, [matchDay])
 
 
     useEffect(() => {
@@ -69,88 +70,16 @@ const Standings = () => {
     }, [getStandings])
 
     return (
-        <div className={styles.container2}>
-
-            {state.round === 0 ? <Loader /> :
-                <>
-                    <div className={styles.leftRightRow}>
-                        <div className={styles.round}>Stand na {state.round} speelrondes</div>
-
-                        <div className={styles.rowWrap}>
-
-                            <div className={styles.leftRow}>
-
-                                < span className={styles.left}>
-                                    <span className={styles.stats}>
-                                        <span className={styles.gs}>GS</span>
-                                        <span className={styles.wgv}>W|G|V</span>
-                                        <span className={styles.p}>P</span>
-                                        <span className={styles.vt}>V-T</span>
-                                    </span>
-                                </span >
-
-                                {state.leftRow.map((place, index) => {
-                                    const { team, position, playedGames, won, draw, lost, points, goalsAgainst, goalsFor } = place
-                                    return (
-                                        <div className={styles.teamWrapper} key={index}>
-                                            <div className={styles.leftTeam}>
-                                                <div className={styles.position}>{position}</div>
-                                                <img src={team.crestUrl} alt="logo" className={styles.clubIcon} />
-                                                <div key={index} className={styles.team}>{team.name}</div>
-                                            </div>
-
-                                            <span className={styles.stats2}>
-                                                <span>{playedGames}</span>
-                                                <span>{won}|{draw}|{lost}</span>
-                                                <span>{points}</span>
-                                                <span>{goalsFor}-{goalsAgainst}</span>
-                                            </span>
-                                        </div>
-                                    )
-                                })}
-                            </div>
-
-                            <div className={styles.rightRow}>
-
-                                < span className={styles.right}>
-                                    <span className={styles.stats}>
-                                        <span className={styles.gs}>GS</span>
-                                        <span className={styles.wgv}>W|G|V</span>
-                                        <span className={styles.p}>P</span>
-                                        <span className={styles.vt}>V-T</span>
-                                    </span>
-                                </span >
-
-                                {state.rightRow.map((place, index) => {
-                                    const { team, position, playedGames, won, draw, lost, points, goalsAgainst, goalsFor } = place
-                                    return (
-                                        <div className={styles.teamWrapper} key={index}>
-                                            <div className={styles.rightTeam}>
-                                                <div className={styles.position2}>{position}</div>
-                                                <img src={team.crestUrl} alt="logo" className={styles.clubIcon} />
-                                                <div key={index} className={styles.team}>{team.name}</div>
-                                            </div>
-
-                                            <span className={styles.stats2}>
-                                                <span>{playedGames}</span>
-                                                <span>{won}|{draw}|{lost}</span>
-                                                <span>{points}</span>
-                                                <span>{goalsFor}-{goalsAgainst}</span>
-                                            </span>
-                                        </div>
-                                    )
-                                })}
-
-                            </div>
-                        </div>
-                    </div>
-
-                </>
-            }
-
-        </div>
+        <>
+            <MatchDay.Provider value={{ matchDay, state }}>{children}</MatchDay.Provider>
+        </>
     )
 }
 
-export default Standings
+export const useGlobalState = () => {
+    return useContext(MatchDay)
+}
+
+
+export { MatchDay, Standings }
 

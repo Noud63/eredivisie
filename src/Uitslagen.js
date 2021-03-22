@@ -22,7 +22,7 @@ const Uitslagen = () => {
                     matchDays.map((game) => {
                         const { homeTeam, awayTeam, score, id } = game
 
-                        return <>
+                        return (
                             <div className={styles.match} key={id}>
                                 <div className={styles.teams}>
                                     <div className={styles.hometeam}>{homeTeam.name}</div>
@@ -30,7 +30,7 @@ const Uitslagen = () => {
                                     <div className={styles.awayteam}>{awayTeam.name}</div>
                                 </div>
                             </div>
-                        </>
+                        )
                     })
                 }
             </div>

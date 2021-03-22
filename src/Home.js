@@ -7,9 +7,11 @@ import goal3 from './images/goal3.jpg'
 import goal4 from './images/goal4.jpg'
 import derbystar from './images/derbystar.png'
 import Uitslagen from './Uitslagen'
-import Standings from './Standings'
+import Stand from './Stand'
 import Recent from './Recent'
 import styles from './styles/Home.module.css'
+
+
 
 const link = "noudvandun@gmail.com"
 const link2 = <a href={'https://github.com/Noud63?tab=repositories'} target={'blank'} style={{ textDecoration: "none", color: "white" }}> github.com/Noud63</a>
@@ -52,8 +54,8 @@ const Home = () => {
 
             <div className={styles.borderMarker}><img src={goal4} className={styles.ballInGoal} alt="" /></div>
 
-            <div className={styles.standings}>
-                <Standings />
+            <div className={styles.stand}>
+                <Stand />
             </div>
 
             <div className={styles.borderMarker}><img src={goal2} className={styles.ballInGoal} alt="" /></div>

@@ -38,7 +38,7 @@ const Header = () => {
                 </Link>
 
 
-                <Link to='/standings' className={styles.link}>
+                <Link to='/stand' className={styles.link}>
                     <div >Stand</div>
                 </Link>
             </div>

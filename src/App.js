@@ -1,5 +1,5 @@
 import React from 'react'
-import Standings from './Standings'
+import Stand from './Stand'
 import Header from './Header'
 import Home from './Home'
 import Uitslagen from './Uitslagen'
@@ -21,7 +21,7 @@ function App() {
         <Route path='/' exact component={Home} />
         <Route path='/uitslagen' component={Uitslagen} />
         <Route path='/recent' component={Recent} />
-        <Route path='/standings' component={Standings} />
+        <Route path='/stand' component={Stand} />
       </Switch>
     </Router>
   );
