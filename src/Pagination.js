@@ -4,6 +4,7 @@ import styles from './styles/Pagination.module.css'
 const Pagination = ({ paginate, currentday, total }) => {
 
     const pageNumbers = []
+
     for (let i = 1; i <= total; i++) {
         pageNumbers.push(i)
     }

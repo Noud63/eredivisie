@@ -80,21 +80,15 @@ const AllGames = ({ children }) => {
         setMatchDays(state[number - 1])
     }
 
-
     const currentday = currentDay
 
-    return (
-        <>
-            <RecentMatches.Provider value={{ state, matchDays, currentday, totalMatches, paginate }}>{children}</RecentMatches.Provider>
-        </>
-    )
+    return <RecentMatches.Provider value={{ state, matchDays, currentday, totalMatches, paginate }}>{children}</RecentMatches.Provider>
+
 }
 
 export const useGlobalContext = () => {
     return useContext(RecentMatches)
 }
 
-
-// export default AllMatches
 export { RecentMatches, AllGames }
 

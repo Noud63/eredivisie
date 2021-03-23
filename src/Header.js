@@ -25,6 +25,7 @@ const Header = () => {
             <div className={styles.eredivisie}>KNVB Eredivisie 2020-2021</div>
             {/* <div className="date">{date}</div> */}
             <div className={styles.links}>
+
                 <Link to="/" className={styles.link}>
                     <div>Home</div>
                 </Link>
@@ -37,11 +38,12 @@ const Header = () => {
                     <div >Uitslagen</div>
                 </Link>
 
-
                 <Link to='/stand' className={styles.link}>
                     <div >Stand</div>
                 </Link>
+
             </div>
+
         </div>
     )
 }

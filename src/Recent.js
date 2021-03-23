@@ -11,7 +11,6 @@ const Recent = () => {
     const { state } = useGlobalContext()
     const { matchDay } = useGlobalState()
 
-
     const currentMatchDay = matchDay
     const recent = state.slice(currentMatchDay - 1, currentMatchDay)
 
@@ -32,7 +31,7 @@ const Recent = () => {
                 <div className={styles.matches}>
 
                     <div className={styles.gamesnRound}>
-                        <div className={styles.alleWedstrijden}>Deze week gespeeld</div>
+                        <div className={styles.alleWedstrijden}>Laatst gespeeld</div>
                         < div className={styles.speelrondes} > Speelronde <div className={styles.circle}><div className={styles.dayNumber}>{currentMatchDay}</div></div></ div>
                     </div>
 

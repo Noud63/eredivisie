@@ -69,17 +69,12 @@ const Standings = ({ children }) => {
         getStandings()
     }, [getStandings])
 
-    return (
-        <>
-            <MatchDay.Provider value={{ matchDay, state }}>{children}</MatchDay.Provider>
-        </>
-    )
+    return <MatchDay.Provider value={{ matchDay, state }}>{children}</MatchDay.Provider>
 }
 
 export const useGlobalState = () => {
     return useContext(MatchDay)
 }
-
 
 export { MatchDay, Standings }
 
