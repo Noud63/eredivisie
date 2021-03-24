@@ -44,7 +44,7 @@ const Recent = () => {
                 <div className={styles.matches}>
 
                     <div className={styles.gamesnRound}>
-                        <div className={styles.alleWedstrijden}>Deze week gespeeld</div>
+                        <div className={styles.alleWedstrijden}>Recent gespeeld</div>
                         < div className={styles.speelrondes} > Speelronde <div className={styles.circle}><div className={styles.dayNumber}>{currentMatchDay}</div></div></ div>
                     </div>
 

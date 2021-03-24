@@ -13,7 +13,7 @@ const Stand = () => {
             {matchDay === 0 ? <Loader /> :
 
                 <div className={styles.leftRightRow}>
-                    <div className={styles.round}>Stand na {matchDay} speelrondes</div>
+                    <div className={styles.round}>De Stand</div>
 
                     <div className={styles.rowWrap}>
 
