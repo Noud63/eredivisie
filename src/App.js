@@ -4,6 +4,7 @@ import Header from './Header'
 import Home from './Home'
 import Uitslagen from './Uitslagen'
 import Recent from './Recent'
+import Footer from './Footer'
 import {
   BrowserRouter as Router,
   Switch,
@@ -23,6 +24,7 @@ function App() {
         <Route path='/recent' component={Recent} />
         <Route path='/stand' component={Stand} />
       </Switch>
+      <Footer />
     </Router>
   );
 }

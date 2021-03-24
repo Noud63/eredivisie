@@ -6,10 +6,13 @@ import goal2 from './images/goal2.jpg'
 import goal3 from './images/goal3.jpg'
 import goal4 from './images/goal4.jpg'
 import derbystar from './images/derbystar.png'
+import vvv1 from './images/vvv1.jpg'
+import malen from './images/malen.jpg'
 import Uitslagen from './Uitslagen'
 import Stand from './Stand'
 import Recent from './Recent'
 import styles from './styles/Home.module.css'
+import Footer from './Footer'
 
 
 
@@ -20,33 +23,33 @@ const link3 = <a href={'http://www.noudvandun.com'} target={'blank'} style={{ te
 
 const Home = () => {
 
-    const derby = React.useRef()
+    // const derby = React.useRef()
 
-    const width = useWindowWidth();
+    // const width = useWindowWidth();
 
-    React.useEffect(() => {
+    // React.useEffect(() => {
 
-        if (width < 850) {
-            derby.current.style = "display: none"
-        } else {
-            derby.current.style = "display: flex"
-        }
+    //     if (width < 850) {
+    //         derby.current.style = "display: none"
+    //     } else {
+    //         derby.current.style = "display: flex"
+    //     }
 
-    }, [width])
+    // }, [width])
 
     return (
         <>
-            <div className={styles.eredivisieLogo}>
+            {/* <div className={styles.eredivisieLogo}>
                 <img src={logo} alt="logo" className={styles.logoStyle} />
-            </div>
+            </div> */}
 
-            <div className={styles.borderMarker}><img src={goal3} className={styles.ballInGoal} alt="" /></div>
+            <div className={styles.borderMarker2}><img src={goal3} className={styles.ballInGoal} alt="" /></div>
 
             <div className={styles.allmatches}>
                 <Uitslagen />
             </div>
 
-            <div className={styles.borderMarker}><img src={goal} className={styles.ballInGoal} alt="" /></div>
+            <div className={styles.borderMarker3}><img src={goal} className={styles.ballInGoal} alt="" /></div>
 
             <div className={styles.dezeweek}>
                 <Recent />
@@ -58,18 +61,35 @@ const Home = () => {
                 <Stand />
             </div>
 
-            <div className={styles.borderMarker}><img src={goal2} className={styles.ballInGoal} alt="" /></div>
-
-            <div className={styles.footer}>
-                <div className={styles.links}>
-                    <div><li>Contact: {link}</li></div><br></br>
-                    <div><li>GitHub: {link2}</li></div><br></br>
-                    <div><li>Website: {link3}</li></div>
+            <div className={styles.topScores}>
+                <div className={styles.top}>Topscorers</div>
+                <div className={styles.topScorers}>
+                    <img src={vvv1} alt="" className={styles.giakou} />
+                    <div className={styles.name}>1. Georgios Giakoumakis - VVV-Venlo</div>
+                    <div className={styles.goals}>24</div>
                 </div>
-                <div className="derbystar" ref={derby}><img src={derbystar} alt="" className="ds" style={{ width: '90px', height: '90px' }} /></div>
-
+                <div className={styles.topScorers}>
+                    <img src={malen} alt="" className={styles.giakou} />
+                    <div className={styles.name}>2. Donyell Malen - PSV</div>
+                    <div className={styles.goals}>15</div>
+                </div>
+                <div className={styles.topScorers}>
+                    {/* <img src={vvv1} alt="" className={styles.giakou} /> */}
+                    {/* <div className={styles.name}>3. Steven Berghuis - Feyenoord</div>
+                    <div className={styles.goals}>15</div> */}
+                </div>
+                <div className={styles.topScorers}>
+                    {/* <img src={vvv1} alt="" className={styles.giakou} /> */}
+                    {/* <div className={styles.name}>4. Teun Koopmeiners - AZ</div>
+                    <div className={styles.goals}>15</div> */}
+                </div>
             </div>
 
+            <div className={styles.borderMarker}><img src={goal2} className={styles.ballInGoal} alt="" /></div>
+
+
+
+           
 
         </>
     )
