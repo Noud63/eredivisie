@@ -40,6 +40,8 @@ const Home = () => {
                 <Stand />
             </div>
 
+            <div className={styles.borderMarker}><img src={goal2} className={styles.ballInGoal} alt="" /></div>
+
             <div className={styles.topScores}>
                 <div className={styles.top}>Topscorers</div>
                 <div className={styles.topScorers}>
@@ -64,7 +66,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className={styles.borderMarker}><img src={goal2} className={styles.ballInGoal} alt="" /></div>
+
 
         </>
     )

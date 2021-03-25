@@ -44,7 +44,7 @@ const Standings = ({ children }) => {
             setMatchDay(data.season.currentMatchday)
             const left = table.slice(0, 9)
             const right = table.slice(9, 18)
-            setState((state) => (    // functional update prev => { ...prev, leftRow: left etc }
+            setState((state) => (    // functional update prev => { ...prev, leftRow: left,  etc }
                 {
                     ...state,
                     leftRow: left,
