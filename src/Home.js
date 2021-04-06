@@ -46,16 +46,16 @@ const Home = () => {
                 <div className={styles.topScorers}>
                     <img src={malen} alt="" className={styles.giakou} />
                     <div className={styles.name}>2. Donyell Malen - PSV</div>
-                    <div className={styles.goals}>15</div>
+                    <div className={styles.goals}>16</div>
                 </div>
                 <div className={styles.topScorers}>
                     <img src={berghuis} alt="" className={styles.giakou} />
                     <div className={styles.name}>2. Steven Berghuis - Feyenoord</div>
-                    <div className={styles.goals}>15</div>
+                    <div className={styles.goals}>16</div>
                 </div>
                 <div className={styles.topScorers}>
                     <img src={koopmeiners} alt="" className={styles.giakou} />
-                    <div className={styles.name}>2. Teun Koopmeiners - AZ</div>
+                    <div className={styles.name}>3. Teun Koopmeiners - AZ</div>
                     <div className={styles.goals}>15</div>
                 </div>
             </div>
