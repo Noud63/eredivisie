@@ -53,7 +53,7 @@ const Standings = ({ children }) => {
                     round: matchDay
                 }
             ))
-
+        
             // setLeftRow(left)
             // setRightRow(right)
             // setstandings(table)

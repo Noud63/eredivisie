@@ -12,12 +12,6 @@ import Stand from './Stand'
 import Recent from './Recent'
 import styles from './styles/Home.module.css'
 
-
-const link = "noudvandun@gmail.com"
-const link2 = <a href={'https://github.com/Noud63?tab=repositories'} target={'blank'} style={{ textDecoration: "none", color: "white" }}> github.com/Noud63</a>
-const link3 = <a href={'http://www.noudvandun.com'} target={'blank'} style={{ textDecoration: "none", color: "white" }}>Noud van Dun</a>
-
-
 const Home = () => {
 
     return (
