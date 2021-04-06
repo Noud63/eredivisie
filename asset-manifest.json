@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/eredivisie/static/css/main.78335aa2.chunk.css",
-    "main.js": "/eredivisie/static/js/main.fdd57fee.chunk.js",
-    "main.js.map": "/eredivisie/static/js/main.fdd57fee.chunk.js.map",
+    "main.js": "/eredivisie/static/js/main.4de1cb11.chunk.js",
+    "main.js.map": "/eredivisie/static/js/main.4de1cb11.chunk.js.map",
     "runtime-main.js": "/eredivisie/static/js/runtime-main.2a7d2813.js",
     "runtime-main.js.map": "/eredivisie/static/js/runtime-main.2a7d2813.js.map",
     "static/js/2.bd976192.chunk.js": "/eredivisie/static/js/2.bd976192.chunk.js",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.2a7d2813.js",
     "static/js/2.bd976192.chunk.js",
     "static/css/main.78335aa2.chunk.css",
-    "static/js/main.fdd57fee.chunk.js"
+    "static/js/main.4de1cb11.chunk.js"
   ]
 }
