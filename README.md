@@ -1,4 +1,4 @@
-KNVB Eredivisie voetbal (Dutch Football (soccer) league)<p>
+KNVB Eredivisie voetbal (Dutch Football league)<p>
 React Create App<br>
 React Hooks<p>
 REST API https://api.football-data.org/v2/competitions/DED/standings<br>
