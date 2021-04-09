@@ -1,7 +1,8 @@
 KNVB Eredivisie voetbal (Dutch Football (soccer) league)<p>
 React Create App<p>
 React Hooks<p>
-REST API  https://api.football-data.org<br><br>  
+REST API https://api.football-data.org/v2/competitions/DED/standings<br><br> 
+REST API https://api.football-data.org/v2/competitions/DED/matches<br><br>
 
 
 ![eredivisie](https://user-images.githubusercontent.com/38325801/112435500-19cc2080-8d45-11eb-8109-105008011c7c.png)<br><br><br>
