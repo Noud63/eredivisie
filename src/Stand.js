@@ -2,18 +2,20 @@ import React from 'react'
 import Loader from './Loader';
 import { useGlobalState } from './Standings'
 import styles from './styles/Stand.module.css'
+import Header from './Header'
 
 const Stand = () => {
 
     const { matchDay, state } = useGlobalState()
 
     return (
+
         <div className={styles.container2}>
 
             {matchDay === 0 ? <Loader /> :
 
                 <div className={styles.leftRightRow}>
-                    <div className={styles.round}>Stand na {matchDay} speelrondes</div>
+                    <div className={styles.round}>De Stand</div>
 
                     <div className={styles.rowWrap}>
 

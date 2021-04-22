@@ -13,8 +13,8 @@ const MatchDay = React.createContext()
 
 const Standings = ({ children }) => {
 
-    const [state, setState] = useState(initialState)
-    const [matchDay, setMatchDay] = useState(0)
+    const [ state, setState ] = useState(initialState)
+    const [ matchDay, setMatchDay ] = useState(0)
 
     /** Instead of an object use separate useStates **/
     // const [standings, setstandings] = useState([])
@@ -30,7 +30,7 @@ const Standings = ({ children }) => {
                 headers: { "X-Auth-Token": "7bf5e57cdcd34e03826e0fb2b4620aa4" }
             })
             const data = await res.json()
-            const table = data.standings[0].table
+            const table = data.standings[ 0 ].table
             for (let club of table) {
                 club.team.name = club.team.name
                     .replace("Rotterdam", "")
@@ -40,7 +40,7 @@ const Standings = ({ children }) => {
                     .replace("Tilburg", "")
                     .replace("SBV", "")
             }
-
+            console.log(data)
             setMatchDay(data.season.currentMatchday)
             const left = table.slice(0, 9)
             const right = table.slice(9, 18)
@@ -62,12 +62,12 @@ const Standings = ({ children }) => {
         } catch (error) {
             console.log(error)
         }
-    }, [matchDay])
+    }, [ matchDay ])
 
 
     useEffect(() => {
         getStandings()
-    }, [getStandings])
+    }, [ getStandings ])
 
     return <MatchDay.Provider value={{ matchDay, state }}>{children}</MatchDay.Provider>
 }
