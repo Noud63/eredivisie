@@ -5,69 +5,13 @@ import { useGlobalState } from "./Standings";
 
 const Recent = () => {
 
-<<<<<<< HEAD
-    const [lastGames, setLastGames] = React.useState([])
-    const [program, setProgram] = React.useState([])
-
-    const { state } = useGlobalContext()
-    const { matchDay } = useGlobalState()
-
-    const currentMatchDay = matchDay - 1
-    const upcomingGame = matchDay
-    const recent = state.slice(currentMatchDay - 1, currentMatchDay)
-    const upcoming = state.slice(upcomingGame - 1, upcomingGame)
-
-    const getLastGames = useCallback(() => {
-        for (let games of recent) {
-            setLastGames(games)
-        }
-    }, [recent])
-
-    const getProgram = useCallback(() => {
-        for (let games of upcoming) {
-            setProgram(games)
-        }
-    }, [upcoming])
-
-
-    useEffect(() => {
-        getLastGames()
-        getProgram()
-    }, [getLastGames, getProgram])
-
-
-    return (
-        <>
-            <div className={styles.container}>
-                <div className={styles.matches}>
-
-                    <div className={styles.gamesnRound}>
-                        <div className={styles.alleWedstrijden}>Uitslagen</div>
-                        < div className={styles.speelrondes} > Speelronde <div className={styles.circle}><div className={styles.dayNumber}>{currentMatchDay}</div></div></ div>
-                    </div>
-
-                    {lastGames.map((game) => {
-                        const { homeTeam, awayTeam, score, id } = game
-
-                        return (
-                            <div className={styles.match} key={id}>
-                                <div className={styles.teams} >
-                                    <div className={styles.hometeam}>{homeTeam.name}</div>
-                                    <div className={styles.scores}>{score.fullTime.homeTeam} : {score.fullTime.awayTeam}</div>
-                                    <div className={styles.awayteam}>{awayTeam.name}</div>
-                                </div>
-                            </div>
-                        )
-                    })
-                    }
-=======
-  const [lastGames, setLastGames] = React.useState([]);
-  const [program, setProgram] = React.useState([]);
+  const [ lastGames, setLastGames ] = React.useState([]);
+  const [ program, setProgram ] = React.useState([]);
 
   const { state } = useGlobalContext();
   const { matchDay } = useGlobalState();
 
-  const currentMatchDay = matchDay;
+  const currentMatchDay = matchDay - 1;
   const upcomingGame = currentMatchDay + 1;
   const recent = state.slice(currentMatchDay - 1, currentMatchDay);
   const upcoming = state.slice(upcomingGame - 1, upcomingGame);
@@ -76,18 +20,18 @@ const Recent = () => {
     for (let games of recent) {
       setLastGames(games);
     }
-  }, [recent]);
+  }, [ recent ]);
 
   const getProgram = useCallback(() => {
     for (let games of upcoming) {
       setProgram(games);
     }
-  }, [upcoming]);
+  }, [ upcoming ]);
 
   useEffect(() => {
     getLastGames();
     getProgram();
-  }, [getLastGames, getProgram]);
+  }, [ getLastGames, getProgram ]);
 
   return (
     <>
@@ -114,7 +58,6 @@ const Recent = () => {
                     {score.fullTime.homeTeam} : {score.fullTime.awayTeam}
                   </div>
                   <div className={styles.awayteam}>{awayTeam.name}</div>
->>>>>>> 02410116021112e1f69d9a958b5300b616731c1a
                 </div>
               </div>
             );
@@ -132,40 +75,6 @@ const Recent = () => {
                 <div className={styles.dayNumber}>{upcomingGame}</div>
               </div>
             </div>
-<<<<<<< HEAD
-
-            <div className={styles.container}>
-                <div className={styles.matches2}>
-
-                    <div className={styles.gamesnRound}>
-                        <div className={styles.alleWedstrijden}>Programma</div>
-                        < div className={styles.speelrondes} > Speelronde <div className={styles.circle}><div className={styles.dayNumber}>{upcomingGame}</div></div></ div>
-                    </div>
-
-                    {program.map((game) => {
-                        const { homeTeam, awayTeam, score, id } = game
-
-                        return (
-                            <div className={styles.match} key={id}>
-                                <div className={styles.teams} >
-                                    <div className={styles.hometeam}>{homeTeam.name}</div>
-                                    <div className={styles.scores}>{score.fullTime.homeTeam} : {score.fullTime.awayTeam}</div>
-                                    <div className={styles.awayteam}>{awayTeam.name}</div>
-                                </div>
-                            </div>
-                        )
-                    })
-                    }
-                </div>
-
-            </div>
-        </>
-
-    )
-}
-
-export default Recent
-=======
           </div>
 
           {program.map((game) => {
@@ -190,4 +99,3 @@ export default Recent
 };
 
 export default Recent;
->>>>>>> 02410116021112e1f69d9a958b5300b616731c1a
