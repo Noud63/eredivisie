@@ -13,14 +13,8 @@ const MatchDay = React.createContext()
 
 const Standings = ({ children }) => {
 
-    const [ state, setState ] = useState(initialState)
-    const [ matchDay, setMatchDay ] = useState(0)
-
-    /** Instead of an object use separate useStates **/
-    // const [standings, setstandings] = useState([])
-    // const [round, setRound] = useState(0)
-    // const [leftRow, setLeftRow] = useState([])
-    // const [rightRow, setRightRow] = useState([])
+    const [state, setState] = useState(initialState)
+    const [matchDay, setMatchDay] = useState(0)
 
     const getStandings = useCallback(async () => {
 
@@ -30,7 +24,7 @@ const Standings = ({ children }) => {
                 headers: { "X-Auth-Token": "7bf5e57cdcd34e03826e0fb2b4620aa4" }
             })
             const data = await res.json()
-            const table = data.standings[ 0 ].table
+            const table = data.standings[0].table
             for (let club of table) {
                 club.team.name = club.team.name
                     .replace("Rotterdam", "")
@@ -40,10 +34,11 @@ const Standings = ({ children }) => {
                     .replace("Tilburg", "")
                     .replace("SBV", "")
             }
-            console.log(data)
-            setMatchDay(data.season.currentMatchday)
+
+            //setMatchDay(data.season.currentMatchday)
             const left = table.slice(0, 9)
             const right = table.slice(9, 18)
+            setMatchDay(data.season.currentMatchday)
             setState((state) => (    // functional update prev => { ...prev, leftRow: left,  etc }
                 {
                     ...state,
@@ -53,23 +48,18 @@ const Standings = ({ children }) => {
                     round: matchDay
                 }
             ))
-        
-            // setLeftRow(left)
-            // setRightRow(right)
-            // setstandings(table)
-            // setRound(matchday)
 
         } catch (error) {
             console.log(error)
         }
-    }, [ matchDay ])
+    }, [matchDay])
 
 
     useEffect(() => {
         getStandings()
-    }, [ getStandings ])
+    }, [getStandings])
 
-    return <MatchDay.Provider value={{ matchDay, state }}>{children}</MatchDay.Provider>
+    return <MatchDay.Provider value={{ state, matchDay }}>{children}</MatchDay.Provider>
 }
 
 export const useGlobalState = () => {
@@ -78,3 +68,16 @@ export const useGlobalState = () => {
 
 export { MatchDay, Standings }
 
+
+/*
+--Instead of an object use separate useStates
+     const [standings, setstandings] = useState([])
+     const [round, setRound] = useState(0)
+     const [leftRow, setLeftRow] = useState([])
+     const [rightRow, setRightRow] = useState([])
+
+     setLeftRow(left)
+    setRightRow(right)
+    setstandings(table)
+    setRound(matchday)
+    */

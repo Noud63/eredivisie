@@ -1,7 +1,4 @@
 import React, { useState, useEffect, useCallback, useContext } from 'react'
-import dotenv from 'dotenv'
-
-dotenv.config()
 
 const url = "https://api.football-data.org/v2/competitions/DED/matches";
 
@@ -10,10 +7,10 @@ const RecentMatches = React.createContext()
 const AllGames = ({ children }) => {
 
 
-    const [ state, setState ] = useState([])
-    const [ matchDays, setMatchDays ] = useState([])
-    const [ currentDay, setCurrentDay ] = useState(1)       // 1 t/m 34
-    const [ totalMatches, setTotalMatches ] = useState(0)   // 34
+    const [state, setState] = useState([])
+    const [matchDays, setMatchDays] = useState([])
+    const [currentDay, setCurrentDay] = useState(1)       // 1 t/m 34
+    const [totalMatches, setTotalMatches] = useState(0)   // 34
 
     const getMatches = useCallback(async () => {
 
@@ -23,12 +20,11 @@ const AllGames = ({ children }) => {
                 headers: { "X-Auth-Token": "7bf5e57cdcd34e03826e0fb2b4620aa4" }
             })
             const data = await res.json()
-
             //Group objects by matchday value, create array of array of objects [ [obj, obj (matchday 1)], [obj, obj (matchday 2)], ...........]
             let result = Object.values(
                 data.matches.reduce((acc, m) => {
-                    acc[ m.matchday ] = acc[ m.matchday ] || [];
-                    acc[ m.matchday ].push(m);
+                    acc[m.matchday] = acc[m.matchday] || [];
+                    acc[m.matchday].push(m);
                     return acc;
                 }, {})
             );
@@ -64,7 +60,7 @@ const AllGames = ({ children }) => {
 
             setState(result)
             setTotalMatches(result.length)
-            const defaultPost = result[ 0 ]
+            const defaultPost = result[0]
             setMatchDays(defaultPost)
 
         } catch (error) {
@@ -75,12 +71,12 @@ const AllGames = ({ children }) => {
 
     useEffect(() => {
         getMatches()
-    }, [ getMatches ])
+    }, [getMatches])
 
 
     const paginate = (number) => {
         setCurrentDay(number)
-        setMatchDays(state[ number - 1 ])
+        setMatchDays(state[number - 1])
     }
 
     const currentday = currentDay

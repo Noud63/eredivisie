@@ -4,7 +4,6 @@ import goal2 from './images/goal2.jpg'
 import goal3 from './images/goal3.jpg'
 import goal4 from './images/goal4.jpg'
 import vvv1 from './images/vvv1.jpg'
-import koopmeiners from './images/koopmeiners.jpg'
 import malen from './images/malen.jpg'
 import berghuis from './images/berghuis.jpg'
 import Uitslagen from './Uitslagen'
@@ -43,7 +42,7 @@ const Home = () => {
                 <div className={styles.topScorers}>
                     <img src={vvv1} alt="" className={styles.giakou} />
                     <div className={styles.name}>1. Georgios Giakoumakis - VVV-Venlo</div>
-                    <div className={styles.goals}>24</div>
+                    <div className={styles.goals}>25</div>
                 </div>
                 <div className={styles.topScorers}>
                     <img src={malen} alt="" className={styles.giakou} />
@@ -54,11 +53,6 @@ const Home = () => {
                     <img src={berghuis} alt="" className={styles.giakou} />
                     <div className={styles.name}>3. Steven Berghuis - Feyenoord</div>
                     <div className={styles.goals}>17</div>
-                </div>
-                <div className={styles.topScorers}>
-                    <img src={koopmeiners} alt="" className={styles.giakou} />
-                    <div className={styles.name}>4. Teun Koopmeiners - AZ</div>
-                    <div className={styles.goals}>15</div>
                 </div>
             </div>
 

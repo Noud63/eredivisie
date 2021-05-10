@@ -5,8 +5,8 @@ import { useGlobalState } from "./Standings";
 
 const Recent = () => {
 
-  const [ lastGames, setLastGames ] = React.useState([]);
-  const [ program, setProgram ] = React.useState([]);
+  const [lastGames, setLastGames] = React.useState([]);
+  const [program, setProgram] = React.useState([]);
 
   const { state } = useGlobalContext();
   const { matchDay } = useGlobalState();
@@ -16,22 +16,38 @@ const Recent = () => {
   const recent = state.slice(currentMatchDay - 1, currentMatchDay);
   const upcoming = state.slice(upcomingGame - 1, upcomingGame);
 
+  /*
+    const currentMatchDay = matchDay - 1;
+    let upcomingGame;
+    const recent = state.slice(currentMatchDay - 1, currentMatchDay);
+    const upcoming = state.slice(upcomingGame - 1, upcomingGame);
+  
+    let scheduled = program.some(el => el.status === "SCHEDULED")
+    if (scheduled) {
+      upcomingGame = currentMatchDay + 1;
+    } else {
+      upcomingGame = currentMatchDay ;
+    }
+    */
+
   const getLastGames = useCallback(() => {
     for (let games of recent) {
       setLastGames(games);
     }
-  }, [ recent ]);
+  }, [recent]);
 
   const getProgram = useCallback(() => {
     for (let games of upcoming) {
       setProgram(games);
     }
-  }, [ upcoming ]);
+  }, [upcoming]);
 
   useEffect(() => {
     getLastGames();
     getProgram();
-  }, [ getLastGames, getProgram ]);
+  }, [getLastGames, getProgram]);
+
+
 
   return (
     <>

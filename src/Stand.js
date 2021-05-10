@@ -4,12 +4,12 @@ import { useGlobalState } from "./Standings";
 import styles from "./styles/Stand.module.css";
 
 const Stand = () => {
-  const { matchDay, state } = useGlobalState();
+  const { state } = useGlobalState();
 
   return (
     <div className={styles.container2}>
 
-      {matchDay === 0 ? <Loader /> :
+      {state.matchDay === 0 ? <Loader /> :
 
         <div className={styles.leftRightRow}>
           <div className={styles.round}>De Stand</div>
