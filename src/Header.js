@@ -35,7 +35,7 @@ const Header = () => {
                 </Link>
 
                 <Link to="/recent" className={styles.link}>
-                    <div >Uitslagen</div>
+                    <div >Recent</div>
                 </Link>
 
                 <Link to='/stand' className={styles.link}>

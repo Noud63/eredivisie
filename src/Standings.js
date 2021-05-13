@@ -35,11 +35,10 @@ const Standings = ({ children }) => {
                     .replace("SBV", "")
             }
 
-            //setMatchDay(data.season.currentMatchday)
             const left = table.slice(0, 9)
             const right = table.slice(9, 18)
             setMatchDay(data.season.currentMatchday)
-            setState((state) => (    // functional update prev => { ...prev, leftRow: left,  etc }
+            setState((state) => (               // functional update prev => { ...prev, leftRow: left,  etc }
                 {
                     ...state,
                     leftRow: left,

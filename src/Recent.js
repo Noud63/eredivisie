@@ -11,24 +11,11 @@ const Recent = () => {
   const { state } = useGlobalContext();
   const { matchDay } = useGlobalState();
 
-  const currentMatchDay = matchDay - 1;
-  const upcomingGame = currentMatchDay + 1;
-  const recent = state.slice(currentMatchDay - 1, currentMatchDay);
-  const upcoming = state.slice(upcomingGame - 1, upcomingGame);
-
-  /*
-    const currentMatchDay = matchDay - 1;
-    let upcomingGame;
-    const recent = state.slice(currentMatchDay - 1, currentMatchDay);
-    const upcoming = state.slice(upcomingGame - 1, upcomingGame);
-  
-    let scheduled = program.some(el => el.status === "SCHEDULED")
-    if (scheduled) {
-      upcomingGame = currentMatchDay + 1;
-    } else {
-      upcomingGame = currentMatchDay ;
-    }
-    */
+  let currentMatchDay = matchDay - 1
+  program.every(match => match.status === "FINISHED" ? currentMatchDay = matchDay : currentMatchDay = matchDay - 1);
+  let upcomingMatchDay = currentMatchDay + 1;
+  let recent = state.slice(currentMatchDay - 1, currentMatchDay);
+  let upcoming = state.slice(upcomingMatchDay - 1, upcomingMatchDay);
 
   const getLastGames = useCallback(() => {
     for (let games of recent) {
@@ -46,7 +33,6 @@ const Recent = () => {
     getLastGames();
     getProgram();
   }, [getLastGames, getProgram]);
-
 
 
   return (
@@ -88,7 +74,7 @@ const Recent = () => {
             <div className={styles.speelrondes}>
               Speelronde
               <div className={styles.circle}>
-                <div className={styles.dayNumber}>{upcomingGame}</div>
+                <div className={styles.dayNumber}>{upcomingMatchDay}</div>
               </div>
             </div>
           </div>

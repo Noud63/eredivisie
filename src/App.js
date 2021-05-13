@@ -24,6 +24,7 @@ function App() {
         <Route path='/recent' component={Recent} />
         <Route path='/stand' component={Stand} />
       </Switch>
+      <Footer />
     </Router>
   );
 }

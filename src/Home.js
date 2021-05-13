@@ -59,9 +59,6 @@ const Home = () => {
             <div className={styles.borderMarker}>
                 <img src={goal2} className={styles.ballInGoal} alt="" /></div>
 
-            <Footer />
-
-
         </>
     )
 }
