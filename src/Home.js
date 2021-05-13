@@ -42,12 +42,12 @@ const Home = () => {
                 <div className={styles.topScorers}>
                     <img src={vvv1} alt="" className={styles.giakou} />
                     <div className={styles.name}>1. Georgios Giakoumakis - VVV-Venlo</div>
-                    <div className={styles.goals}>25</div>
+                    <div className={styles.goals}>26</div>
                 </div>
                 <div className={styles.topScorers}>
                     <img src={malen} alt="" className={styles.giakou} />
                     <div className={styles.name}>2. Donyell Malen - PSV</div>
-                    <div className={styles.goals}>17</div>
+                    <div className={styles.goals}>19</div>
                 </div>
                 <div className={styles.topScorers}>
                     <img src={berghuis} alt="" className={styles.giakou} />
