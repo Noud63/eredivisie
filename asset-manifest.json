@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/eredivisie/static/css/main.ed11a90c.chunk.css",
-    "main.js": "/eredivisie/static/js/main.fc44d4fb.chunk.js",
-    "main.js.map": "/eredivisie/static/js/main.fc44d4fb.chunk.js.map",
+    "main.css": "/eredivisie/static/css/main.208a7f5c.chunk.css",
+    "main.js": "/eredivisie/static/js/main.d8935698.chunk.js",
+    "main.js.map": "/eredivisie/static/js/main.d8935698.chunk.js.map",
     "runtime-main.js": "/eredivisie/static/js/runtime-main.2a7d2813.js",
     "runtime-main.js.map": "/eredivisie/static/js/runtime-main.2a7d2813.js.map",
-    "static/js/2.bd976192.chunk.js": "/eredivisie/static/js/2.bd976192.chunk.js",
-    "static/js/2.bd976192.chunk.js.map": "/eredivisie/static/js/2.bd976192.chunk.js.map",
+    "static/js/2.2d5315e5.chunk.js": "/eredivisie/static/js/2.2d5315e5.chunk.js",
+    "static/js/2.2d5315e5.chunk.js.map": "/eredivisie/static/js/2.2d5315e5.chunk.js.map",
     "index.html": "/eredivisie/index.html",
-    "static/css/main.ed11a90c.chunk.css.map": "/eredivisie/static/css/main.ed11a90c.chunk.css.map",
-    "static/js/2.bd976192.chunk.js.LICENSE.txt": "/eredivisie/static/js/2.bd976192.chunk.js.LICENSE.txt",
+    "static/css/main.208a7f5c.chunk.css.map": "/eredivisie/static/css/main.208a7f5c.chunk.css.map",
+    "static/js/2.2d5315e5.chunk.js.LICENSE.txt": "/eredivisie/static/js/2.2d5315e5.chunk.js.LICENSE.txt",
     "static/media/berghuis.bf6f6a1d.jpg": "/eredivisie/static/media/berghuis.bf6f6a1d.jpg",
-    "static/media/derbystar.a8d9de33.png": "/eredivisie/static/media/derbystar.a8d9de33.png",
+    "static/media/derbystar.86352c25.png": "/eredivisie/static/media/derbystar.86352c25.png",
+    "static/media/eredivisielogo.d602a5bd.png": "/eredivisie/static/media/eredivisielogo.d602a5bd.png",
     "static/media/goal.d5be5ba6.jpg": "/eredivisie/static/media/goal.d5be5ba6.jpg",
     "static/media/goal2.2169e7b1.jpg": "/eredivisie/static/media/goal2.2169e7b1.jpg",
     "static/media/goal3.cf0fd3d3.jpg": "/eredivisie/static/media/goal3.cf0fd3d3.jpg",
@@ -21,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2a7d2813.js",
-    "static/js/2.bd976192.chunk.js",
-    "static/css/main.ed11a90c.chunk.css",
-    "static/js/main.fc44d4fb.chunk.js"
+    "static/js/2.2d5315e5.chunk.js",
+    "static/css/main.208a7f5c.chunk.css",
+    "static/js/main.d8935698.chunk.js"
   ]
 }
