@@ -36,6 +36,12 @@ body {
     margin-top: 2%;
 }
 
+@media only screen and (max-width: 1000px) {
+  .borderMarker {
+     display: none;
+  }
+}
+
 .borderMarker3 {
     width: 100%;
     height: auto;

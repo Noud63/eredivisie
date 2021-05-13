@@ -2,6 +2,7 @@ import React from 'react'
 import { useWindowWidth } from 'react-window-size-hooks';
 import styles from './styles/Footer.module.css'
 import derbystar from './images/derbystar.png'
+import logo from './images/eredivisielogo.png'
 
 const Footer = () => {
 
@@ -9,15 +10,15 @@ const Footer = () => {
 
     const width = useWindowWidth();
 
-    React.useEffect(() => {
+    // React.useEffect(() => {
 
-        if (width < 850) {
-            derby.current.style = "display: none"
-        } else {
-            derby.current.style = "display: flex"
-        }
+    //     if (width <= 850) {
+    //         derby.current.style = "display: none"
+    //     } else {
+    //         derby.current.style = "display: flex"
+    //     }
 
-    }, [width])
+    // }, [width])
 
     const link = "noudvandun@gmail.com"
     const link2 = <a href={'https://github.com/Noud63?tab=repositories'} target={'blank'} style={{ textDecoration: "none", color: "white" }}> github.com/Noud63</a>
@@ -26,15 +27,15 @@ const Footer = () => {
     return (
         <div className={styles.footer}>
             <div className={styles.links}>
-                <div><li>Contact: {link}</li></div><br></br>
-                <div><li>GitHub: {link2}</li></div><br></br>
-                <div><li>Website: {link3}</li></div>
+                <div><li><span className={styles.linkName}>Contact:</span> {link}</li></div>
+                <div><li><span className={styles.linkName}>GitHub:</span> {link2}</li></div>
+                <div><li><span className={styles.linkName}>Website:</span> {link3}</li></div>
+                <div><li><span className={styles.linkName}>Located:</span> Amsterdam</li></div>
             </div>
-            <div className="derbystar" ref={derby}><img src={derbystar} alt="" className="ds" style={{ width: '90px', height: '90px' }} /></div>
+            <div className={styles.logo} ><img src={logo} alt="" className={styles.erelog} /></div>
+            <div className={styles.derbystar} ><img src={derbystar} alt="" style={{ width: '100px', height: 'auto' }} /></div>
 
         </div>
-
-
     )
 }
 
