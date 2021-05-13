@@ -12,7 +12,7 @@ const Recent = () => {
   const { matchDay } = useGlobalState();
 
   let currentMatchDay = matchDay - 1
-  program.every(match => match.status === "FINISHED" ? currentMatchDay = matchDay : currentMatchDay = matchDay - 1);
+  // program.every(match => match.status === "FINISHED" ? currentMatchDay = matchDay : currentMatchDay = matchDay - 1);
   let upcomingMatchDay = currentMatchDay + 1;
   let recent = state.slice(currentMatchDay - 1, currentMatchDay);
   let upcoming = state.slice(upcomingMatchDay - 1, upcomingMatchDay);
