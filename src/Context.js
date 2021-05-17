@@ -17,7 +17,7 @@ const AllGames = ({ children }) => {
         try {
             const res = await fetch(url, {
                 method: "GET",
-                headers: { "X-Auth-Token": "7bf5e57cdcd34e03826e0fb2b4620aa4" }
+                headers: { "X-Auth-Token": "*****************************************" }
             })
             const data = await res.json()
             //Group objects by matchday value, create array of array of objects [ [obj, obj (matchday 1)], [obj, obj (matchday 2)], ...........]
