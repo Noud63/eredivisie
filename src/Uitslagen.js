@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback, useEffect } from 'react'
 import { useGlobalContext } from './Context'
 import Loader from './Loader';
 import Pagination from './Pagination'
@@ -6,18 +6,19 @@ import styles from './styles/AllMatches.module.css'
 
 const Uitslagen = () => {
 
-    const { state, matchDays, currentday, totalMatches, paginate } = useGlobalContext()
-
+    const { state, currentDay, totalMatches, matchDays, paginate } = useGlobalContext()
+   
     return (
+
         <div className={styles.container}>
             <div className={styles.matches}>
 
                 <div className={styles.gamesnRound}>
                     <div className={styles.alleWedstrijden}>Alle wedstrijden</div>
-                    < div className={styles.speelrondes} > Speelronde <div className={styles.circle}><div className={styles.dayNumber}>{currentday}</div></div></ div>
+                    < div className={styles.speelrondes} > Speelronde <div className={styles.circle}><div className={styles.dayNumber}>{currentDay}</div></div></ div>
                 </div>
 
-                {totalMatches === 0 ? <Loader /> :
+                {state.loading ? <Loader /> :
 
                     matchDays.map((game) => {
                         const { homeTeam, awayTeam, score, id } = game
@@ -34,7 +35,7 @@ const Uitslagen = () => {
                     })
                 }
             </div>
-            <Pagination paginate={paginate} currentday={currentday} total={totalMatches} result={state} />
+            <Pagination paginate={paginate} currentDay={currentDay} totalMatches={totalMatches} totalMatches={state.totalMatches}/>
 
         </div>
     )

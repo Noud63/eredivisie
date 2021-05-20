@@ -52,7 +52,7 @@ const Home = () => {
                 <div className={styles.topScorers}>
                     <img src={berghuis} alt="" className={styles.giakou} />
                     <div className={styles.name}>3. Steven Berghuis - Feyenoord</div>
-                    <div className={styles.goals}>17</div>
+                    <div className={styles.goals}>18</div>
                 </div>
             </div>
 

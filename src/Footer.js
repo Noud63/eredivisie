@@ -6,9 +6,9 @@ import logo from './images/eredivisielogo.png'
 
 const Footer = () => {
 
-    const derby = React.useRef()
+    // const derby = React.useRef()
 
-    const width = useWindowWidth();
+    // const width = useWindowWidth();
 
     // React.useEffect(() => {
 
@@ -27,10 +27,10 @@ const Footer = () => {
     return (
         <div className={styles.footer}>
             <div className={styles.links}>
-                <div><li><span className={styles.linkName}>Contact:</span> {link}</li></div>
-                <div><li><span className={styles.linkName}>GitHub:</span> {link2}</li></div>
-                <div><li><span className={styles.linkName}>Website:</span> {link3}</li></div>
-                <div><li><span className={styles.linkName}>Located:</span> Amsterdam</li></div>
+                <div><span className={styles.linkName}>Contact:</span> {link}</div>
+                <div><span className={styles.linkName}>GitHub:</span> {link2}</div>
+                <div><span className={styles.linkName}>Website:</span> {link3}</div>
+                <div><span className={styles.linkName}>Located:</span> Amsterdam</div>
             </div>
             <div className={styles.logo} ><img src={logo} alt="" className={styles.erelog} /></div>
             <div className={styles.derbystar} ><img src={derbystar} alt="" style={{ width: '100px', height: 'auto' }} /></div>

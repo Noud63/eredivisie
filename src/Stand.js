@@ -1,15 +1,15 @@
 import React from "react";
 import Loader from "./Loader";
-import { useGlobalState } from "./Standings";
+import { useGlobalContext } from './Context';
 import styles from "./styles/Stand.module.css";
 
 const Stand = () => {
-  const { state } = useGlobalState();
-
+  const { state } = useGlobalContext();
+  
   return (
     <div className={styles.container2}>
 
-      {state.matchDay === 0 ? <Loader /> :
+      {state.loading ? <Loader /> :
 
         <div className={styles.leftRightRow}>
           <div className={styles.round}>De Stand</div>

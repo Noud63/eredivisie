@@ -1,21 +1,21 @@
 import React from 'react'
 import styles from './styles/Pagination.module.css'
 
-const Pagination = ({ paginate, currentday, total }) => {
+const Pagination = ({ paginate, currentDay, totalMatches }) => {
 
     const pageNumbers = []
 
-    for (let i = 1; i <= total; i++) {
+    for (let i = 1; i <= totalMatches; i++) {
         pageNumbers.push(i)
     }
 
-
-    return (
+return (
         <div className={styles.pagination}>
             <div className={styles.buttonNumbers}>
                 {pageNumbers.map((number) => {
-                    return (number === currentday) ? <button type={styles.button} key={number} onClick={() => paginate(number)} className={styles.btn + " " + styles.active}>{number}</button> :
-                        <button type={styles.button} key={number} onClick={() => paginate(number)} className={styles.btn}>{number}</button>
+                    return (number === currentDay) ? 
+                           <button type={styles.button} key={number} onClick={() => paginate(number)} className={styles.btn + " " + styles.active}>{number}</button> :
+                           <button type={styles.button} key={number} onClick={() => paginate(number)} className={styles.btn}>{number}</button>
                 }
                 )}
             </div>
