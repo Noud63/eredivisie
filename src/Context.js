@@ -49,6 +49,7 @@ const AllData = ({ children }) => {
                                 .replace("AFC", "")
                                 .replace("Tilburg", "")
                                 .replace("SBV", "")
+                                .replace("-Leeuwarden", "")
                         }
 
                         const matches = data2.data.matches
@@ -60,7 +61,8 @@ const AllData = ({ children }) => {
                                 .replace("Almelo", "")
                                 .replace("AFC", "")
                                 .replace("Tilburg", "")
-                                .replace("SBV", "");
+                                .replace("SBV", "")
+                                .replace("-Leeuwarden", "")
 
                             club.awayTeam.name = club.awayTeam.name
                                 .replace("Rotterdam", "")
@@ -68,7 +70,8 @@ const AllData = ({ children }) => {
                                 .replace("Almelo", "")
                                 .replace("AFC", "")
                                 .replace("Tilburg", "")
-                                .replace("SBV", "");
+                                .replace("SBV", "")
+                                .replace("-Leeuwarden", "")
 
                             if (club.score.fullTime.homeTeam === null || club.score.fullTime.awayTeam === null) {
                                 club.score.fullTime.homeTeam = "?";
