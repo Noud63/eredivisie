@@ -10,10 +10,9 @@ import Uitslagen from './Uitslagen'
 import Stand from './Stand'
 import Recent from './Recent'
 import styles from './styles/Home.module.css'
-import Footer from './Footer'
+//import Footer from './Footer'
 
 const Home = () => {
-
 
     return (
         <>
@@ -38,7 +37,7 @@ const Home = () => {
             <div className={styles.borderMarker}><img src={goal} className={styles.ballInGoal} alt="" /></div>
 
             <div className={styles.topScores}>
-                <div className={styles.top}>Topscorers</div>
+                <div className={styles.top}>Topscorers seizoen 2020-2021</div>
                 <div className={styles.topScorers}>
                     <img src={vvv1} alt="" className={styles.giakou} />
                     <div className={styles.name}>1. Georgios Giakoumakis - VVV-Venlo</div>

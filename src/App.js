@@ -1,4 +1,5 @@
 import React from 'react'
+import AdBlockDetector from './AdBlockDetector'
 import Stand from './Stand'
 import Header from './Header'
 import Home from './Home'
@@ -15,17 +16,19 @@ import './styles/index.css'
 function App() {
 
   return (
-
-    <Router basename="/eredivisie">
-      <Header />
-      <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/uitslagen' component={Uitslagen} />
-        <Route path='/recent' component={Recent} />
-        <Route path='/stand' component={Stand} />
-      </Switch>
-      <Footer />
-    </Router>
+    <>
+      <AdBlockDetector />
+      <Router basename="/eredivisie">
+        <Header />
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/uitslagen' component={Uitslagen} />
+          <Route path='/recent' component={Recent} />
+          <Route path='/stand' component={Stand} />
+        </Switch>
+        <Footer />
+      </Router>
+    </>
   );
 }
 

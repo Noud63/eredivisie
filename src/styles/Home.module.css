@@ -190,3 +190,11 @@ font-weight: bold;
 font-size: calc(13px + (38 - 13) * ((100vw - 320px) / (1920 - 320)));
 text-shadow: 0px 0px 4px black;
 }
+
+.notify {
+  width: 1px;
+}
+
+.ads {
+   width: 1px;
+}

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react'
+//import React, { useCallback, useEffect } from 'react'
 import { useGlobalContext } from './Context'
 import Loader from './Loader';
 import Pagination from './Pagination'
@@ -6,8 +6,8 @@ import styles from './styles/AllMatches.module.css'
 
 const Uitslagen = () => {
 
-    const { state, currentDay, totalMatches, matchDays, paginate } = useGlobalContext()
-   
+    const { state, currentDay, matchDays, paginate } = useGlobalContext()
+
     return (
 
         <div className={styles.container}>
@@ -35,7 +35,8 @@ const Uitslagen = () => {
                     })
                 }
             </div>
-            <Pagination paginate={paginate} currentDay={currentDay} totalMatches={totalMatches} totalMatches={state.totalMatches}/>
+            <Pagination paginate={paginate} currentDay={currentDay} totalMatches={state.totalMatches} />
+            {/* <Pagination paginate={paginate} currentDay={currentDay} totalMatches={totalMatches} totalMatches={state.totalMatches}/> */}
 
         </div>
     )

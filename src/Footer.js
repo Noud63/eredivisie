@@ -1,5 +1,5 @@
 import React from 'react'
-import { useWindowWidth } from 'react-window-size-hooks';
+//import { useWindowWidth } from 'react-window-size-hooks';
 import styles from './styles/Footer.module.css'
 import derbystar from './images/derbystar.png'
 import logo from './images/eredivisielogo.png'
