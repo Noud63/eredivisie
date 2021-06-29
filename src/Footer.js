@@ -27,10 +27,10 @@ const Footer = () => {
     return (
         <div className={styles.footer}>
             <div className={styles.links}>
-                <div><span className={styles.linkName}>Contact:</span> {link}</div>
-                <div><span className={styles.linkName}>GitHub:</span> {link2}</div>
-                <div><span className={styles.linkName}>Website:</span> {link3}</div>
-                <div><span className={styles.linkName}>Located:</span> Amsterdam</div>
+                <div className={styles.contact}><span className={styles.linkName}>Contact:</span><span>{link}</span></div>
+                <div className={styles.contact}><span className={styles.linkName}>Website:</span><span>{link3}</span></div>
+                <div className={styles.contact}><span className={styles.linkName}>Located:</span><span>Amsterdam</span></div>
+                <div className={styles.contact}><span className={styles.linkName}>GitHub:</span><span>{link2}</span></div>
             </div>
             <div className={styles.logo} ><img src={logo} alt="" className={styles.erelog} /></div>
             <div className={styles.derbystar} ><img src={derbystar} alt="" style={{ width: '100px', height: 'auto' }} /></div>
