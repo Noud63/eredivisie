@@ -1,5 +1,5 @@
 import React from 'react'
-import AdBlockDetector from './AdBlockDetector'
+// import AdBlockDetector from './AdBlockDetector'
 import Stand from './Stand'
 import Header from './Header'
 import Home from './Home'
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      <AdBlockDetector />
+      {/* <AdBlockDetector /> */}
       <Router basename="/eredivisie">
         <Header />
         <Switch>
