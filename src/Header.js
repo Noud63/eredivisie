@@ -22,7 +22,9 @@ const Header = () => {
 
     return (
         <div className={styles.header}>
+            {/* <div className={styles.logo2}><img src={logo} alt="" className={styles.logo} /></div> */}
             <div className={styles.eredivisie}>KNVB Eredivisie 2021-2022</div>
+            
             {/* <div className="date">{date}</div> */}
             <div className={styles.links}>
 

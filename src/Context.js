@@ -23,6 +23,7 @@ const AllData = ({ children }) => {
     const [matchDays, setMatchDays] = useState([])
     const [currentDay, setCurrentDay] = useState(1)       // 1 t/m 34
     const [matchDay, setMatchDay] = useState([])
+    const [ranking, setRanking] = useState([])
 
     useEffect(() => {
 
@@ -39,8 +40,10 @@ const AllData = ({ children }) => {
                     })
                 ])
                     .then(axios.spread((data1, data2) => {
-
+                         
                         const ranking = data1.data.standings[0].table
+                        setRanking(ranking)
+                        
                         for (let club of ranking) {
                             club.team.name = club.team.name
                                 .replace("Rotterdam", "")
@@ -128,7 +131,7 @@ const AllData = ({ children }) => {
         setMatchDays(state.matchByDay[number - 1])
     }
 
-    return <AllApiData.Provider value={{ state, currentDay, matchDays, matchDay, paginate }}>{children}</AllApiData.Provider>
+    return <AllApiData.Provider value={{ state, currentDay, matchDays, matchDay, paginate, ranking }}>{children}</AllApiData.Provider>
 
 }
 

@@ -1,5 +1,9 @@
 import React from 'react'
 import goal from './images/goal.jpg'
+import eredivisie65 from './images/eredivisie65.png'
+import feyenoord from './images/feyenoord.png'
+import willem2 from './images/willem2.png'
+import ajax from './images/ajax.png'
 import goal2 from './images/goal2.jpg'
 import goal3 from './images/goal3.jpg'
 import goal4 from './images/goal4.jpg'
@@ -16,7 +20,31 @@ const Home = () => {
 
     return (
         <>
-            <div className={styles.schaal}><img src={goal3} className={styles.ballInGoal} alt="" /></div>
+
+
+            <div className={styles.schaal}>
+                <img src={goal3} className={styles.schaalPic} alt="" />
+                <div className={styles.ere65}><img src={eredivisie65} alt="" className={styles.eredivisie65}/></div>
+            </div>
+
+            {/* <div className={styles.clubLogos}>
+                <div className={styles.club}><img src={feyenoord} className={styles.fey} alt=""/></div>
+                <div className={styles.club}><img src={ajax} className={styles.aj} alt="" /></div>
+                <div className={styles.club}><img src={willem2} className={styles.wil} alt="" /></div>
+                <div className={styles.club}><img src={feyenoord} className={styles.fey} alt="" /></div>
+                <div className={styles.club}><img src={feyenoord} className={styles.fey} alt="" /></div>
+                <div className={styles.club}><img src={feyenoord} className={styles.fey} alt="" /></div>
+                <div className={styles.club}><img src={feyenoord} className={styles.fey} alt="" /></div>
+                <div className={styles.club}><img src={feyenoord} className={styles.fey} alt="" /></div>
+                <div className={styles.club}><img src={feyenoord} className={styles.fey} alt="" /></div>
+                <div className={styles.club}><img src={feyenoord} className={styles.fey} alt="" /></div>
+                <div className={styles.club}><img src={feyenoord} className={styles.fey} alt="" /></div>
+                <div className={styles.club}><img src={feyenoord} className={styles.fey} alt="" /></div>
+                <div className={styles.club}><img src={feyenoord} className={styles.fey} alt="" /></div>
+                <div className={styles.club}><img src={feyenoord} className={styles.fey} alt="" /></div>
+                <div className={styles.club}><img src={feyenoord} className={styles.fey} alt="" /></div>
+                <div className={styles.club}><img src={feyenoord} className={styles.fey} alt="" /></div>
+            </div> */}
 
             <div className={styles.dezeweek} >
                 <Recent />
