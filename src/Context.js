@@ -40,10 +40,10 @@ const AllData = ({ children }) => {
                     })
                 ])
                     .then(axios.spread((data1, data2) => {
-                         
+
                         const ranking = data1.data.standings[0].table
                         setRanking(ranking)
-                        
+
                         for (let club of ranking) {
                             club.team.name = club.team.name
                                 .replace("Rotterdam", "")
