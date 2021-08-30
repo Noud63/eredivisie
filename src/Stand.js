@@ -4,7 +4,11 @@ import { useGlobalContext } from './Context';
 import styles from "./styles/Stand.module.css";
 
 const Stand = () => {
-  const { state } = useGlobalContext();
+  const { state, ranking} = useGlobalContext();
+
+  console.log(ranking)
+
+  
   
   return (
     <div className={styles.container2}>
@@ -33,7 +37,10 @@ const Stand = () => {
                   <div className={styles.teamWrapper} key={index}>
                     <div className={styles.leftTeam}>
                       <div className={styles.position}>{position}</div>
-                      <img src={team.crestUrl} alt="logo" className={styles.clubIcon} />
+                      {/* logos nec and sc cambuur not available therefor: */}
+                      {(team.name === "NEC") ? <img src={team.crestUrl = "https://voetballogos.ccvshop.nl/Files/10/153000/153857/FileBrowser/nederland/nec.png"} alt="logo" className={styles.clubIcon} /> : 
+                      (team.name === "SC Cambuur") ? <img src={team.crestUrl = "https://voetballogos.ccvshop.nl/Files/10/153000/153857/FileBrowser/nederland/sc_cambuur_logo.jpg"} alt="logo" className={styles.clubIcon} /> :
+                        <img src={team.crestUrl} alt="logo" className={styles.clubIcon} />}
                       <div key={index} className={styles.team}>{team.name}</div>
                     </div>
 
@@ -65,7 +72,10 @@ const Stand = () => {
                   <div className={styles.teamWrapper} key={index}>
                     <div className={styles.rightTeam}>
                       <div className={styles.position2}>{position}</div>
-                      <img src={team.crestUrl} alt="logo" className={styles.clubIcon} />
+                      {/* logos nec and sc cambuur not available therefor: */}
+                      {(team.name === "NEC") ? <img src={team.crestUrl = "https://d3et0fncpz2hhr.cloudfront.net/clubs/nec/_80x80_fit_center-center_85_none/logo-nec.png"} alt="logo" className={styles.clubIcon} /> :
+                        (team.name === "SC Cambuur") ? <img src={team.crestUrl = "https://d3et0fncpz2hhr.cloudfront.net/clubs/sc-cambuur/_80x80_fit_center-center_85_none/logo-sc-cambuur.png"} alt="logo" className={styles.clubIcon} /> :
+                        <img src={team.crestUrl} alt="logo" className={styles.clubIcon} />}
                       <div key={index} className={styles.team}>{team.name}</div>
                     </div>
 
