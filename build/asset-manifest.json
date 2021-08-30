@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/eredivisie/static/css/main.a89acb54.chunk.css",
-    "main.js": "/eredivisie/static/js/main.de6ca831.chunk.js",
-    "main.js.map": "/eredivisie/static/js/main.de6ca831.chunk.js.map",
+    "main.js": "/eredivisie/static/js/main.f4b331ea.chunk.js",
+    "main.js.map": "/eredivisie/static/js/main.f4b331ea.chunk.js.map",
     "runtime-main.js": "/eredivisie/static/js/runtime-main.2a7d2813.js",
     "runtime-main.js.map": "/eredivisie/static/js/runtime-main.2a7d2813.js.map",
     "static/js/2.8e321e0e.chunk.js": "/eredivisie/static/js/2.8e321e0e.chunk.js",
@@ -12,9 +12,8 @@
     "static/js/2.8e321e0e.chunk.js.LICENSE.txt": "/eredivisie/static/js/2.8e321e0e.chunk.js.LICENSE.txt",
     "static/media/ajax.fe542232.png": "/eredivisie/static/media/ajax.fe542232.png",
     "static/media/berghuis.bf6f6a1d.jpg": "/eredivisie/static/media/berghuis.bf6f6a1d.jpg",
-    "static/media/derbystar.86352c25.png": "/eredivisie/static/media/derbystar.86352c25.png",
+    "static/media/derbystar65.e2c7427c.png": "/eredivisie/static/media/derbystar65.e2c7427c.png",
     "static/media/eredivisie65.7b9b2efe.png": "/eredivisie/static/media/eredivisie65.7b9b2efe.png",
-    "static/media/eredivisielogo.419aa473.png": "/eredivisie/static/media/eredivisielogo.419aa473.png",
     "static/media/feyenoord.e0f3e027.png": "/eredivisie/static/media/feyenoord.e0f3e027.png",
     "static/media/Home.module.css": "/eredivisie/static/media/willem2color.97a345c3.png",
     "static/media/goal.d5be5ba6.jpg": "/eredivisie/static/media/goal.d5be5ba6.jpg",
@@ -29,6 +28,6 @@
     "static/js/runtime-main.2a7d2813.js",
     "static/js/2.8e321e0e.chunk.js",
     "static/css/main.a89acb54.chunk.css",
-    "static/js/main.de6ca831.chunk.js"
+    "static/js/main.f4b331ea.chunk.js"
   ]
 }

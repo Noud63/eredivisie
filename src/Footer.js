@@ -2,7 +2,7 @@ import React from 'react'
 //import { useWindowWidth } from 'react-window-size-hooks';
 import styles from './styles/Footer.module.css'
 import derbystar65 from './images/derbystar65.png'
-import logo from './images/eredivisielogo.png'
+import logo from './images/eredivisielogo1.png'
 
 const Footer = () => {
 
