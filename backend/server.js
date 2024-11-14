@@ -11,16 +11,13 @@ app.use(cors())
 app.use(express.json())
 dotenv.config()
 
-// app.use(
-//   cors({
-//     origin: [
-//       "https://dutch-football-league-8k8w.vercel.app/api",
-//       "localhost:3000",
-//     ],
-//     methods: ["GET"],
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin: ["https://https://eredivisie.vercel.app/api", "localhost:3000"],
+    methods: ["GET"],
+    credentials: true,
+  })
+);
 
 app.get("/", (req, res) => {
   res.json("Hello");
