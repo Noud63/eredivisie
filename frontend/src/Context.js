@@ -28,6 +28,7 @@ const AllData = ({ children }) => {
 
         try {
             const response = await axios('/api/footballData')
+             console.log("Res:", response);
 
                     let ranking = response.data.standings.standings[0].table
                     setRanking(ranking)
@@ -45,6 +46,8 @@ const AllData = ({ children }) => {
                     }
 
                     const matches = response.data.matches.matches
+
+                   
 
                     for (let club of matches) {
                         club.homeTeam.name = club.homeTeam.name
