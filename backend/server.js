@@ -28,16 +28,14 @@ app.get("/", (req, res) => {
   res.json("Hello");
 }); 
 
-
+app.use("/api/footballData", footballDataRoute);
 
 // Place after routes
 // Serving the frontend
-app.use('/', express.static(path.join(__dirname, '../frontend/', 'build')))
+app.use("/", express.static(path.join(__dirname, "../frontend", "build")));
 
-app.use("/api/footballData", footballDataRoute);
-
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../frontend/build/index.html'))
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
 });
 
 app.listen(PORT, console.log(`Server running on port ${PORT}`))
