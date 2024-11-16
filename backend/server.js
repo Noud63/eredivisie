@@ -11,13 +11,13 @@ app.use(cors())
 app.use(express.json())
 dotenv.config()
 
-// app.use(
-//   cors({
-//     origin: ["http://localhost:3000", "https://https://eredivisie.vercel.app"],
-//     methods: ["GET"],
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "https://https://eredivisie.vercel.app/api"],
+    methods: ["GET"],
+    credentials: true,
+  })
+);
 
 app.get("/", (req, res) => {
   res.json("Hello");
