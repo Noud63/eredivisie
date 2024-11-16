@@ -25,10 +25,8 @@ const AllData = ({ children }) => {
         
         dispatchState({ type: "DATA_REQUEST" })
 
-
-        try {
-            const response = await axios('http://localhost:5000/api/footballData')
-             console.log("Res:", response.data);
+         try {
+            const response = await axios('http://localhost:5000/footballData')
 
                     let ranking = response.data.standings.standings[0].table
                     setRanking(ranking)
@@ -47,9 +45,7 @@ const AllData = ({ children }) => {
 
                     const matches = response.data.matches.matches
 
-                   
-
-                    for (let club of matches) {
+                   for (let club of matches) {
                         club.homeTeam.name = club.homeTeam.name
                             .replace("Rotterdam", "")
                             .replace("'65", "")

@@ -11,19 +11,19 @@ app.use(cors())
 app.use(express.json())
 dotenv.config()
 
-// app.use(
-//   cors({
-//     origin: ["http://localhost:3000", "https://https://eredivisie.vercel.app"],
-//     methods: ["GET"],
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "https://https://eredivisie.vercel.app"],
+    methods: ["GET"],
+    credentials: true,
+  })
+);
 
 app.get("/", (req, res) => {
   res.json("Hello");
 }); 
 
-app.use('/api/footballData', footballDataRoute)
+app.use('/footballData', footballDataRoute)
 
 // Place after routes
 // Serving the frontend
