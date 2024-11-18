@@ -10,8 +10,7 @@ const URL3 = "https://api.football-data.org/v4/competitions/DED/teams";
 
 const getFootballData = asyncHandler(async (req, res) => {
 
-  console.log("API Key:", process.env.REACT_APP_API_KEY);
-
+try {
    const response = await axios.all([
      await axios.get(URL, {
        headers: {
@@ -28,15 +27,16 @@ const getFootballData = asyncHandler(async (req, res) => {
          "X-Auth-Token": process.env.REACT_APP_API_KEY,
        },
      }),
-     
    ]);
 
-    
-    const allData = { standings: response[0].data, matches: response[1].data}
+    const allData = { standings: response[0].data, matches: response[1].data };
 
-    console.log("data:", allData)
+    console.log("data:", allData);
 
-    res.status(200).send(allData)
+    res.status(200).send(allData);
+} catch (error) {
+  console.log(error)
+}
 })
 
 module.exports = getFootballData
