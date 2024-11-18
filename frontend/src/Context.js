@@ -2,8 +2,6 @@ import React, { useEffect, useContext, useState, useCallback } from 'react'
 import AllDataReducer from './reducers/AllDataReducer'
 import axios from 'axios'
 
-const baseURL = process.env.REACT_APP_API_URL || "http://localhost:5000";
-
 const AllApiData = React.createContext()
 
 const initialState = {
@@ -28,7 +26,7 @@ const AllData = ({ children }) => {
         dispatchState({ type: "DATA_REQUEST" })
 
          try {
-            const response = await axios(`${baseURL}/footballData`);
+            const response = await axios(`/api/footballData`);
 
             console.log("Res:", response.data)
 

@@ -7,17 +7,17 @@ const router = express.Router()
 const footballDataRoute = require('./footballDataRoute')
 const PORT = process.env.REACT_APP_PORT || 5000
 
-app.use(cors())
+app.use(
+  cors({
+    origin:"https://https://eredivisie.vercel.app",
+    methods: ["GET"],
+    credentials: true,
+  })
+);
 app.use(express.json())
 dotenv.config()
 
-// app.use(
-//   cors({
-//     origin: ["http://localhost:3000", "https://https://eredivisie.vercel.app"],
-//     methods: ["GET"],
-//     credentials: true,
-//   })
-// );
+
 
 app.use((req, res, next) => {
   console.log(`Request received: ${req.method} ${req.url}`);
@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 
 console.log("API Key:", process.env.REACT_APP_API_KEY);
 
-app.use("/footballData", footballDataRoute);
+app.use("/api/footballData", footballDataRoute);
 
 app.use('/', express.static(path.join(__dirname, '../frontend/', 'build')))
 
