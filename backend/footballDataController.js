@@ -31,7 +31,7 @@ try {
 
     const allData = { standings: response[0].data, matches: response[1].data };
 
-    console.log("data:", allData);
+    console.log("data:", allData.standings);
 
     res.status(200).send(allData);
 } catch (error) {

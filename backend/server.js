@@ -7,17 +7,17 @@ const router = express.Router()
 const footballDataRoute = require('./footballDataRoute')
 const PORT = process.env.REACT_APP_PORT || 5000
 
-app.use(
-  cors({
-    origin:"https://https://eredivisie.vercel.app",
-    methods: ["GET"],
-    credentials: true,
-  })
-);
+app.use(cors())
 app.use(express.json())
 dotenv.config()
 
-
+// app.use(
+//   cors({
+//     origin:"https://https://eredivisie.vercel.app"],
+//     methods: ["GET"],
+//     credentials: true,
+//   })
+// );
 
 app.use((req, res, next) => {
   console.log(`Request received: ${req.method} ${req.url}`);
