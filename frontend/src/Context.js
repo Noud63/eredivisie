@@ -2,6 +2,8 @@ import React, { useEffect, useContext, useState, useCallback } from 'react'
 import AllDataReducer from './reducers/AllDataReducer'
 import axios from 'axios'
 
+const baseURL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+
 const AllApiData = React.createContext()
 
 const initialState = {
@@ -26,9 +28,9 @@ const AllData = ({ children }) => {
         dispatchState({ type: "DATA_REQUEST" })
 
          try {
-            const response = await axios('/footballData')
+            const response = await axios(`${baseURL}/footballData`);
 
-            console.log(response)
+            console.log("Res:", response.data)
 
                     let ranking = response.data.standings.standings[0].table
                     setRanking(ranking)
