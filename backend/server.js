@@ -4,6 +4,7 @@ const cors = require('cors')
 const dotenv = require('dotenv')
 const path = require('path')
 const router = express.Router()
+const axios = require("axios");
 const footballDataRoute = require('./footballDataRoute')
 const PORT = process.env.REACT_APP_PORT || 5000
 
@@ -11,22 +12,49 @@ app.use(cors())
 app.use(express.json())
 dotenv.config()
 
-// app.use(
-//   cors({
-//     origin:"https://eredivisie.vercel.app",
-//     methods: ["GET"],
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin:"https://eredivisie.vercel.app",
+    methods: ["GET"],
+    credentials: true,
+  })
+);
 
-app.use((req, res, next) => {
-  console.log(`Request received: ${req.method} ${req.url}`);
-  next();
+app.get("/api/footballData", async(req, res) => {
+
+  const URL = "https://api.football-data.org/v4/competitions/DED/standings";
+  const URL2 = "https://api.football-data.org/v4/competitions/DED/matches";
+
+  const URL3 = "https://api.football-data.org/v4/competitions/DED/teams";
+
+   const response = await axios.all([
+     await axios.get(URL, {
+       headers: {
+         "X-Auth-Token": process.env.REACT_APP_API_KEY,
+       },
+     }),
+     await axios.get(URL2, {
+       headers: {
+         "X-Auth-Token": process.env.REACT_APP_API_KEY,
+       },
+     }),
+     await axios.get(URL3, {
+       headers: {
+         "X-Auth-Token": process.env.REACT_APP_API_KEY,
+       },
+     }),
+   ]);
+   
+
+    const allData = { standings: response[0].data, matches: response[1].data };
+
+    console.log("data:", allData.standings);
+
+
+  return res.json(allData);
 });
 
-console.log("API Key:", process.env.REACT_APP_API_KEY);
-
-app.use("/api/footballData", footballDataRoute);
+// app.use("/api/footballData", footballDataRoute);
 
 app.use('/', express.static(path.join(__dirname, '../frontend/', 'build')))
 
