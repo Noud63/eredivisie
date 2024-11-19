@@ -13,7 +13,7 @@ dotenv.config()
 
 app.use(
   cors({
-    origin:"https://eredivisie.vercel.app/",
+    origin:"https://eredivisie.vercel.app",
     methods: ["GET"],
     credentials: true,
   })
