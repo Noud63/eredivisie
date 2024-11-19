@@ -15,22 +15,34 @@ try {
      await axios.get(URL, {
        headers: {
          "X-Auth-Token": process.env.REACT_APP_API_KEY,
-         "Access-Control-Allow-Origin": "https://eredivisie.vercel.app",
        },
      }),
      await axios.get(URL2, {
        headers: {
          "X-Auth-Token": process.env.REACT_APP_API_KEY,
-         "Access-Control-Allow-Origin": "https://eredivisie.vercel.app",
        },
      }),
      await axios.get(URL3, {
        headers: {
          "X-Auth-Token": process.env.REACT_APP_API_KEY,
-         "Access-Control-Allow-Origin": "https://eredivisie.vercel.app",
        },
      }),
    ]);
+
+    res.setHeader(
+      "Access-Control-Allow-Origin",
+      "https://eredivisie.vercel.app"
+    );
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Content-Type, Authorization"
+    );
+
+    if (req.method === "OPTIONS") {
+      res.status(200).end(); // Handle preflight request
+      return;
+    }
 
     const allData = { standings: response[0].data, matches: response[1].data };
 
