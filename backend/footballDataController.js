@@ -48,7 +48,7 @@ try {
 
     console.log("data:", allData.standings);
 
-    res.status(200).send(allData);
+    res.status(200).json(allData);
 } catch (error) {
   console.log(error)
 }
