@@ -30,11 +30,10 @@ const Stand = () => {
 
               {state.leftRow.map((place, index) => {
                 const { team, position, playedGames, won, draw, lost, points, goalsAgainst, goalsFor } = place
-                console.log(team)
                 return (
                   <div className={styles.teamWrapper} key={index}>
                     <div className={styles.leftTeam}>
-                      <div className={styles.position}>{position}</div>
+                      <div className={styles.position}>{index+1}</div>
                               <img src={team.crest} alt="logo" className={styles.clubIcon} />
                       <div key={index} className={styles.team}>{team.name}</div>
                     </div>
@@ -66,19 +65,29 @@ const Stand = () => {
                 return (
                   <div className={styles.teamWrapper} key={index}>
                     <div className={styles.rightTeam}>
-                      <div className={styles.position2}>{position}</div>
-                          <img src={team.crest} alt="logo" className={styles.clubIcon} />
-                      <div key={index} className={styles.team}>{team.name}</div>
+                      <div className={styles.position2}>{index + 10}</div>
+                      <img
+                        src={team.crest}
+                        alt="logo"
+                        className={styles.clubIcon}
+                      />
+                      <div key={index} className={styles.team}>
+                        {team.name}
+                      </div>
                     </div>
 
                     <span className={styles.stats2}>
                       <span className={styles.pg}>{playedGames}</span>
-                      <span className={styles.wdl2}>{won}|{draw}|{lost}</span>
+                      <span className={styles.wdl2}>
+                        {won}|{draw}|{lost}
+                      </span>
                       <span className={styles.points}>{points}</span>
-                      <span className={styles.gfga}>{goalsFor}-{goalsAgainst}</span>
+                      <span className={styles.gfga}>
+                        {goalsFor}-{goalsAgainst}
+                      </span>
                     </span>
                   </div>
-                )
+                );
               })}
 
             </div>

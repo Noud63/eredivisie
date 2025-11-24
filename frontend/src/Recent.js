@@ -10,13 +10,12 @@ const Recent = () => {
    const [lastGames, setLastGames] = React.useState([]);
    const [program, setProgram] = React.useState([]);
 
-   let currentMatchDay = matchDay - 1
+   let currentMatchDay = matchDay 
    // program.every(match => match.status === "FINISHED" ? currentMatchDay = matchDay : currentMatchDay = matchDay - 1);
    let upcomingMatchDay = currentMatchDay + 1;
    let recent = state.matchByDay.slice(currentMatchDay - 1, currentMatchDay);
    let upcoming = state.matchByDay.slice(upcomingMatchDay - 1, upcomingMatchDay);
 
-   console.log("Recent:", lastGames)
 
    const getLastGames = useCallback(() => {
       for (let games of recent) {

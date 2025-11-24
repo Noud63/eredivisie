@@ -22,7 +22,7 @@ const Header = () => {
     return (
         <div className={scrolled ? styles.header : styles.header + ' ' + styles.scrolled}>
 
-            <div className={styles.eredivisie}>KNVB Eredivisie 2024-2025</div>
+            <div className={styles.eredivisie}>KNVB Eredivisie 2025-2026</div>
 
             <div className={styles.links}>
 

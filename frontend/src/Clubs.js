@@ -1,20 +1,24 @@
 import React from 'react'
 import styles from './styles/Clubs.module.css'
 import { icons, names } from './assets/iconArray.js'
+import { useGlobalContext } from "./Context";
 
 const Clubs = () => {
 
+    const { state, ranking } = useGlobalContext();
+
+    // console.log("State:", state)
 return (
     <>
        <div className={styles.iconBoxWrapper}>
             <div className={styles.clubsIconWrapper}>
                 <div className={styles.alleClubs}>Alle deelnemende clubs</div>
                 <div className={styles.iconBox}>
-                    {icons.map((icon, index) => {
+                    {ranking && ranking.map((team, index) => {
                         return (
                             <div key={index} className={styles.icon}>
-                                <img src={process.env.PUBLIC_URL + `/icons/${icon}`} alt="icon" className={styles.iconPng} />
-                                <div className={styles.clubName}>{names[index]}</div>
+                                <img src={team.team.crest} alt="icon" className={styles.iconPng} />
+                                <div className={styles.clubName}>{team.team.name}</div>
                             </div>
                         )
                     })}
