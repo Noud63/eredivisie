@@ -11,7 +11,14 @@ const History = () => {
             <div className={styles.history}>
                 <span className={styles.ontstaan}>Ontstaan</span>
                         <div className={styles.historyText}>
-
+                            Het ontstaan van de Eredivisie gaat ver terug in de tijd. De voorloper
+          van de Eredivisie was de kampioenscompetitie.<br />Al sinds 1888 wordt er
+          officieus gestreden om het Nederlands kampioenschap. Met ingang van
+          het seizoen 1898/'99 werd dit officieel, waarna Concordia uit
+          Rotterdam zich als eerste landskampioen van Nederland mocht noemen.<br />Na
+          de introductie van het betaald voetbal in 1954 werd twee jaar later de
+          Eredivisie officieel opgericht. Zodoende zijn sinds 1956 de sterkste
+          clubs van Nederland verenigd in één landelijke competitie.<br /><br />
                             In 1865 werd de allereerste officiële wedstrijd gespeeld. De wedstrijd vond plaats in Enschede. 
                             De teams die speelden waren Britse textielarbeiders en een team van Haagse textielarbeiders. 
                             De score is onbekend, wel is bekend dat die wedstrijd zich in Enschede heeft afgespeeld.<br /><br />

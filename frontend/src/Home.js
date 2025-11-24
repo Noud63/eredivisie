@@ -4,6 +4,7 @@ import eredivisie65 from "./images/eredivisie65.png";
 import goal2 from "./images/goal2.jpg";
 import goal3 from "./images/goal3.jpg";
 import goal4 from "./images/goal4.jpg";
+import ueda from "./images/ueda.png";
 import Uitslagen from "./Uitslagen";
 import Stand from "./Stand";
 import Recent from "./Recent";
@@ -41,7 +42,7 @@ const Home = () => {
 
       <div className={styles.history2}>
         <div className={styles.historyText}>
-          <div className={styles.stukje}>De geschiedenis</div>
+          <div className={styles.stukje}>Geschiedenis</div>
           Het ontstaan van de Eredivisie gaat ver terug in de tijd. De voorloper
           van de Eredivisie was de kampioenscompetitie. Al sinds 1888 wordt er
           officieus gestreden om het Nederlands kampioenschap. Met ingang van
@@ -85,11 +86,27 @@ const Home = () => {
 
       <div className={styles.topScores1}>
         <div className={styles.top}>Topscorers seizoen {season}</div>
-        <div>
+        <div className={styles.scorers}>
           {topScorers &&
-            topScorers.map((scorer, index) => (
+            topScorers.slice(0, 3).map((scorer, index) => (
               <div className={styles.topScorers} key={index}>
-                <div>{scorer.player.name} - {scorer.team.shortName}</div> <div>{scorer.goals} goals</div>
+                
+                <div className={styles.scorerInfo}>
+                    {scorer.player.name === "Ayase Ueda" ? (
+                  <img src={ueda} alt="ueda" className={styles.topScorerPic} />
+                ) : null}
+                {scorer.player.name === "Guus Til" ? (
+                  <img src={ueda} alt="ueda" className={styles.topScorerPic} />
+                ) : null}
+                {scorer.player.name === "Ismael Saibari" ? (
+                  <img src={ueda} alt="ueda" className={styles.topScorerPic} />
+                ) : null}
+                  <div>
+                    {scorer.player.name} - {scorer.team.shortName}
+                  </div>
+                  
+                </div>
+                <div>{scorer.goals} goals</div>
               </div>
             ))}
         </div>

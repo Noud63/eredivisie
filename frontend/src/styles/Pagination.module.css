@@ -30,8 +30,7 @@
 }
 
 .active {
-  background-color:  rgb(196, 160, 0);
-  color:white;
+  background-color:  rgb(255, 196, 0);
   text-shadow: 0px 0px 10px rgb(65, 42, 0);
 }
 
