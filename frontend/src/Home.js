@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 import { useGlobalContext } from "./Context";
 
 const Home = () => {
-  const { state, topScorers, season } = useGlobalContext();
+  const { topScorers, season } = useGlobalContext();
   console.log("Season:", season.season);
 
   return (

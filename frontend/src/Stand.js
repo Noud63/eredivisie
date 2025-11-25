@@ -34,7 +34,7 @@ const Stand = () => {
               </span >
 
               {state.leftRow.map((place, index) => {
-                const { team, position, playedGames, won, draw, lost, points, goalsAgainst, goalsFor } = place
+                const { team, playedGames, won, draw, lost, points, goalsAgainst, goalsFor } = place
                 return (
                   <div className={styles.teamWrapper} key={index}>
                     <div className={styles.leftTeam}>
@@ -66,7 +66,7 @@ const Stand = () => {
               </span >
 
               {state.rightRow.map((place, index) => {
-                const { team, position, playedGames, won, draw, lost, points, goalsAgainst, goalsFor } = place
+                const { team, playedGames, won, draw, lost, points, goalsAgainst, goalsFor } = place
                 return (
                   <div className={styles.teamWrapper} key={index}>
                     <div className={styles.rightTeam}>

@@ -1,11 +1,10 @@
 import React from 'react'
 import styles from './styles/Clubs.module.css'
-import { icons, names } from './assets/iconArray.js'
 import { useGlobalContext } from "./Context";
 
 const Clubs = () => {
 
-    const { state, ranking } = useGlobalContext();
+    const { ranking } = useGlobalContext();
 
     // console.log("State:", state)
 return (
