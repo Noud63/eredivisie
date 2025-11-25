@@ -2,13 +2,18 @@ import React from "react";
 import Loader from "./Loader";
 import { useGlobalContext } from './Context';
 import styles from "./styles/Stand.module.css";
+import { useLocation } from "react-router-dom";
 
 const Stand = () => {
   
   const { state } = useGlobalContext();
+
+  const location = useLocation(); 
+  const path = location.pathname; 
   
   return (
     <div className={styles.container2}>
+      {path === "/stand" && <div className={styles.spacer}></div>}
 
       {state.loading ? <Loader /> :
 

@@ -6,6 +6,23 @@
   padding: .6rem;
 }
 
+.spacer{
+  height: 180px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .spacer {
+     height: 150px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .spacer {
+     height: 120px;
+  }
+}
+
 .container2 {
   max-width: 1155px;
   height: auto;

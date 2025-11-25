@@ -5,6 +5,8 @@ import goal2 from "./images/goal2.jpg";
 import goal3 from "./images/goal3.jpg";
 import goal4 from "./images/goal4.jpg";
 import ueda from "./images/ueda.png";
+import till from "./images/till.png";
+import saibari from "./images/saibari.png"; 
 import Uitslagen from "./Uitslagen";
 import Stand from "./Stand";
 import Recent from "./Recent";
@@ -18,7 +20,8 @@ const Home = () => {
   console.log("Season:", season.season);
 
   return (
-    <>
+    <div className={styles.home}>
+      <div className={styles.spacer}></div>
       <div className={styles.schaal}>
         <img src={goal3} className={styles.schaalPic} alt="" />
         <div className={styles.ere65}>
@@ -96,17 +99,15 @@ const Home = () => {
                   <img src={ueda} alt="ueda" className={styles.topScorerPic} />
                 ) : null}
                 {scorer.player.name === "Guus Til" ? (
-                  <img src={ueda} alt="ueda" className={styles.topScorerPic} />
+                  <img src={till} alt="ueda" className={styles.topScorerPic} />
                 ) : null}
                 {scorer.player.name === "Ismael Saibari" ? (
-                  <img src={ueda} alt="ueda" className={styles.topScorerPic} />
+                  <img src={saibari} alt="ueda" className={styles.topScorerPic} />
                 ) : null}
-                  <div>
-                    {scorer.player.name} - {scorer.team.shortName}
-                  </div>
+                {scorer.player.name} - {scorer.team.shortName}
                   
                 </div>
-                <div>{scorer.goals} goals</div>
+                <div className={styles.goals}>{scorer.goals} goals</div>
               </div>
             ))}
         </div>
@@ -115,7 +116,7 @@ const Home = () => {
       <div className={styles.borderMarker}>
         <img src={goal2} className={styles.ballInGoal} alt="" />
       </div>
-    </>
+    </div>
   );
 };
 

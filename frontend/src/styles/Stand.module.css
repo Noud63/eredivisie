@@ -10,6 +10,23 @@
   padding: 0 .6rem 0 .6rem;
 }
 
+.spacer{
+  height: 180px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .spacer {
+     height: 150px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .spacer {
+     height: 120px;
+  }
+}
+
 .rowWrap {
   display: flex;
   flex-direction: row;

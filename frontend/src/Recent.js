@@ -1,9 +1,13 @@
 import React, { useEffect, useCallback } from "react";
 import styles from "./styles/Recent.module.css";
 import { useGlobalContext } from "./Context";
+import { useLocation } from "react-router-dom";
 
 
 const Recent = () => {
+
+    const location = useLocation();
+    const path = location.pathname;
 
    const { state, matchDay } = useGlobalContext();
    
@@ -39,6 +43,7 @@ const Recent = () => {
       <>
 
          <div className={styles.container}>
+                 {path === "/recent" && <div className={styles.spacer}></div>}
             <div className={styles.matches}>
                <div className={styles.gamesnRound}>
                   <div className={styles.alleWedstrijden}>Recent gespeeld</div>

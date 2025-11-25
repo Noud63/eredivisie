@@ -2,14 +2,19 @@ import { useGlobalContext } from './Context'
 import Loader from './Loader';
 import Pagination from './Pagination'
 import styles from './styles/AllMatches.module.css'
+import { useLocation } from 'react-router-dom';
 
 const Uitslagen = () => {
 
     const { state, currentDay, matchDays, setCurrentDay, setMatchDays } = useGlobalContext()
 
+    const location = useLocation();
+    const path = location.pathname;
+
     return (
 
         <div className={styles.container}>
+            {path === "/uitslagen" && <div className={styles.spacer}></div>}
             <div className={styles.matches}>
 
                 <div className={styles.gamesnRound}>

@@ -2,10 +2,29 @@
 .container {
   max-width: 1155px;
   height: auto;
-  margin: 0 auto;
+  margin: 0px auto;
+  padding-top: 180px;
   /* background-color: rgb(36, 79, 143); */
   padding: .5rem;
 }
+
+.spacer{
+  height: 180px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .spacer {
+     height: 150px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .spacer {
+     height: 120px;
+  }
+}
+
 
 .matches {
   width: 100%;
