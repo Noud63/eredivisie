@@ -11,22 +11,22 @@ export default async function handler(req, res) {
     const [standings, matches, teams, scorers] =  await axios.all([
          axios.get(URL, {
            headers: {
-             "X-Auth-Token": process.env.FOOTBALL__API_KEY,
+             "X-Auth-Token": process.env.FOOTBALL_API_KEY,
            },
          }),
          axios.get(URL2, {
            headers: {
-             "X-Auth-Token": process.env.FOOTBALL__API_KEY,
+             "X-Auth-Token": process.env.FOOTBALL_API_KEY,
            },
          }),
          axios.get(URL3, {
            headers: {
-             "X-Auth-Token": process.env.FOOTBALL__API_KEY,
+             "X-Auth-Token": process.env.FOOTBALL_API_KEY,
            },
          }),
          axios.get(URL4, {
            headers: {
-             "X-Auth-Token": process.env.FOOTBALL__API_KEY,
+             "X-Auth-Token": process.env.FOOTBALL_API_KEY,
            },
          }),
        ]);
