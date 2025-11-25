@@ -11,17 +11,17 @@ app.use(cors())
 app.use(express.json())
 dotenv.config()
 
-// app.use(
-//   cors({
-//     origin:"https://eredivisie.vercel.app",
-//     methods: ["GET"],
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin:"https://eredivisie-zeta.vercel.app",
+    methods: ["GET"],
+    credentials: true,
+  })
+);
 
-// app.get("/api/footballData", (req, res) => {
-//   res.json({ message: "Success"});
-// });
+app.get("/api/footballData", (req, res) => {
+  res.json({ message: "Success"});
+});
 
 
 app.use("/api/footballData", footballDataRoute);
