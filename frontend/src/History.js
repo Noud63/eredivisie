@@ -4,10 +4,15 @@ import abe from './images/abelenstra.jpg'
 import faas from './images/fasswilkes.jpg'
 import johan from './images/johancruijff.jpg'
 import marco from './images/marcovanbasten.jpg'
+import { useLocation } from 'react-router-dom'
 
 const History = () => {
+
+    const location = useLocation(); 
+    const path = location.pathname;
     return (
         <div className={styles.historyWrapper}>
+                  {path === "/history" && <div className={styles.spacerHistory}></div>}
             <div className={styles.history}>
                 <span className={styles.ontstaan}>Ontstaan</span>
                         <div className={styles.historyText}>

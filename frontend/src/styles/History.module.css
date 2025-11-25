@@ -7,10 +7,30 @@
   max-width: 1155px;
   height: auto;
   margin: 0 auto;
-  padding: 0 .8rem;
+  padding: 0 2rem;
   color: white;
 
 } 
+
+.spacerHistory {
+  height: 200px;
+}
+
+@media only screen and (max-width: 800px) {
+   .spacerHistory {
+    height: 160px;
+   }
+}
+
+@media only screen and (max-width: 400px) {
+   .spacerHistory {
+    height: 120px;
+   }
+   .historyWrapper { 
+    padding: 0 1rem;
+   }
+   
+}
 
 .history {
   width: 100%;
