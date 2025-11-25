@@ -34,7 +34,7 @@ const allData = { standings: response[0].data, matches: response[1].data, topSco
 
 console.log("data:", allData);
 
-return res.status(200).send(allData);
+return res.status(200).json(allData);
   } catch (error) {
     console.error(error.response?.data || error.message);
     res.status(500).json({
