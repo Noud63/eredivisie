@@ -1,16 +1,16 @@
 import React from "react";
-import goal from "./images/goal.jpg";
-import eredivisie65 from "./images/eredivisie65.png";
-import goal2 from "./images/goal2.jpg";
-import goal3 from "./images/goal3.jpg";
-import goal4 from "./images/goal4.jpg";
-import ueda from "./images/ueda.png";
-import till from "./images/till.png";
-import saibari from "./images/saibari.png"; 
+import goal from "../images/goal.jpg";
+import eredivisie65 from "../images/eredivisie65.png";
+import goal2 from "../images/goal2.jpg";
+import goal3 from "../images/goal3.jpg";
+import goal4 from "../images/goal4.jpg";
+import ueda from "../images/ueda.png";
+import till from "../images/till.png";
+import saibari from "../images/saibari.png";
 import Uitslagen from "./Uitslagen";
 import Stand from "./Stand";
 import Recent from "./Recent";
-import styles from "./styles/Home.module.css";
+import styles from "../styles/Home.module.css";
 import Clubs from "./Clubs";
 import { Link } from "react-router-dom";
 import { useGlobalContext } from "./Context";
@@ -93,19 +93,29 @@ const Home = () => {
           {topScorers &&
             topScorers.slice(0, 3).map((scorer, index) => (
               <div className={styles.topScorers} key={index}>
-                
                 <div className={styles.scorerInfo}>
-                    {scorer.player.name === "Ayase Ueda" ? (
-                  <img src={ueda} alt="ueda" className={styles.topScorerPic} />
-                ) : null}
-                {scorer.player.name === "Guus Til" ? (
-                  <img src={till} alt="ueda" className={styles.topScorerPic} />
-                ) : null}
-                {scorer.player.name === "Ismael Saibari" ? (
-                  <img src={saibari} alt="ueda" className={styles.topScorerPic} />
-                ) : null}
-                {scorer.player.name} - {scorer.team.shortName}
-                  
+                  {scorer.player.name === "Ayase Ueda" ? (
+                    <img
+                      src={ueda}
+                      alt="ueda"
+                      className={styles.topScorerPic}
+                    />
+                  ) : null}
+                  {scorer.player.name === "Guus Til" ? (
+                    <img
+                      src={till}
+                      alt="ueda"
+                      className={styles.topScorerPic}
+                    />
+                  ) : null}
+                  {scorer.player.name === "Ismael Saibari" ? (
+                    <img
+                      src={saibari}
+                      alt="ueda"
+                      className={styles.topScorerPic}
+                    />
+                  ) : null}
+                  {scorer.player.name} - {scorer.team.shortName}
                 </div>
                 <div className={styles.goals}>{scorer.goals} goals</div>
               </div>

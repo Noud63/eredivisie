@@ -1,5 +1,5 @@
 import React, { useEffect, useContext, useState, useCallback } from "react";
-import AllDataReducer from "./reducers/AllDataReducer";
+import AllDataReducer from "../reducers/AllDataReducer";
 import axios from "axios";
 
 const AllApiData = React.createContext();
@@ -29,12 +29,13 @@ const AllData = ({ children }) => {
 
       console.log("Res:", response.data);
 
-      let season = response.data.standings.season.startDate.slice(
-        0,
-        4) + "-" + response.data.standings.season.endDate.slice(0, 4)
-    
+      let season =
+        response.data.standings.season.startDate.slice(0, 4) +
+        "-" +
+        response.data.standings.season.endDate.slice(0, 4);
+
       setSeason(season);
-      console.log("Season:", season)
+      console.log("Season:", season);
 
       let topScorers = response.data.topScorers.scorers;
       setTopScorers(topScorers);
@@ -112,7 +113,7 @@ const AllData = ({ children }) => {
         matches: matches,
         matchByDay: matchByDay,
         totalMatches: totalMatches,
-        currentMatchday: day
+        currentMatchday: day,
       };
 
       dispatchState({ type: "DATA_REQUEST_SUCCESS", payload: data });

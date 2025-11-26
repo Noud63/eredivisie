@@ -1,7 +1,7 @@
 import React from "react";
 import Loader from "./Loader";
 import { useGlobalContext } from './Context';
-import styles from "./styles/Stand.module.css";
+import styles from "../styles/Stand.module.css";
 import { useLocation } from "react-router-dom";
 
 const Stand = () => {

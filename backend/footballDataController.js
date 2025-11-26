@@ -2,44 +2,35 @@ const express = require('express')
 const axios = require('axios')
 const asyncHandler = require('express-async-handler')
 
-const URL = "https://api.football-data.org/v4/competitions/DED/standings";
-const URL2 = "https://api.football-data.org/v4/competitions/DED/matches";
-const URL3 = "https://api.football-data.org/v4/competitions/DED/teams";
-const URL4 = "https://api.football-data.org/v4/competitions/DED/scorers";
+const URL_1 = "https://api.football-data.org/v4/competitions/DED/standings";
+const URL_2 = "https://api.football-data.org/v4/competitions/DED/matches";
+const URL_3 = "https://api.football-data.org/v4/competitions/DED/teams";
+const URL_4 = "https://api.football-data.org/v4/competitions/DED/scorers";
 
 
 const getFootballData = asyncHandler(async (req, res) => {
 
 try {
-   const response = await axios.all([
-     await axios.get(URL, {
-       headers: {
-         "X-Auth-Token": process.env.REACT_APP_API_KEY,
-       },
-     }),
-     await axios.get(URL2, {
-       headers: {
-         "X-Auth-Token": process.env.REACT_APP_API_KEY,
-       },
-     }),
-     await axios.get(URL3, {
-       headers: {
-         "X-Auth-Token": process.env.REACT_APP_API_KEY,
-       },
-     }),
-     await axios.get(URL4, {
-       headers: {
-         "X-Auth-Token": process.env.REACT_APP_API_KEY,
-       },
-     }),
-   ]);
+   const headers = {
+      headers: {
+        "X-Auth-Token": process.env.REACT_APP_API_KEY,
+      },
+    };
+
+    //axios.all replaced with Promise.all
+    const response = await Promise.all([
+      axios.get(URL_1, headers),
+      axios.get(URL_2, headers),
+      axios.get(URL_3, headers),
+      axios.get(URL_4, headers),
+    ]);
    
 
     const allData = { standings: response[0].data, matches: response[1].data, topScorers: response[3].data, teams: response[2].data };
 
-    console.log("data:", allData.topScorers);
+    console.log("data:", allData);
 
-    return res.status(200).send(allData);
+    return res.status(200).json(allData);
 } catch (error) {
   console.log(error)
 }

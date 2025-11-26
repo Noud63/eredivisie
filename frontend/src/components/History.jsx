@@ -1,9 +1,9 @@
 import React from 'react'
-import styles from './styles/History.module.css'
-import abe from './images/abelenstra.jpg'
-import faas from './images/fasswilkes.jpg'
-import johan from './images/johancruijff.jpg'
-import marco from './images/marcovanbasten.jpg'
+import styles from '../styles/History.module.css'
+import abe from '../images/abelenstra.jpg'
+import faas from '../images/fasswilkes.jpg'
+import johan from '../images/johancruijff.jpg'
+import marco from '../images/marcovanbasten.jpg'
 import { useLocation } from 'react-router-dom'
 
 const History = () => {

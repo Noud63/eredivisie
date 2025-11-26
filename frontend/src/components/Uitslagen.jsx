@@ -1,7 +1,7 @@
 import { useGlobalContext } from './Context'
 import Loader from './Loader';
 import Pagination from './Pagination'
-import styles from './styles/AllMatches.module.css'
+import styles from '../styles/AllMatches.module.css'
 import { useLocation } from 'react-router-dom';
 
 const Uitslagen = () => {

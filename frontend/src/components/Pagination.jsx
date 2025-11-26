@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './styles/Pagination.module.css'
+import styles from '../styles/Pagination.module.css'
 
 const Pagination = ({ state, currentDay, totalMatches, setCurrentDay, setMatchDays }) => {
 

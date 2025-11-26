@@ -1,5 +1,5 @@
-import React, { useEffect, useCallback } from "react";
-import styles from "./styles/Recent.module.css";
+import React, { useEffect} from "react";
+import styles from "../styles/Recent.module.css";
 import { useGlobalContext } from "./Context";
 import { useLocation } from "react-router-dom";
 
@@ -9,34 +9,72 @@ const Recent = () => {
     const location = useLocation();
     const path = location.pathname;
 
-   const { state, matchDay } = useGlobalContext();
+   const { state } = useGlobalContext();
+
+   let [finished, setFinished] = React.useState([]);
+   let [timed, setTimed] = React.useState([]);
+   let [recentMatchDay, setRecentMatchDay] = React.useState(0);
+   let [matchDay, setMatchDay] = React.useState(0);
+
+   // console.log("Matchbyday:", state.matchByDay.map((item) => item.map((match) => match.status === "TIMED")) );
+   // console.log("Matchbydays:", state.matchByDay);
+   // console.log("Day:", matchDay)
+  
+   useEffect(()=> {
+    const finishedArr = [];
+    const timedArr = [];
+
+  state.matchByDay.forEach(day =>
+    day.forEach(match => {
+      if (match.status === "FINISHED") {
+        finishedArr.push(match);
+      } else if (match.status === "TIMED") {
+        timedArr.push(match);
+      }
+    })
+    );
+
+    setFinished(finishedArr);
+    setTimed(timedArr);
+
+  // Derived values
+  if (finishedArr.length > 0) {
+    setRecentMatchDay(finishedArr[finishedArr.length - 1].matchday);
+  }
+
+  if (timedArr.length > 0) {
+    setMatchDay(timedArr[0].matchday);
+  }
+    },[state.matchByDay]);  
+
+   // console.log("Timed:", timed.slice(0, 9 ))
    
-   const [lastGames, setLastGames] = React.useState([]);
-   const [program, setProgram] = React.useState([]);
+   // const [lastGames, setLastGames] = React.useState([]);
+   // const [program, setProgram] = React.useState([]);
 
-   let currentMatchDay = matchDay 
+   // let currentMatchDay = matchDay 
    // program.every(match => match.status === "FINISHED" ? currentMatchDay = matchDay : currentMatchDay = matchDay - 1);
-   let upcomingMatchDay = currentMatchDay + 1;
-   let recent = state.matchByDay.slice(currentMatchDay - 1, currentMatchDay);
-   let upcoming = state.matchByDay.slice(upcomingMatchDay - 1, upcomingMatchDay);
+   // let upcomingMatchDay = currentMatchDay + 1;
+   // let recent = state.matchByDay.slice(currentMatchDay - 1, currentMatchDay);
+   // let upcoming = state.matchByDay.slice(upcomingMatchDay - 1, upcomingMatchDay);
 
 
-   const getLastGames = useCallback(() => {
-      for (let games of recent) {
-         setLastGames(games);
-      }
-   }, [recent]);
+   // const getLastGames = useCallback(() => {
+   //    for (let games of recent) {
+   //       setLastGames(games);
+   //    }
+   // }, [recent]);
 
-   const getProgram = useCallback(() => {
-      for (let games of upcoming) {
-         setProgram(games);
-      }
-   }, [upcoming]);
+   // const getProgram = useCallback(() => {
+   //    for (let games of upcoming) {
+   //       setProgram(games);
+   //    }
+   // }, [upcoming]);
 
-   useEffect(() => {
-      getLastGames();
-      getProgram();
-   }, [getLastGames, getProgram]);
+   // useEffect(() => {
+   //    getLastGames();
+   //    getProgram();
+   // }, [getLastGames, getProgram]);
 
 
    return (
@@ -50,12 +88,12 @@ const Recent = () => {
                   <div className={styles.speelrondes}>
                      Speelronde
                       <div className={styles.circle}>
-                        <div className={styles.dayNumber}>{currentMatchDay}</div>
+                        <div className={styles.dayNumber}>{recentMatchDay}</div>
                      </div>
                   </div>
                </div>
 
-               {lastGames.map((game) => {
+               {finished.slice(finished.length - 9, finished.length).map((game) => {
                   const { homeTeam, awayTeam, score, id } = game;
 
                   return (
@@ -80,12 +118,12 @@ const Recent = () => {
                   <div className={styles.speelrondes}>
                      Speelronde
               <div className={styles.circle}>
-                        <div className={styles.dayNumber}>{upcomingMatchDay}</div>
+                        <div className={styles.dayNumber}>{matchDay}</div>
                      </div>
                   </div>
                </div>
 
-               {program.map((game) => {
+               {timed.slice(0, 9).map((game) => {
                   const { homeTeam, awayTeam, score, id } = game;
 
                   return (
