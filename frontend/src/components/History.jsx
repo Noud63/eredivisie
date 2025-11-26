@@ -14,7 +14,7 @@ const History = () => {
         <div className={styles.historyWrapper}>
                   {path === "/history" && <div className={styles.spacerHistory}></div>}
             <div className={styles.history}>
-                <span className={styles.ontstaan}>Ontstaan</span>
+                <span className={styles.ontstaan}>Ontstaan van de Eredivisie</span>
                         <div className={styles.historyText}>
                             Het ontstaan van de Eredivisie gaat ver terug in de tijd. De voorloper
           van de Eredivisie was de kampioenscompetitie.<br />Al sinds 1888 wordt er

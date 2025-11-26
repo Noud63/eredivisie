@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../styles/Header.module.css'
-import { Link } from "react-router-dom";
+import HeaderMenu from './HeaderMenu';
+import logo from '../images/eredivisielogo.png'
 
 const Header = () => {
 
@@ -22,27 +23,12 @@ const Header = () => {
     return (
         <div className={scrolled ? styles.header : styles.header + ' ' + styles.scrolled}>
 
-            <div className={styles.eredivisie}>KNVB Eredivisie 2025-2026</div>
+            <div className={styles.eredivisie}>
+                <img src={logo} alt="Eredivisie Logo" className={styles.logo} />
+                KNVB Eredivisie 2025-2026
+                </div>
 
-            <div className={styles.links}>
-
-                <Link to="/" className={styles.link}>
-                    <div>Home</div>
-                </Link>
-
-                <Link to="/uitslagen" className={styles.link}>
-                    <div >Wedstrijden</div>
-                </Link>
-
-                <Link to="/recent" className={styles.link}>
-                    <div >Recent</div>
-                </Link>
-
-                <Link to='/stand' className={styles.link}>
-                    <div >Stand</div>
-                </Link>
-
-            </div>
+            <HeaderMenu />
 
         </div>
     )

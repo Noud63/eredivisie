@@ -82,14 +82,14 @@ const Home = () => {
       </div>
 
       <div className={styles.borderMarker}>
-        <img src={goal} className={styles.ballInGoal} alt="" />
+        <img src={goal2} className={styles.ballInGoal} alt="" />
       </div>
 
       <Clubs />
 
       <div className={styles.topScores1}>
         <div className={styles.top}>Topscorers seizoen {season}</div>
-        <div className={styles.scorers}>
+          <div className={styles.scorers}>
           {topScorers &&
             topScorers.slice(0, 3).map((scorer, index) => (
               <div className={styles.topScorers} key={index}>
@@ -115,7 +115,7 @@ const Home = () => {
                       className={styles.topScorerPic}
                     />
                   ) : null}
-                  {scorer.player.name} - {scorer.team.shortName}
+                  <div className={styles.name}>{scorer.player.name} - {scorer.team.shortName}</div>
                 </div>
                 <div className={styles.goals}>{scorer.goals} goals</div>
               </div>
@@ -123,9 +123,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className={styles.borderMarker}>
-        <img src={goal2} className={styles.ballInGoal} alt="" />
-      </div>
+      
     </div>
   );
 };

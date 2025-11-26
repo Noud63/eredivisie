@@ -58,6 +58,15 @@ background: linear-gradient(90deg,rgba(0, 18, 31, 1) 0%, rgba(36, 79, 143, 1) 50
   /* border: 1px solid red; */
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  height: .75em;
+  width: .75em;
+  margin-top: 4px;
+  margin-right: 10px;
+}
+
 /* .eredivisie {
   background-image: url('../images/dutchFlag.png');
   background-clip: text;
