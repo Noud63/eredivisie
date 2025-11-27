@@ -26,9 +26,9 @@ try {
     ]);
    
 
-    const allData = { standings: response[0].data, matches: response[1].data, topScorers: response[3].data, teams: response[2].data };
+    const allData = { standings: response[0].data, matches: response[1].data, topScorers: response[3].data, teams: response[2].data};
 
-    // console.log("data:", allData);
+    console.log("data:", allData);
 
     return res.status(200).json(allData);
 } catch (error) {

@@ -61,7 +61,7 @@
   align-items: center;
   justify-content: center;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 16px;
     width: 100%;
   }
 }
@@ -95,13 +95,13 @@
 @media only screen and (max-width: 960px) {
   .round {
      width: 100%;
-     margin-bottom: 0rem;
+    
   }
 }
 
 @media only screen and (max-width: 600px) {
   .round {
-     margin-top: 1rem;
+     margin-top: 0rem;
   }
 }
 
@@ -131,90 +131,6 @@
   justify-content: center;
   width: 10%;
 }
-
-/* .positionGreen {
-  position: absolute;
-  top:0;
-  left:0;
-  bottom:0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 10px;
-  border-top-left-radius: .6rem;
-  border-bottom-left-radius: .6rem;
- background: #00970d;
-}
-
-.positionBlack {
-  position: absolute;
-  top:0;
-  left:0;
-  bottom:0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 10px;
-  border-top-left-radius: .6rem;
-  border-bottom-left-radius: .6rem;
- background: #000000;
-}
-
-.positionRed {
-  position: absolute;
-  top:0;
-  left:0;
-  bottom:0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 10px;
-  border-top-left-radius: .6rem;
-  border-bottom-left-radius: .6rem;
- background: #ac0000;
-}
-
-.positionPurple {
-  position: absolute;
-  top:0;
-  left:0;
-  bottom:0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 10px;
-  border-top-left-radius: .6rem;
-  border-bottom-left-radius: .6rem;
- background: #b820ff;
-}
-
-.positionOrange {
-  position: absolute;
-  top:0;
-  left:0;
-  bottom:0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 10px;
-  border-top-left-radius: .6rem;
-  border-bottom-left-radius: .6rem;
- background: #e27900;
-}
-
-.positionBlue {
-  position: absolute;
-  top:0;
-  left:0;
-  bottom:0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 10px;
-  border-top-left-radius: .6rem;
-  border-bottom-left-radius: .6rem;
- background: #2f9aff;
-} */
 
 
 .positionColor {
@@ -277,6 +193,9 @@ position: absolute;
 @media only screen and (max-width: 750px) {
   .right {
     display: none;
+  }
+  .round {
+     margin-bottom: 0rem;
   }
 }
 
