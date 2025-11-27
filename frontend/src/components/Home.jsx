@@ -2,8 +2,12 @@ import React from "react";
 import goal from "../images/goal.jpg";
 import eredivisie65 from "../images/eredivisie65.png";
 import goal2 from "../images/goal2.jpg";
+import goal2_small from "../images/goal2_small.jpg";
 import goal3 from "../images/goal3.jpg";
+import goal3_small from "../images/goal3_small.jpg";    
 import goal4 from "../images/goal4.jpg";
+import goal_small from "../images/goal_small.jpg";
+import goal4_small from "../images/goal4_small.jpg";
 import ueda from "../images/ueda.png";
 import till from "../images/till.png";
 import saibari from "../images/saibari.png";
@@ -24,6 +28,7 @@ const Home = () => {
       <div className={styles.spacer}></div>
       <div className={styles.schaal}>
         <img src={goal3} className={styles.schaalPic} alt="" />
+        <img src={goal3_small} className={styles.schaalPic_small} alt="" />
         <div className={styles.ere65}>
           <img src={eredivisie65} alt="" className={styles.eredivisie65} />
         </div>
@@ -67,6 +72,7 @@ const Home = () => {
 
       <div className={styles.borderMarker2}>
         <img src={goal} className={styles.ballInGoal} alt="" />
+        <img src={goal_small} className={styles.ballInGoal_small} alt="" />
       </div>
 
       <div className={styles.stand}>
@@ -75,6 +81,7 @@ const Home = () => {
 
       <div className={styles.borderMarker}>
         <img src={goal4} className={styles.ballInGoal} alt="" />
+        <img src={goal4_small} className={styles.ballInGoal_small} alt="" />
       </div>
 
       <div className={styles.allmatches}>
@@ -83,6 +90,7 @@ const Home = () => {
 
       <div className={styles.borderMarker}>
         <img src={goal2} className={styles.ballInGoal} alt="" />
+        <img src={goal2_small} className={styles.ballInGoal_small} alt="" />
       </div>
 
       <Clubs />

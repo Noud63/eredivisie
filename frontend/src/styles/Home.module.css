@@ -41,25 +41,41 @@
     width: 100%;
     display: block;
     max-width: 2000px;
-    margin: 0 auto;
+    margin: 8% auto;
     line-height: 0;
     height: auto;
-    margin-top: 4%;
 }
+
+
 
 .ballInGoal {
     width: 100%;
     height: auto;
-    
+}
+
+.ballInGoal_small {
+    width: 100%;
+    height: auto;
+  }
+
+@media only screen and (max-width: 850px) {
+  .ballInGoal {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .ballInGoal_small {
+    display: none;
+  }
 }
 
 
 .borderMarker2 {
     width: 100%;
     max-width: 2000px;
-    margin: 0 auto;
+    margin: 8% auto;
     height: auto;
-    margin-top: 2%;
 }
 
 .schaal {
@@ -76,6 +92,23 @@
 .schaalPic {
     width: 100%;
     height: auto;
+}
+
+.schaalPic_small {
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (min-width: 850px) {
+  .schaalPic_small {
+    display: none;
+}
+}
+
+@media only screen and (max-width: 849px) {
+  .schaalPic {
+    display: none;
+}
 }
 
 .history {
@@ -164,13 +197,13 @@
 }
 
 .eredivisie65 {
-  width: 100%;
+  width: 80%;
   height: auto;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1150px) {
   .eredivisie65  {
-    width: 70%;
+    width: 60%;
   height: auto;
   }
 }
@@ -180,16 +213,16 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
   .eredivisie65  {
     width: 50%;
   height: auto;
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
   .ere65  {
-     margin-right: 8%;
+     margin-right: 4%;
   }
 }
 
@@ -197,25 +230,24 @@
   .eredivisie65  {
     width: 40%;
   height: auto;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .ere65  {
-     margin-right: 10%;
+   margin-left: 24%;
   }
 }
 
 @media only screen and (max-width: 450px) {
   .eredivisie65  {
-    width: 30%;
-  height: auto;
+    width: 40%;
+    height: auto;
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 400px) {
   .ere65  {
-     margin-right:2%;
+     margin-right:0;
+  }
+  .eredivisie65  {
+    width: 30%;
+    height: auto;
   }
 }
 
@@ -336,7 +368,7 @@
   width: 100%;
   height: auto;
   box-shadow: 0px 2px 4px rgb(8, 77, 175);
-  border-radius: .8rem;
+  border-radius: .6rem;
 }
 
 

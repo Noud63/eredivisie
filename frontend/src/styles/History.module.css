@@ -55,7 +55,7 @@
   font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
   /* background-color:rgb(36, 79, 143); */
   box-shadow: 0px 2px 8px rgb(0, 22, 54);
-  border-radius: .8rem;
+  border-radius: .6rem;
   border: 2px solid  rgb(196, 160, 0);
   margin-bottom: 1.2rem;
 }
@@ -111,7 +111,7 @@
   font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
   /* background-color:rgb(36, 79, 143); */
   box-shadow: 0px 2px 8px rgb(0, 22, 54);
-  border-radius: .8rem;
+  border-radius: .4rem;
   border: 2px solid  rgb(196, 160, 0);
   /* margin-bottom: 1.2rem; */
 }
@@ -123,9 +123,10 @@
   font-size: 0;
   width: 100%;
   height: auto;
+  padding: 1rem;
   margin-top: 10px;
-  border:30px solid  rgb(22, 54, 94);
-   background-color: rgb(22, 54, 94);
+  border:20px solid  rgb(8, 33, 63);
+   background-color: rgb(8, 33, 63);
 }
 
 @media only screen and (max-width: 720px) {

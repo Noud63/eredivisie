@@ -71,7 +71,7 @@
     padding: .6em;
     background-color: white;
     box-shadow: 0px 2px 8px rgb(0, 22, 54);
-    border-radius: .8rem;
+    border-radius: .6rem;
     border: 2px solid rgb(101, 147, 216);
 }
 
@@ -87,7 +87,7 @@
     padding: .6em;
     background-color: white;
     box-shadow: 0px 2px 8px rgb(0, 22, 54);
-    border-radius: .8rem;
+    border-radius: .6rem;
     border: 2px solid rgb(101, 147, 216);
 }
 
@@ -141,7 +141,7 @@
   font-size: calc(12px + (22 - 12) * ((100vw - 320px) / (1920 - 320)));
   /* background-color:rgb(36, 79, 143); */
   box-shadow: 0px 2px 8px rgb(0, 22, 54);
-  border-radius: .8rem;
+  border-radius: .6rem;
   border: 2px solid  rgb(196, 160, 0);
   margin-bottom: 1.2rem;
 }
