@@ -8,6 +8,8 @@ import Legenda from "./Legenda";
 const Stand = () => {
   const { state } = useGlobalContext();
 
+  console.log("State:", state)
+
   const location = useLocation();
   const path = location.pathname;
 

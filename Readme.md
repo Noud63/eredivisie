@@ -1,8 +1,8 @@
 <h1>KNVB Eredivisie voetbal (Dutch Football league)</h1>
 
-Front-end: React 18 (hooks).<br>
-Back-end: Express Node.<br>
-REST API https://api.football-data.org<br><br><br>
+Front-end: React 18, Sass.<br>
+Back-end: Express NodeJS<br>
+REST API https://api.football-data.org<br><br>
 
 
 <div><a href="https://github.com/user-attachments/assets/7f4e71ab-83e3-44bc-a811-b0696cfadfb0"><img width="1919" height="1080" alt="Image" src="https://github.com/user-attachments/assets/7f4e71ab-83e3-44bc-a811-b0696cfadfb0" /></a></div><br /><br />
