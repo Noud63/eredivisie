@@ -13,7 +13,7 @@ const getFootballData = asyncHandler(async (req, res) => {
 try {
    const headers = {
       headers: {
-        "X-Auth-Token": process.env.REACT_APP_API_KEY,
+        "X-Auth-Token": process.env.FOOTBALL_API_KEY,
       },
     };
 
