@@ -13,7 +13,7 @@ dotenv.config()
 
 // app.use(
 //   cors({
-//     origin:"",
+//     origin:"https://eredivisie-backend.vercel.app",
 //     methods: ["GET"],
 //     credentials: true,
 //   })
@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 });
 
 
-// app.use("/api/footballData", footballDataRoute);
+app.use("/api/footballData", footballDataRoute);
 
 // app.use('/', express.static(path.join(__dirname, '../frontend/', 'build')))
 
