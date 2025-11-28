@@ -19,12 +19,12 @@ dotenv.config()
 //   })
 // );
 
-app.get("/", (req, res) => {
+app.get("/api/footballData", (req, res) => {
   res.json({ message: "Success"});
 });
 
 
-// app.use("/api/footballData", footballDataRoute);
+app.use("/api/footballData", footballDataRoute);
 
 // app.use('/', express.static(path.join(__dirname, '../frontend/', 'build')))
 
