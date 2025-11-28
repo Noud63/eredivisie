@@ -24,7 +24,7 @@ dotenv.config()
 // });
 
 
-app.use("/api/footballData", footballDataRoute);
+app.use("/", footballDataRoute);
 
 // app.use('/', express.static(path.join(__dirname, '../frontend/', 'build')))
 
