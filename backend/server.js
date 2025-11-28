@@ -11,13 +11,13 @@ app.use(cors())
 app.use(express.json())
 dotenv.config()
 
-// app.use(
-//   cors({
-//     origin:"https://eredivisie-backend.vercel.app",
-//     methods: ["GET"],
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin:"https://eredivisie-backend.vercel.app/api/footballData",
+    methods: ["GET"],
+    credentials: true,
+  })
+);
 
 app.get("/", (req, res) => {
   res.json({ message: "Success"});
