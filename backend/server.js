@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 });
 
 
-app.use("/api/footballData", footballDataRoute);
+// app.use("/api/footballData", footballDataRoute);
 
 // app.use('/', express.static(path.join(__dirname, '../frontend/', 'build')))
 
