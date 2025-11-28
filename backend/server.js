@@ -19,7 +19,7 @@ dotenv.config()
 //   })
 // );
 
-app.get("/api/footballData", (req, res) => {
+app.get("/", (req, res) => {
   res.json({ message: "Success"});
 });
 
