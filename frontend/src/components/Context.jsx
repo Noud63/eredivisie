@@ -27,7 +27,7 @@ const AllData = ({ children }) => {
     try {
       const response = await axios.get("/api/footballData");
 
-      console.log("Res:", response.data);
+      // console.log("Res:", response.data.teams.teams);
 
       let season =
         response.data.standings.season.startDate.slice(0, 4) +
@@ -35,12 +35,10 @@ const AllData = ({ children }) => {
         response.data.standings.season.endDate.slice(0, 4);
 
       setSeason(season);
-      console.log("Season:", season);
 
       let topScorers = response.data.topScorers.scorers;
       setTopScorers(topScorers);
 
-      //   console.log("Topscorers:", topScorers);
       let ranking = response.data.standings.standings[0].table;
       setRanking(ranking);
 

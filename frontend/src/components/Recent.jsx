@@ -54,7 +54,7 @@ const Recent = () => {
     setOpenModal(!openModal);
   };
 
-  // console.log("Timed:", timed.slice(0, 9 ))
+  console.log("Timed:", timed.slice(0, 9 ))
 
   // const [lastGames, setLastGames] = React.useState([]);
   // const [program, setProgram] = React.useState([]);

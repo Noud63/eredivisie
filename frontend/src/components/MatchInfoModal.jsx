@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styles from "../styles/Recent.module.css";
 import DateFormatter from "../utils/dateFormatter";
 import GetStadium from "../utils/getStadium";
-import goffertstadion from "../images/goffertstadion.jpg"
 
 const MatchInfoModal = ({ showMatchInfo, timed, ID }) => {
   const [match, setMatch] = useState({});
@@ -16,9 +15,7 @@ const MatchInfoModal = ({ showMatchInfo, timed, ID }) => {
 
   const day = DateFormatter(match?.utcDate);
 
-  const stadion = GetStadium(match?.homeTeam?.id);
-
-  console.log(stadion);
+  const stadion = GetStadium(match?.homeTeam?.id); // [{...}]
 
   return (
     <div className={styles.modal} onClick={showMatchInfo}>
@@ -39,11 +36,11 @@ const MatchInfoModal = ({ showMatchInfo, timed, ID }) => {
           </div>
 
           <div className={styles.plaats}>
-            <div className={styles.stadion}>{stadion[0].stadion}</div>-
-            <div className={styles.stadion}>{stadion[0].city}</div>
+            <div className={styles.stadion}>{stadion[0]?.stadion}</div>-
+            <div className={styles.stadion}>{stadion[0]?.city}</div>
           </div>
 
-          <div ><img src={goffertstadion} alt="" style={{width:"100%", borderRadius: "5%"}}/></div>
+          <div><img src={stadion[0]?.image} alt="" style={{width:"100%", borderRadius: "3%"}}/></div>
         </div>
       )}
     </div>

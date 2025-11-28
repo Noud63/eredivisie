@@ -1,72 +1,83 @@
 [
   {
-    "id": 0,
+    "id": 678,
     "club": "Ajax",
     "stadion": "Johan Cruyff ArenA",
     "city": "Amsterdam",
-    "capacity": 55865
+    "capacity": 55865,
+    "image": "/images/jca.jpg"
   },
   {
-     "id": 0,
+     "id": 682,
     "club": "AZ",
     "stadion": "AFAS Stadion",
     "city": "Alkmaar",
-    "capacity": 19478
+    "capacity": 19478,
+    "image": "/images/afas.jpg"
   },
   {
-     "id": 0,
+     "id": 670,
     "club": "Excelsior",
-    "stadion": "Van Donge & De Roo Stadion",
+    "stadion": "Woudestein",
     "city": "Rotterdam",
-    "capacity": 4500
+    "capacity": 4500,
+    "image": "/images/woudestein.jpg"
   },
   {
-     "id": 0,
+     "id": 675,
     "club": "Feyenoord",
     "stadion": "De Kuip",
     "city": "Rotterdam",
-    "capacity": 47500
+    "capacity": 47500,
+    "image": "/images/kuip.jpg"
   },
   {
-     "id": 0,
+     "id": 1920,
     "club": "Fortuna Sittard",
     "stadion": "Fortuna Sittard Stadion",
     "city": "Sittard",
-    "capacity": 10300
+    "capacity": 10300,
+    "image": "/images/fortuna.jpg"
   },
   {
-     "id": 0,
+     "id": 718,
     "club": "Go Ahead Eagles",
     "stadion": "De Adelaarshorst",
     "city": "Deventer",
-    "capacity": 10000
+    "capacity": 10000,
+    "image": "/images/adelaarshorst.jpg"
   },
   {
-     "id": 0,
+     "id": 677,
     "club": "FC Groningen",
     "stadion": "Euroborg",
     "city": "Groningen",
-    "capacity": 22550
+    "capacity": 22550,
+    "image": "/images/euroborg.jpg"
   },
   {
-     "id": 0,
+     "id": 673,
     "club": "Heerenveen",
     "stadion": "Abe Lenstra Stadion",
     "city": "Heerenveen",
-    "capacity": 27224
+    "capacity": 27224,
+    "image": ""
   },
   {
+    "id": 671,
     "club": "Heracles Almelo",
     "stadion": "Asito Stadion",
     "city": "Almelo",
-    "capacity": 12080
+    "capacity": 12080,
+    "image": "/images/asito.jpg" 
   },
   {
-     "id": 0,
+     "id": 681,
     "club": "NAC Breda",
     "stadion": "Rat Verlegh Stadion",
     "city": "Breda",
-    "capacity": 19000
+    "capacity": 19000,
+    "image": ""
   },
   {
     "id": 1915,
@@ -74,53 +85,62 @@
     "stadion": "Goffertstadion",
     "city": "Nijmegen",
     "capacity": 12500,
-    "image": "/images/offertstadion.jpg"
+    "image": "/images/goffertstadion.jpg"
   },
   {
-     "id": 0,
+     "id": 684,
     "club": "PEC Zwolle",
     "stadion": "MAC³PARK Stadion",
     "city": "Zwolle",
-    "capacity": 13250
+    "capacity": 13250,
+    "image": "/images/mac3park.jpg"
   },
   {
+     "id": 674,
     "club": "PSV Eindhoven",
     "stadion": "Philips Stadion",
     "city": "Eindhoven",
-    "capacity": 36500
+    "capacity": 36500,
+    "image": "/images/philips.jpg"
   },
   {
+     "id": 6806,
     "club": "Sparta Rotterdam",
     "stadion": "Spartastadion Het Kasteel",
     "city": "Rotterdam",
-    "capacity": 11000
+    "capacity": 11000,
+    "image": "/images/kasteel.jpg"
   },
   {
-     "id": 0,
+     "id": 1912,
     "club": "Telstar",
     "stadion": "BUKO Stadion",
     "city": "Velsen",
-    "capacity": 5338
+    "capacity": 5338,
+    "image": "/images/buko.jpg"
   },
   {
-     "id": 0,
+     "id": 666,
     "club": "FC Twente",
     "stadion": "De Grolsch Veste",
     "city": "Enschede",
-    "capacity": 30205
+    "capacity": 30205,
+    "image": "/images/grolschveste.jpg"
   },
   {
-     "id": 0,
+     "id": 676,
     "club": "FC Utrecht",
     "stadion": "Stadion Galgenwaard",
     "city": "Utrecht",
-    "capacity": 23750
+    "capacity": 23750,
+    "image": ""
   },
   {
-     "id": 0,
+     "id": 1919,
     "club": "FC Volendam",
     "stadion": "Kras Stadion",
     "city": "Volendam",
-    "capacity": 7384
+    "capacity": 7384,
+    "image": ""
   }
 ]

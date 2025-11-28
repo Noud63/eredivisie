@@ -9,7 +9,7 @@ const options = {
   minute: "2-digit",
   
 }; 
-console.log(day.toLocaleString("nl-NL", options))
+// console.log(day.toLocaleString("nl-NL", options))
 return day.toLocaleString("nl-NL", options)
 
 }
