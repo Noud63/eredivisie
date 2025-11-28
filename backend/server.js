@@ -19,9 +19,9 @@ app.use(
   })
 );
 
-// app.get("/api/footballData", (req, res) => {
-//   res.json({ message: "Success"});
-// });
+app.get("/api/footballData", (req, res) => {
+  res.json({ message: "Success"});
+});
 
 
 app.use("/api/footballData", footballDataRoute);
