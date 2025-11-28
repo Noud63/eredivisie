@@ -44,7 +44,7 @@
 }
 
 .iconPng {
-    width: 100px;
+    width: 70px;
     height: auto;
     -webkit-filter: drop-shadow(5px 5px 5px rgb(0, 34, 73));
     filter: drop-shadow(5px 5px 5px rgb(0, 34, 73));
@@ -94,7 +94,7 @@
         grid-template-rows: repeat(6, 1fr);
     }
     .iconPng {
-    width: 80px;
+    width: 60px;
     height: auto;
     -webkit-filter: drop-shadow(3px 3px 3px rgb(0, 34, 73));
     filter: drop-shadow(3px 3px 3px rgb(0, 34, 73));
