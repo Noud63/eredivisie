@@ -21,18 +21,23 @@ const MatchInfoModal = ({ showMatchInfo, timed, ID }) => {
     <div className={styles.modal} onClick={showMatchInfo}>
       {match && (
         <div className={styles.modalContent}>
+
           <div className={styles.modalTeams}>
             <img src={match.homeTeam?.crest} alt="" />
-            <div className={styles.hometeam_modal}>{match.homeTeam?.name}</div>
-            <div className={styles.scores_modal}>-</div>
-            <div className={styles.awayteam_modal}>{match.awayTeam?.name}</div>
-            <img src={match.awayTeam?.crest} alt="" />
+            <div className={styles.teamName}>
+              <div className={styles.hometeam_modal}>
+                {match.homeTeam?.name}
+              </div>
+              <div className={styles.scores_modal}>-</div>
+              <div className={styles.awayteam_modal}>
+                {match.awayTeam?.name}
+              </div>
+            </div>
+              <img src={match.awayTeam?.crest} alt="" />
           </div>
-          
 
           <div className={styles.date}>
-            <div>{day.slice(0, -8)}</div>-
-            <div>{day.slice(-6, day.length)}</div>
+            <div>{day.slice(0, -8)}</div>-<div>{day.slice(-6, day.length)}</div>
           </div>
 
           <div className={styles.plaats}>
@@ -40,7 +45,13 @@ const MatchInfoModal = ({ showMatchInfo, timed, ID }) => {
             <div className={styles.stadion}>{stadion[0]?.city}</div>
           </div>
 
-          <div><img src={stadion[0]?.image} alt="" style={{width:"100%", borderRadius: "3%"}}/></div>
+          <div>
+            <img
+              src={stadion[0]?.image}
+              alt=""
+              style={{ width: "100%", borderRadius: "3%" }}
+            />
+          </div>
         </div>
       )}
     </div>

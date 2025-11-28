@@ -73,16 +73,16 @@ const History = () => {
                             <div className={styles.speler}><img src={marco} alt="marco" className={styles.spelerImg} /><div className={styles.spelerNaam}>Marco van Basten</div></div>
                     </div>
 
-                <span className={styles.historyInBeeld}>Korte geschiedenis in beeld</span>
+                {/* <span className={styles.historyInBeeld}>Korte geschiedenis in beeld</span> */}
 
-                <div className={styles.youtubeVideo}>
+                {/* <div className={styles.youtubeVideo}>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/g_AxEJfBv2g" 
                             title="YouTube video player" 
                             frameBorder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowFullScreen>
                    </iframe>
-                </div>
+                </div> */}
 
             </div>
                 

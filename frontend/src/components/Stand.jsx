@@ -12,7 +12,9 @@ const Stand = () => {
   const path = location.pathname;
 
   return (
-    <div className={styles.container2}>
+
+  <div className={styles.stand}>
+<div className={styles.container2}>
       {path === "/stand" && <div className={styles.spacer}></div>}
 
       {state.loading ? (
@@ -153,6 +155,9 @@ const Stand = () => {
         </div>
       )}
     </div>
+  </div>
+
+    
   );
 };
 

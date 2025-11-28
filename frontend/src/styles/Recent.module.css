@@ -214,7 +214,7 @@
   flex-direction: column;
   width: 100%;
   max-width: 550px;
-  padding: .5rem 1rem;
+  padding: .8rem 1rem;
   margin: 0 2%;
   height: auto;
   background-color: white;
@@ -297,4 +297,37 @@
   color: rgb(36, 79, 143);
   font-weight: 500;
   margin-bottom: 1rem;
+}
+
+.teamName {
+  width: 100%;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 500px) {
+  .modalTeams {
+    padding: .5em 0 .5em 0;
+  font-size: 18px;
+  }
+  
+}
+
+@media only screen and (max-width: 450px) {
+  .modalTeams {
+    padding: .3em 0 .6em 0;
+  font-size: 16px;
+  }
+  .modalTeams img {
+  width: 30px;
+  height: auto;
+}
+.modalContent {
+    padding: .6em;
+  }
+  .date, .plaats {
+    font-size: 14px;
+  }
 }

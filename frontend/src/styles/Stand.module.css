@@ -1,13 +1,16 @@
-
+.stand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 .6rem 0 .6rem;
+}
 .container2 {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  max-width: 1200px;
-  margin: 0 auto;
-  /* background-color: rgb(36, 79, 143); */
-  padding: 0 .6rem 0 .6rem;
 }
 
 .spacer{
