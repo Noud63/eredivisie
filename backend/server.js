@@ -19,9 +19,9 @@ dotenv.config()
 //   })
 // );
 
-app.get("/", (req, res) => {
-  res.json({ message: "Success"});
-});
+// app.get("/", (req, res) => {
+//   res.json({ message: "Success"});
+// });
 
 
 app.use("/api/footballData", footballDataRoute);

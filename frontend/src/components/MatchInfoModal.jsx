@@ -3,15 +3,15 @@ import styles from "../styles/Recent.module.css";
 import DateFormatter from "../utils/dateFormatter";
 import GetStadium from "../utils/getStadium";
 
-const MatchInfoModal = ({ showMatchInfo, timed, ID }) => {
+const MatchInfoModal = ({ showMatchInfo, program, ID }) => {
   const [match, setMatch] = useState({});
 
   useEffect(() => {
-    if (!timed || !ID) return;
+    if (!program || !ID) return;
 
-    const found = timed.find((game) => game.id === ID);
+    const found = program.find((game) => game.id === ID);
     setMatch(found || null);
-  }, [timed, ID]);
+  }, [program, ID]);
 
   const day = DateFormatter(match?.utcDate);
 
