@@ -21,6 +21,10 @@ const HeaderMenu = () => {
                     <Link to='/stand' className={styles.link}>
                         <div >Stand</div>
                     </Link>
+                    <Link to='/clubinfo' className={styles.link}>
+                        <div >Clubs</div>
+                    </Link>
+    
     
                 </div>
   )
