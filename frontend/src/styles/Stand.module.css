@@ -4,7 +4,7 @@
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 .6rem 0 .6rem;
+  padding: 0 1.4rem;
 }
 .container2 {
   display: flex;
@@ -33,6 +33,7 @@
 .rowWrap {
   display: flex;
   flex-direction: row;
+  gap: 4%;
 }
 
 .rightRow {
@@ -41,7 +42,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 0 0 1rem 1rem;
 }
 
 .leftRow {
@@ -50,7 +50,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 0 1rem 1rem 0;
 }
 
 @media only screen and (max-width: 750px) {

@@ -21,7 +21,7 @@ import { useGlobalContext } from "./Context";
 
 const Home = () => {
   const { topScorers, season } = useGlobalContext();
-  console.log("Season:", season.season);
+  console.log("Top:", topScorers);
 
   return (
     <div className={styles.home}>
@@ -101,28 +101,9 @@ const Home = () => {
           {topScorers &&
             topScorers.slice(0, 3).map((scorer, index) => (
               <div className={styles.topScorers} key={index}>
+                
                 <div className={styles.scorerInfo}>
-                  {scorer.player.name === "Ayase Ueda" ? (
-                    <img
-                      src={ueda}
-                      alt="ueda"
-                      className={styles.topScorerPic}
-                    />
-                  ) : null}
-                  {scorer.player.name === "Guus Til" ? (
-                    <img
-                      src={till}
-                      alt="ueda"
-                      className={styles.topScorerPic}
-                    />
-                  ) : null}
-                  {scorer.player.name === "Ismael Saibari" ? (
-                    <img
-                      src={saibari}
-                      alt="ueda"
-                      className={styles.topScorerPic}
-                    />
-                  ) : null}
+                  <img src={scorer.team.crest} alt="" style={{width:"30px"}}/>
                   <div className={styles.name}>{scorer.player.name} - {scorer.team.shortName}</div>
                 </div>
                 <div className={styles.goals}>{scorer.goals} goals</div>

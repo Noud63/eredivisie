@@ -1,62 +1,65 @@
 .home {
-  width:100%;
+  width: 100%;
   max-width: 2000px;
   margin: 0 auto;
   background: #00121f;
-  background: linear-gradient(90deg,rgba(0, 18, 31, 1) 0%, rgba(36, 79, 143, 1) 50%, rgba(0, 18, 31, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 18, 31, 1) 0%,
+    rgba(36, 79, 143, 1) 50%,
+    rgba(0, 18, 31, 1) 100%
+  );
 }
 
-.spacer{
+.spacer {
   height: 160px;
   width: 100%;
 }
 
 @media only screen and (max-width: 800px) {
   .spacer {
-     height: 130px;
+    height: 130px;
   }
 }
 
 @media only screen and (max-width: 400px) {
   .spacer {
-     height: 100px;
+    height: 100px;
   }
 }
 .eredivisieLogo {
-    width: 100%;
-    margin-top: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 @media only screen and (max-width: 800px) {
   .eredivisieLogo {
-     margin-top: 0rem;
+    margin-top: 0rem;
   }
 }
 
 .borderMarker {
-    width: 100%;
-    display: block;
-    max-width: 2000px;
-    margin: 6% auto;
-    line-height: 0;
-    height: auto;
+  width: 100%;
+  display: block;
+  max-width: 2000px;
+  margin: 6% auto;
+  line-height: 0;
+  height: auto;
 }
 
-
-
 .ballInGoal {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .ballInGoal_small {
-    width: 100%;
-    height: auto;
-  }
+  width: 100%;
+  height: auto;
+}
 
 @media only screen and (max-width: 850px) {
   .ballInGoal {
@@ -70,12 +73,11 @@
   }
 }
 
-
 .borderMarker2 {
-    width: 100%;
-    max-width: 2000px;
-    margin: 8% auto;
-    height: auto;
+  width: 100%;
+  max-width: 2000px;
+  margin: 4% auto;
+  height: auto;
 }
 
 .schaal {
@@ -90,38 +92,39 @@
 }
 
 .schaalPic {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .schaalPic_small {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 @media only screen and (min-width: 850px) {
   .schaalPic_small {
     display: none;
-}
+  }
 }
 
 @media only screen and (max-width: 849px) {
   .schaalPic {
     display: none;
-}
+  }
 }
 
 .history {
   visibility: visible;
-  width:50%;
-  top:50%;
-  left:10%;
+  width: 50%;
+  top: 50%;
+  left: 10%;
   transform: translate(-10%, -50%);
   position: absolute;
   color: white;
   line-height: 1.5;
   font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (1920 - 320)));
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-shadow: 0px 0px 4px black, 0px 0px 4px black;
 }
 
@@ -135,8 +138,8 @@
   color: white;
   line-height: 1.5;
   font-size: 1.2rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .historyText {
@@ -161,29 +164,28 @@
 
 @media only screen and (max-width: 1150px) {
   .history {
-     visibility: hidden;
+    visibility: hidden;
   }
   .history2 {
     display: flex;
     font-size: 1rem;
   }
-
 }
 
 @media only screen and (max-width: 500px) {
-   .history2 {
-    font-size: .9rem;
+  .history2 {
+    font-size: 0.9rem;
   }
-  .stukje{
+  .stukje {
     font-size: 1.2rem;
   }
 }
 
 @media only screen and (max-width: 400px) {
-   .history2 {
-    font-size: .9rem;
+  .history2 {
+    font-size: 0.9rem;
   }
-  .stukje{
+  .stukje {
     font-size: 1.1rem;
   }
 }
@@ -202,224 +204,211 @@
 }
 
 @media only screen and (max-width: 1150px) {
-  .eredivisie65  {
+  .eredivisie65 {
     width: 60%;
-  height: auto;
+    height: auto;
   }
 }
 @media only screen and (max-width: 1000px) {
-  .ere65  {
-     margin-right: 12%;
+  .ere65 {
+    margin-right: 12%;
   }
 }
 
 @media only screen and (max-width: 850px) {
-  .eredivisie65  {
+  .eredivisie65 {
     width: 50%;
-  height: auto;
+    height: auto;
   }
 }
 
 @media only screen and (max-width: 850px) {
-  .ere65  {
-     margin-right: 4%;
+  .ere65 {
+    margin-right: 4%;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .eredivisie65  {
+  .eredivisie65 {
     width: 40%;
-  height: auto;
-   margin-left: 24%;
+    height: auto;
+    margin-left: 24%;
   }
 }
 
 @media only screen and (max-width: 450px) {
-  .eredivisie65  {
+  .eredivisie65 {
     width: 40%;
     height: auto;
   }
 }
 
 @media only screen and (max-width: 400px) {
-  .ere65  {
-     margin-right:0;
+  .ere65 {
+    margin-right: 0;
   }
-  .eredivisie65  {
+  .eredivisie65 {
     width: 30%;
     height: auto;
   }
 }
 
-
 .allmatches {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5%
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
 }
 
 .stand {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 4%;
-    /* margin-bottom: 2%; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4%;
+  /* margin-bottom: 2%; */
 }
 
-.dezeweek{
-    margin: 4% auto;
+.dezeweek {
+  margin: 4% auto;
 }
-
 
 .derbystar {
-    width: 30%;
-    height: auto;
-    margin-right: 50px;
+  width: 30%;
+  height: auto;
+  margin-right: 50px;
 }
 
 .ds {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .topScores1 {
-   max-width: 1155px;
-   margin: 0 auto;
-   height: auto;
-   margin-bottom: 2%;
-   padding: .6rem;
-  }
-
- .topScores2 {
-   max-width: 1155px;
-   margin: 5% auto;
-   height: auto;
-   margin-bottom: 7%;
-   padding: .6rem;
-  } 
+  max-width: 1155px;
+  margin: 0 auto;
+  height: auto;
+  margin-bottom: 2%;
+  padding: 0.8rem;
+}
 
 .top {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: row;
-    padding: .6em ;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: calc(12px + (22 - 12) * ((100vw - 320px) / (1920 - 320)));
-   background-color:transparent;
-    box-shadow: 0px 2px 8px rgb(0 33 82);
-    border-radius: .6rem;
-    border: 2px solid rgb(196, 160, 0);
-    margin-bottom: 1.2rem;
-}
-
-.topScorers {
-  width: 100%;  
-    display: flex;
-    align-items: center;
-   justify-content: center;
-    flex-direction: row;
-    padding: .6em ;
-   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: rgb(36, 79, 143);
-    font-weight: bold;
-    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
-   background-color:white;
-    box-shadow: 0px 2px 8px rgb(0 33 82);
-    border-radius: .6rem;
-    border: 2px solid rgb(101, 147, 216);
-    margin-bottom: 1.2rem;
-}
-
-
-
-.scorerInfo {
-  width: 50%;
+  width: 100%;
+  height: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: row;
+  padding: 0.6rem 0 0.6rem 0;
+  color: white;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
+  box-shadow: 0px 2px 8px rgb(0, 22, 54);
+  border-radius: 0.6rem;
+  border: 2px solid rgb(196, 160, 0);
+  margin-bottom: 1.4rem;
 }
 
 .topScorers {
-   position: relative;
-   width: 100%;
-   height: auto;
-   margin: 50px 0 2% 0;
-   display: flex;
-   justify-content: flex-end;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(36, 79, 143);
+  font-weight: bold;
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+  background-color: white;
+  box-shadow: 0px 2px 8px rgb(0 33 82);
+  border-radius: 0.6rem;
+  border: 2px solid rgb(101, 147, 216);
+  margin-bottom: 1.2rem;
 }
 
-.topScorerPic { 
-  position: absolute;
-  width:80px;
-  left:20px;
+.scorerInfo {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.4em;
+}
+
+.topScorers {
+  width: 100%;
   height: auto;
-  border-radius: 50%;
-  border: 8px solid white;
-  box-shadow: 0px 0px 8px rgb(22, 81, 165);
+  margin: 2% 0 2% 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .top3 {
   width: 100%;
   height: auto;
   box-shadow: 0px 2px 4px rgb(8, 77, 175);
-  border-radius: .6rem;
-}
-
-
-@media only screen and (max-width: 650px) {
-  .top {
-     border-radius: .5rem;
-     box-shadow: 0px 2px 4px rgb(0 33 82);
-      margin-bottom: .8rem;
-  }
-  .top3 {
-     border-radius: .5rem;
-  }
-  .topScorerPic {
-    width: 60px;
-     border: 6px solid white;
-   }
-  .scorerInfo {
-    justify-content: flex-start; 
-  }
-  .scorerInfo {
-    width: 55%;
-  }
-  .topScorers {
-       margin: 30px 0 2% 0;
-  }
-}
-
-
-.goals {
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: rgb(36, 79, 143);
-    font-weight: bold;
-    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
-    padding-right: 20px;
+  border-radius: 0.6rem;
 }
 
 .name {
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: rgb(36, 79, 143);
-    font-weight: bold;
-    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+  display: flex;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(36, 79, 143);
+  font-weight: bold;
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.goals {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(36, 79, 143);
+  font-weight: bold;
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+  width: 80px;
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 650px) {
+  .top {
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 4px rgb(0 33 82);
+    margin-bottom: 0.8rem;
+  }
+  .top3 {
+    border-radius: 0.5rem;
+  }
+  .scorerInfo {
+
+    justify-content: flex-start;
+  }
+  .topScorers {
+    margin-bottom: 14px;
+    justify-content: space-between;
+  }
+  .goals {
+    width: 100px;
+  }
+  .scorers {
+        margin-top: 14px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
-  
-  .topScorerPic {
-    width: 53px;
-     border: 6px solid white;
-   }
-  .goals{
-    padding-right: 10px;
+  .goals {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+  }
+  .scorerInfo {
+     gap: 5px;
   }
 }
 
@@ -428,24 +417,21 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 }
 
 .ads {
-   width: 1px;
+  width: 1px;
 }
 
-body::-webkit-scrollbar-track
-{
+body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 3px rgba(0, 4, 15, 0.5);
   box-shadow: inset 0 0 3px rgba(0, 4, 15, 0.5);
   background-color: rgb(87, 127, 187);
 }
 
-body::-webkit-scrollbar
-{
+body::-webkit-scrollbar {
   width: 12px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
-body::-webkit-scrollbar-thumb
-{
+body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgb(0, 11, 34);
   box-shadow: inset 0 0 6px rgb(0, 11, 34);

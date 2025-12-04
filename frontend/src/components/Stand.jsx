@@ -16,7 +16,7 @@ const Stand = () => {
   return (
 
   <div className={styles.stand}>
-<div className={styles.container2}>
+    <div className={styles.container2}>
       {path === "/stand" && <div className={styles.spacer}></div>}
 
       {state.loading ? (
