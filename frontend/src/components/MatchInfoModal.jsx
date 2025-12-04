@@ -45,7 +45,7 @@ const MatchInfoModal = ({ showMatchInfo, program, ID }) => {
             <div className={styles.stadion}>{stadion[0]?.city}</div>
           </div>
 
-          <div>
+          <div className={styles.stadionImage}>
             <img
               src={stadion[0]?.image}
               alt=""
