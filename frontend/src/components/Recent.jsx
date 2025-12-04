@@ -1,8 +1,9 @@
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect, useCallback, useState } from "react";
 import styles from "../styles/Recent.module.css";
 import { useGlobalContext } from "./Context";
 import { useLocation } from "react-router-dom";
 import MatchInfoModal from "./MatchInfoModal";
+import lastMatchExpired from "../utils/hasLastMatchExpired";
 
 const Recent = () => {
   const location = useLocation();
@@ -10,12 +11,21 @@ const Recent = () => {
 
   const { state, matchDay } = useGlobalContext();
 
-  const [lastGames, setLastGames] = React.useState([]);
+   const [lastGames, setLastGames] = React.useState([]);
   const [program, setProgram] = React.useState([]);
+  const [currentMatchDay, setCurrentMatchDay] = useState(matchDay)
   const [id, setId] = React.useState(null);
   const [openModal, setOpenModal] = React.useState(false);
 
-  let currentMatchDay = matchDay - 1;
+  useEffect(() => {
+      if(lastMatchExpired(matchDay, state.matchByDay)){
+           setCurrentMatchDay(matchDay)
+      }else{
+        setCurrentMatchDay(matchDay - 1)
+      }
+  },[matchDay, state.matchByDay])
+
+  // let currentMatchDay = matchDay - 1 ;
   // program.every(match => match.status === "FINISHED" ? currentMatchDay = matchDay : currentMatchDay = matchDay - 1);
   let upcomingMatchDay = currentMatchDay + 1;
   let recent = state.matchByDay.slice(currentMatchDay - 1, currentMatchDay);
@@ -44,6 +54,33 @@ const Recent = () => {
     setId(id);
     setOpenModal(!openModal);
   };
+
+  // const [lastGames, setLastGames] = React.useState([]);
+  // const [program, setProgram] = React.useState([]);
+
+  // let currentMatchDay = matchDay
+  // program.every(match => match.status === "FINISHED" ? currentMatchDay = matchDay : currentMatchDay = matchDay - 1);
+  // let upcomingMatchDay = currentMatchDay + 1;
+  // let recent = state.matchByDay.slice(currentMatchDay - 1, currentMatchDay);
+  // let upcoming = state.matchByDay.slice(upcomingMatchDay - 1, upcomingMatchDay);
+
+  // const getLastGames = useCallback(() => {
+  //    for (let games of recent) {
+  //       setLastGames(games);
+  //    }
+  // }, [recent]);
+
+  // const getProgram = useCallback(() => {
+  //    for (let games of upcoming) {
+  //       setProgram(games);
+  //    }
+  // }, [upcoming]);
+
+  // useEffect(() => {
+  //    getLastGames();
+  //    getProgram();
+  // }, [getLastGames, getProgram]);
+//   console.log("Timed:", timed);
 
   return (
     <>
