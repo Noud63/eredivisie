@@ -1,7 +1,4 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
-}
+
 
 .iconBoxWrapper {
     margin: 0 auto;
@@ -10,9 +7,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 4%;
     margin-bottom: 8%;
-    padding: .6rem;
+    padding: 0 .6rem;
 }
 
 .clubsIconWrapper{
@@ -28,7 +24,7 @@
   height: auto;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: row;
   padding: .6rem 0 .6rem 0;
   color: white;
@@ -60,10 +56,12 @@
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-template-columns: repeat(9, 1fr );
+    grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 30px;
+    column-gap: 20px;
+    row-gap: 30px;
     margin-top: 10px;
+    width: 100%;
 }
 
 .icon {
@@ -72,6 +70,7 @@
     justify-content: center;
     flex-direction: column;
     width: 100px;
+    width: 100%;
 }
 
 .clubName {
@@ -85,6 +84,7 @@
     .iconBox {
         grid-template-columns: repeat(6, 1fr );
         grid-template-rows: repeat(3, 1fr);
+
     }
 }
 
@@ -106,9 +106,7 @@
     width: 50px;
     height: auto;
 }
-.icon {
-   width: 90px;
-}
+
 .clubName {
     font-size: .8rem;
 }
