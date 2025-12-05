@@ -25,7 +25,7 @@ const AllData = ({ children }) => {
     dispatchState({ type: "DATA_REQUEST" });
 
     try {
-      const response = await axios.get("https://eredivisie-backend.vercel.app/api/footballData");
+      const response = await axios.get("/api/footballData");
 
       // console.log("Res:", response.data.teams.teams);
 
@@ -41,6 +41,10 @@ const AllData = ({ children }) => {
 
       let ranking = response.data.standings.standings[0].table;
       setRanking(ranking);
+
+      const teams = response.data.teams.teams
+
+      console.log("Teams:", teams)
 
       for (let club of ranking) {
         club.team.name = club.team.name
@@ -112,6 +116,7 @@ const AllData = ({ children }) => {
         matchByDay: matchByDay,
         totalMatches: totalMatches,
         currentMatchday: day,
+        teams: teams
       };
 
       dispatchState({ type: "DATA_REQUEST_SUCCESS", payload: data });
