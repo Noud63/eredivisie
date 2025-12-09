@@ -7,8 +7,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 8%;
-    padding: 0 1.4rem;
+    /* margin-bottom: 8%; */
+    padding: 0 .8em;
 }
 
 .clubsIconWrapper{
@@ -36,7 +36,7 @@
   border-radius: .6rem;
   border: 2px solid  rgb(196, 160, 0);
   margin-bottom: 1.4rem;
-  padding-left: 1rem;
+
 }
 
 .iconPng {
