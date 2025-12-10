@@ -84,7 +84,8 @@ const ClubInfo = () => {
                       <span className={styles.teamName}>
                         <a
                           href={team.website}
-                          target="_blank" rel="noreferrer"
+                          target="_blank"
+                          rel="noreferrer"
                           style={{ textDecoration: "none", color: "white" }}
                         >
                           {team.website}
@@ -124,24 +125,33 @@ const ClubInfo = () => {
 
                 <div className={styles.allPlayers}>
                   <div className={styles.selectie}>Spelers selectie: </div>
-                  <div className={styles.teamSelection}>
-                    {players[index]?.map((player) => (
-                      <div className={styles.players} key={player.name}>
-                        <div className={styles.playerInfo}>
-                          <div className={styles.playersName}>
-                            {player.name === "Lucas Vennegoor of Hesselink"
-                              ? "Lucas Vennegoor"
-                              : player.name}
+                  <div className={styles.teamSelectionWrapper}>
+                    <div className={styles.teamSelection}>
+                      {players[index]?.map((player) => (
+                        <div className={styles.players} key={player.name}>
+                          <div className={styles.playerInfo}>
+                            <div className={styles.playersName}>
+                              <span>
+                                {player.name.length > 24 
+                                  ? player.name.slice(0, 20) + "..."
+                                  : player.name}
+                              </span>
+                            </div>
+
+                            <div className={styles.playerDobNatPos}>
+                              <div>
+                                Leeftijd:{" "}
+                                {2025 - player.dateOfBirth?.slice(0, 4) || "?"}{" "}
+                                jaar
+                              </div>
+                              <div>Land: {nationality(player.nationality)}</div>
+                              <div>Positie: {position(player.position)}</div>
+                            </div>
+
                           </div>
-                          <div>
-                            Leeftijd:{" "}
-                            {2025 - player.dateOfBirth?.slice(0, 4) || "?"} jaar
-                          </div>
-                          <div>Land: {nationality(player.nationality)}</div>
-                          <div>Positie: {position(player.position)}</div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
