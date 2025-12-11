@@ -270,4 +270,5 @@ background: white;
   background: linear-gradient(90deg,rgba(36, 79, 143, 1) 20%, rgba(0, 18, 31, 1) 100%);
   z-index: 1000;
   box-shadow: 0 4px 4px rgb(0,0,0, .8);
+  cursor: pointer;
 }

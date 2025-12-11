@@ -5,11 +5,10 @@ import abe from "../images/abelenstra.jpg";
 import faas from "../images/fasswilkes.jpg";
 import johan from "../images/johancruijff.jpg";
 import marco from "../images/marcovanbasten.jpg";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { useLocation } from "react-router-dom";
 
 const History = () => {
-  const path = usePathname();
+  const path = useLocation().pathname;
   return (
     <div className={styles.historyWrapper}>
       {path === "/history" && <div className={styles.spacerHistory}></div>}
@@ -123,57 +122,42 @@ const History = () => {
 
         <div className={styles.gallerij}>
           <div className={styles.speler}>
-            <Image
+            <img
               src={abe}
-              width={0}
-              height={0}
+             
               alt="abe"
               className={styles.spelerImg}
             />
             <div className={styles.spelerNaam}>Abe Lenstra</div>
           </div>
           <div className={styles.speler}>
-            <Image
+            <img
               src={faas}
-              width={0}
-              height={0}
+              
               alt="faas"
               className={styles.spelerImg}
             />
             <div className={styles.spelerNaam}>Faas Wilkes</div>
           </div>
           <div className={styles.speler}>
-            <Image
+            <img
               src={johan}
-              width={0}
-              height={0}
+              
               alt="johan"
               className={styles.spelerImg}
             />
             <div className={styles.spelerNaam}>Johan Cruijff</div>
           </div>
           <div className={styles.speler}>
-            <Image
+            <img
               src={marco}
-              width={0}
-              height={0}
+              
               alt="marco"
               className={styles.spelerImg}
             />
             <div className={styles.spelerNaam}>Marco van Basten</div>
           </div>
         </div>
-
-        {/* <span className={styles.historyInBeeld}>Korte geschiedenis in beeld</span> */}
-
-        {/* <div className={styles.youtubeVideo}>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/g_AxEJfBv2g" 
-                            title="YouTube video player" 
-                            frameBorder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowFullScreen>
-                   </iframe>
-                </div> */}
       </div>
     </div>
   );

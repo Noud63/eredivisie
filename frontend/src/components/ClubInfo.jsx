@@ -2,12 +2,10 @@
 import React, { useEffect, useState } from "react";
 import Clubs from "./Clubs";
 import styles from "../styles/ClubInfo.module.css";
-import { ArrowUp } from "lucide-react";
 import { useGlobalContext } from "./Context";
 import shirts from "../assets/shirtsArray";
 import position from "../utils/positionTranslation";
 import nationality from "../utils/nationalityTranslation";
-import Image from "next/image";
 import ScrollToTop from "./ScrollToTop";
 
 const ClubInfo = () => {
@@ -142,16 +140,7 @@ const ClubInfo = () => {
       </div>
 
       <ScrollToTop />
-      {/* Scroll to Top Button
-      {showScrollButton && (
-        <button
-          onClick={scrollToTop}
-          className={styles.scrollToTopButton}
-          aria-label="Scroll to top"
-        >
-          <ArrowUp size={26} color="#fff" />
-        </button>
-      )} */}
+    
     </div>
   );
 };
