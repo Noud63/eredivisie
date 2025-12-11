@@ -4,6 +4,7 @@
   margin: 0 auto;
   padding: 0.6rem;
   padding-bottom: 2rem;
+  min-height: 50vh
 }
 
 .spacer {
@@ -25,9 +26,8 @@
 
 .container2 {
   max-width: 1155px;
-  height: auto;
+  min-height: 50vh;
   margin: 2% auto;
-  /* background-color: rgb(36, 79, 143); */
   padding: 0.6rem;
   margin-bottom: 3%;
 }
