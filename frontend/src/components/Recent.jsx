@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import MatchInfoModal from "./MatchInfoModal";
 import lastMatchExpired from "../utils/hasLastMatchExpired";
 import Loader from "./Loader";
-import Image from "next/image";
 
 const Recent = () => {
   const path = usePathname();
