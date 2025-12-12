@@ -123,6 +123,7 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+
 .teams {
   width: 100%;
   height: auto;
@@ -138,7 +139,7 @@
 }
 
 .awayteam,
-.hometeam {
+.hometeam, .hometeam2, .awayteam2 {
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
@@ -152,6 +153,15 @@
   border-radius: 0.6rem;
   border: 2px solid rgb(101, 147, 216);
 }
+
+.match_upcoming:hover .hometeam2,
+.match_upcoming:hover .awayteam2 {
+  color:rgb(255, 255, 255);
+  background-color: rgba(36, 79, 143, 1);
+   border: 2px solid rgb(255, 255, 255);
+  transition: .3s ease;
+}
+
 
 @media only screen and (max-width: 450px) {
   .hometeam,
