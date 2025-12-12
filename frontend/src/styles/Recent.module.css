@@ -279,7 +279,7 @@
   position: absolute;
   inset: 0;
   background: #e1e4e8;
-  animation: pulse .5s ease-in-out infinite;
+  animation: pulse .3s ease-in-out infinite;
 }
 
 @keyframes pulse {
@@ -297,7 +297,7 @@
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 200ms ease;
+  transition: opacity 100ms ease;
 }
 
 .loaded {
