@@ -2,13 +2,13 @@
 import React, { useEffect, useCallback, useState } from "react";
 import styles from "../styles/Recent.module.css";
 import { useGlobalContext } from "./Context";
-import { usePathname } from "next/navigation";
+import { useLocation } from "react-router-dom"
 import MatchInfoModal from "./MatchInfoModal";
 import lastMatchExpired from "../utils/hasLastMatchExpired";
 import Loader from "./Loader";
 
 const Recent = () => {
-  const path = usePathname();
+  const path = useLocation().pathname;
 
   const { state, matchDay } = useGlobalContext();
 
