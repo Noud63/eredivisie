@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Recent.module.css";
 import DateFormatter from "../utils/dateFormatter";
@@ -5,6 +6,7 @@ import GetStadium from "../utils/getStadium";
 
 const MatchInfoModal = ({ showMatchInfo, program, ID }) => {
   const [match, setMatch] = useState({});
+  const [imgLoaded, setImgLoaded] = useState(false);
 
   useEffect(() => {
     if (!program || !ID) return;
@@ -21,7 +23,6 @@ const MatchInfoModal = ({ showMatchInfo, program, ID }) => {
     <div className={styles.modal} onClick={showMatchInfo}>
       {match && (
         <div className={styles.modalContent}>
-
           <div className={styles.modalTeams}>
             <img src={match.homeTeam?.crest} alt="" />
             <div className={styles.teamName}>
@@ -33,7 +34,7 @@ const MatchInfoModal = ({ showMatchInfo, program, ID }) => {
                 {match.awayTeam?.name}
               </div>
             </div>
-              <img src={match.awayTeam?.crest} alt="" />
+            <img src={match.awayTeam?.crest} alt="" />
           </div>
 
           <div className={styles.date}>
@@ -46,11 +47,13 @@ const MatchInfoModal = ({ showMatchInfo, program, ID }) => {
           </div>
 
           <div className={styles.stadionImage}>
+             {!imgLoaded && <div className={styles.skeleton} />}
             <img
               src={stadion[0]?.image}
               alt=""
-              style={{ width: "100%", borderRadius: "3%" }}
-            />
+                onLoad={() => setImgLoaded(true)}
+               className={`${styles.image} ${imgLoaded ? styles.loaded : ""}`}
+            /> 
           </div>
         </div>
       )}
