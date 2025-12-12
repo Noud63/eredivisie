@@ -1,12 +1,14 @@
 /* loader */
 .LoaderError {
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
+  min-height: 100vh;
 }
 .lds-roller {
-  display: inline-block;
+  display: flex;
   position: relative;
   width: 80px;
   height: 80px;
@@ -90,10 +92,12 @@
   }
 }
 
-
 .error {
-  margin: 100px auto;
+  margin: 80px auto 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 99%;
-  color: white;
-  font-size: 1.8rem;
+  color: rgb(233, 190, 0);
+  font-size: 1.2rem;
 }

@@ -1,29 +1,30 @@
+"use client";
 import React, { useEffect, useCallback, useState } from "react";
 import styles from "../styles/Recent.module.css";
 import { useGlobalContext } from "./Context";
-import { useLocation } from "react-router-dom";
+import { usePathname } from "next/navigation";
 import MatchInfoModal from "./MatchInfoModal";
 import lastMatchExpired from "../utils/hasLastMatchExpired";
+import Loader from "./Loader";
 
 const Recent = () => {
-  const location = useLocation();
-  const path = location.pathname;
+  const path = usePathname();
 
   const { state, matchDay } = useGlobalContext();
 
-   const [lastGames, setLastGames] = React.useState([]);
+  const [lastGames, setLastGames] = React.useState([]);
   const [program, setProgram] = React.useState([]);
-  const [currentMatchDay, setCurrentMatchDay] = useState(matchDay)
+  const [currentMatchDay, setCurrentMatchDay] = useState(matchDay);
   const [id, setId] = React.useState(null);
   const [openModal, setOpenModal] = React.useState(false);
 
   useEffect(() => {
-      if(lastMatchExpired(matchDay, state.matchByDay)){
-           setCurrentMatchDay(matchDay)
-      }else{
-        setCurrentMatchDay(matchDay - 1)
-      }
-  },[matchDay, state.matchByDay])
+    if (lastMatchExpired(matchDay, state.matchByDay)) {
+      setCurrentMatchDay(matchDay);
+    } else {
+      setCurrentMatchDay(matchDay - 1);
+    }
+  }, [matchDay, state.matchByDay]);
 
   // let currentMatchDay = matchDay - 1 ;
   // program.every(match => match.status === "FINISHED" ? currentMatchDay = matchDay : currentMatchDay = matchDay - 1);
@@ -47,7 +48,6 @@ const Recent = () => {
     getLastGames();
     getProgram();
   }, [getLastGames, getProgram]);
-
 
   const showMatchInfo = (id) => {
     console.log("Id:", id);
@@ -80,7 +80,7 @@ const Recent = () => {
   //    getLastGames();
   //    getProgram();
   // }, [getLastGames, getProgram]);
-//   console.log("Timed:", timed);
+  //   console.log("Timed:", timed);
 
   return (
     <>
@@ -97,7 +97,7 @@ const Recent = () => {
             </div>
           </div>
 
-          {lastGames.map((game) => {
+           {state.loading ? <Loader /> : lastGames.map((game) => {
             const { homeTeam, awayTeam, score, id } = game;
 
             return (
@@ -127,7 +127,7 @@ const Recent = () => {
             </div>
           </div>
 
-          {program.map((game, index) => {
+     {state.loading ? <Loader /> : program.map((game, index) => {
             const { homeTeam, awayTeam, score, id } = game;
 
             return (

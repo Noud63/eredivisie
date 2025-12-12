@@ -2,11 +2,14 @@
 import React, { useEffect, useState } from "react";
 import Clubs from "./Clubs";
 import styles from "../styles/ClubInfo.module.css";
+import { ArrowUp } from "lucide-react";
 import { useGlobalContext } from "./Context";
 import shirts from "../assets/shirtsArray";
 import position from "../utils/positionTranslation";
 import nationality from "../utils/nationalityTranslation";
+import Image from "next/image";
 import ScrollToTop from "./ScrollToTop";
+import Loader from "./Loader";
 
 const ClubInfo = () => {
   const { state } = useGlobalContext();
@@ -25,9 +28,8 @@ const ClubInfo = () => {
     <div className={styles.infoContainer}>
       <div className={styles.spacer}></div>
       <Clubs />
-      <div className={styles.clubsInfo}>
-        {teams &&
-          teams.map((team, index) => (
+      {state.loading ? <Loader /> : <div className={styles.clubsInfo}>
+        {teams.map((team, index) => (
             <div className={styles.team} key={team.name} id={team.id}>
               <div className={styles.teamHeader}>
                 <img src={team.crest} alt={team.name} />
@@ -137,10 +139,19 @@ const ClubInfo = () => {
               </div>
             </div>
           ))}
-      </div>
+      </div>}
 
       <ScrollToTop />
-    
+      {/* Scroll to Top Button
+      {showScrollButton && (
+        <button
+          onClick={scrollToTop}
+          className={styles.scrollToTopButton}
+          aria-label="Scroll to top"
+        >
+          <ArrowUp size={26} color="#fff" />
+        </button>
+      )} */}
     </div>
   );
 };

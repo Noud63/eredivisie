@@ -1,17 +1,16 @@
+
+"use client"
 import React from "react";
 import Loader from "./Loader";
 import { useGlobalContext } from "./Context";
 import styles from "../styles/Stand.module.css";
-import { useLocation } from "react-router-dom";
+import { usePathname } from 'next/navigation';
 import Legenda from "./Legenda";
 
 const Stand = () => {
   const { state } = useGlobalContext();
 
-  // console.log("State:", state)
-
-  const location = useLocation();
-  const path = location.pathname;
+  const path = usePathname()
 
   return (
 

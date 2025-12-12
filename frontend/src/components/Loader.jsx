@@ -5,7 +5,7 @@ const Loader = () => {
     return (
         <>
             <div className="LoaderError">
-                <div className="error">Ooops, you reached your request limit, just wait one minute and try again!</div>
+                <div className="error">Ooops, something went wrong!<br />wait one minute and try again!</div>
                 <div className="lds-roller">
                     <div></div>
                     <div></div>
