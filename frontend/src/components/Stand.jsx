@@ -4,13 +4,13 @@ import React from "react";
 import Loader from "./Loader";
 import { useGlobalContext } from "./Context";
 import styles from "../styles/Stand.module.css";
-import { usePathname } from 'next/navigation';
+import { useLocation } from "react-router-dom";
 import Legenda from "./Legenda";
 
 const Stand = () => {
   const { state } = useGlobalContext();
 
-  const path = usePathname()
+  const path = useLocation().pathname
 
   return (
 

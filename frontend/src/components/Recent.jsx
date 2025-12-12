@@ -2,13 +2,13 @@
 import React, { useEffect, useCallback, useState } from "react";
 import styles from "../styles/Recent.module.css";
 import { useGlobalContext } from "./Context";
-import { usePathname } from "next/navigation";
 import MatchInfoModal from "./MatchInfoModal";
 import lastMatchExpired from "../utils/hasLastMatchExpired";
+import { useLocation } from "react-router-dom";
 import Loader from "./Loader";
 
 const Recent = () => {
-  const path = usePathname();
+const path = useLocation().pathname
 
   const { state, matchDay } = useGlobalContext();
 
@@ -97,21 +97,25 @@ const Recent = () => {
             </div>
           </div>
 
-           {state.loading ? <Loader /> : lastGames.map((game) => {
-            const { homeTeam, awayTeam, score, id } = game;
+          {state.loading ? (
+            <Loader />
+          ) : (
+            lastGames.map((game) => {
+              const { homeTeam, awayTeam, score, id } = game;
 
-            return (
-              <div className={styles.match} key={id}>
-                <div className={styles.teams}>
-                  <div className={styles.hometeam}>{homeTeam.name}</div>
-                  <div className={styles.scores}>
-                    {score.fullTime.home} : {score.fullTime.away}
+              return (
+                <div className={styles.match} key={id}>
+                  <div className={styles.teams}>
+                    <div className={styles.hometeam}>{homeTeam.name}</div>
+                    <div className={styles.scores}>
+                      {score.fullTime.home} : {score.fullTime.away}
+                    </div>
+                    <div className={styles.awayteam}>{awayTeam.name}</div>
                   </div>
-                  <div className={styles.awayteam}>{awayTeam.name}</div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })
+          )}
         </div>
       </div>
 
@@ -127,25 +131,29 @@ const Recent = () => {
             </div>
           </div>
 
-     {state.loading ? <Loader /> : program.map((game, index) => {
-            const { homeTeam, awayTeam, score, id } = game;
+          {state.loading ? (
+            <Loader />
+          ) : (
+            program.map((game, index) => {
+              const { homeTeam, awayTeam, score, id } = game;
 
-            return (
-              <div
-                className={styles.match_upcoming}
-                key={index}
-                onClick={() => showMatchInfo(id)}
-              >
-                <div className={styles.teams}>
-                  <div className={styles.hometeam}>{homeTeam.name}</div>
-                  <div className={styles.scores}>
-                    {score.fullTime.home} : {score.fullTime.away}
+              return (
+                <div
+                  className={styles.match_upcoming}
+                  key={index}
+                  onClick={() => showMatchInfo(id)}
+                >
+                  <div className={styles.teams}>
+                    <div className={styles.hometeam}>{homeTeam.name}</div>
+                    <div className={styles.scores}>
+                      {score.fullTime.home} : {score.fullTime.away}
+                    </div>
+                    <div className={styles.awayteam}>{awayTeam.name}</div>
                   </div>
-                  <div className={styles.awayteam}>{awayTeam.name}</div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })
+          )}
         </div>
       </div>
 
