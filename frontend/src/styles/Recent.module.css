@@ -157,7 +157,7 @@
 .match_upcoming:hover .hometeam2,
 .match_upcoming:hover .awayteam2 {
   color:rgb(255, 255, 255);
-  background-color: rgba(36, 79, 143, 1);
+  background: linear-gradient(90deg,rgba(0, 18, 31, 1) 0%, rgba(36, 79, 143, 1) 50%, rgba(0, 18, 31, 1) 100%);
    border: 2px solid rgb(255, 255, 255);
   transition: .3s ease;
 }
