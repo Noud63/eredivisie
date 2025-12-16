@@ -109,28 +109,6 @@ const ClubInfo = () => {
                   </div>
                 </div>
 
-                {/* <div className={styles.stadions}>
-                  {stadions?.map((stadion, index) => (
-                    <div key={index}>
-                      {stadion.id === team.id && (
-                        <div className={styles.stadionInfoWrapper}>
-                          <div>
-                            <div>Stadion: {stadion.club}</div>
-                            <div>Capaciteit: {stadion.club}</div>
-                          </div>
-                          <Image
-                            src={stadion.image}
-                            width={400}
-                            height={300}
-                            alt=""
-                            className={styles.stadionImg}
-                          />
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div> */}
-
                 <div className={styles.allPlayers}>
                   <div className={styles.selectie}>Spelers selectie: </div>
                   <div className={styles.teamSelectionWrapper}>
