@@ -2,13 +2,14 @@
 import React, { useEffect, useState } from "react";
 import Clubs from "./Clubs";
 import styles from "../styles/ClubInfo.module.css";
-import { ArrowUp } from "lucide-react";
 import { useGlobalContext } from "./Context";
 import shirts from "../assets/shirtsArray";
 import position from "../utils/positionTranslation";
 import nationality from "../utils/nationalityTranslation";
 import ScrollToTop from "./ScrollToTop";
 import Loader from "./Loader";
+import Image from "next/image";
+import stadions from "../data/stadions";
 
 const ClubInfo = () => {
   const { state } = useGlobalContext();
@@ -27,8 +28,11 @@ const ClubInfo = () => {
     <div className={styles.infoContainer}>
       <div className={styles.spacer}></div>
       <Clubs />
-      {state.loading ? <Loader /> : <div className={styles.clubsInfo}>
-        {teams.map((team, index) => (
+      {state.loading ? (
+        <Loader />
+      ) : (
+        <div className={styles.clubsInfo}>
+          {teams.map((team, index) => (
             <div className={styles.team} key={team.name} id={team.id}>
               <div className={styles.teamHeader}>
                 <img src={team.crest} alt={team.name} />
@@ -84,7 +88,7 @@ const ClubInfo = () => {
                           <div className={styles.shirtUitThuis}>
                             <div className={styles.shirtThuis}>
                               <img
-                                src={`../images/shirts/${shirt.thuis}`}
+                                src={`/shirts/${shirt.thuis}`}
                                 alt=""
                                 className={styles.shirt}
                               />
@@ -92,7 +96,7 @@ const ClubInfo = () => {
                             </div>
                             <div className={styles.shirtUit}>
                               <img
-                                src={`../images/shirts/${shirt.uit}`}
+                                src={`/shirts/${shirt.uit}`}
                                 alt=""
                                 className={styles.shirt}
                               />
@@ -104,6 +108,28 @@ const ClubInfo = () => {
                     ))}
                   </div>
                 </div>
+
+                {/* <div className={styles.stadions}>
+                  {stadions?.map((stadion, index) => (
+                    <div key={index}>
+                      {stadion.id === team.id && (
+                        <div className={styles.stadionInfoWrapper}>
+                          <div>
+                            <div>Stadion: {stadion.club}</div>
+                            <div>Capaciteit: {stadion.club}</div>
+                          </div>
+                          <Image
+                            src={stadion.image}
+                            width={400}
+                            height={300}
+                            alt=""
+                            className={styles.stadionImg}
+                          />
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div> */}
 
                 <div className={styles.allPlayers}>
                   <div className={styles.selectie}>Spelers selectie: </div>
@@ -138,10 +164,10 @@ const ClubInfo = () => {
               </div>
             </div>
           ))}
-      </div>}
+        </div>
+      )}
 
       <ScrollToTop />
-  
     </div>
   );
 };
