@@ -8,8 +8,6 @@ import position from "../utils/positionTranslation";
 import nationality from "../utils/nationalityTranslation";
 import ScrollToTop from "./ScrollToTop";
 import Loader from "./Loader";
-import Image from "next/image";
-import stadions from "../data/stadions";
 
 const ClubInfo = () => {
   const { state } = useGlobalContext();
