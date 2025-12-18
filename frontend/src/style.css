@@ -1,9 +1,12 @@
-body {
-    margin:0;
-    padding:0;
-    /* margin-top: 160px; */
+* {
   box-sizing: border-box;
-  background-color: rgb(36, 79, 143);
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* background-color: rgb(36, 79, 143); */
+  background: linear-gradient(90deg,rgba(0, 18, 31, 1) 0%, rgba(36, 79, 143, 1) 50%, rgba(0, 18, 31, 1) 100%);
 }
 
 #root {
@@ -12,14 +15,4 @@ body {
   margin: 0 auto;
   background: linear-gradient(90deg,rgba(0, 18, 31, 1) 0%, rgba(36, 79, 143, 1) 50%, rgba(0, 18, 31, 1) 100%);
 }
-/* @media only screen and (max-width: 800px) {
-  body {
-     padding-top: 160px;
-  }
-}
 
-@media only screen and (max-width: 400px) {
-  body {
-     padding-top: 120px;
-  }
-} */

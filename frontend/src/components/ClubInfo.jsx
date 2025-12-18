@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Clubs from "./Clubs";
 import styles from "../styles/ClubInfo.module.css";
 import { useGlobalContext } from "./Context";
-import shirts from "../assets/shirtsArray";
+import shirts from "../data/shirtsArray";
 import position from "../utils/positionTranslation";
 import nationality from "../utils/nationalityTranslation";
 import ScrollToTop from "./ScrollToTop";
@@ -79,27 +79,38 @@ const ClubInfo = () => {
                   </div>
 
                   <div>
-                    <div className={styles.shirtLabel}>Shirts: </div>
+                    {/* <div className={styles.shirtLabel}>Shirts: </div> */}
                     {shirts.map((shirt, index) => (
                       <div key={shirt.id} className={styles.shirtsWrapper}>
                         {shirt.id === team.id && (
-                          <div className={styles.shirtUitThuis}>
-                            <div className={styles.shirtThuis}>
-                              <img
-                                src={`/shirts/${shirt.thuis}`}
-                                alt=""
-                                className={styles.shirt}
-                              />
-                              <div className={styles.uitthuis}>thuis</div>
+                          <div className={styles.coachShirts}>
+                            <div className={styles.shirtsUitEnThuis}>
+                              <div className={styles.shirtThuis}>
+                                <img
+                                  src={`/shirts/${shirt.thuis}`}
+                                  alt=""
+                                  className={styles.shirt}
+                                />
+                                <div className={styles.uitthuis}>thuis</div>
+                              </div>
+                              <div className={styles.shirtUit}>
+                                <img
+                                  src={`/shirts/${shirt.uit}`}
+                                  alt=""
+                                  className={styles.shirt}
+                                />
+                                <div className={styles.uitthuis}>uit</div>
+                              </div>
+                             
                             </div>
-                            <div className={styles.shirtUit}>
-                              <img
-                                src={`/shirts/${shirt.uit}`}
-                                alt=""
-                                className={styles.shirt}
-                              />
-                              <div className={styles.uitthuis}>uit</div>
-                            </div>
+                             <div className={styles.coach}>
+                                <img
+                                  src={`/coaches/${shirt.trainerImg}`}
+                                  alt=""
+                                  className={styles.coachImg}
+                                />
+                                <div className={styles.uitthuis}>coach</div>
+                              </div>
                           </div>
                         )}
                       </div>
