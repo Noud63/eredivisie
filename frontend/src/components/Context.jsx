@@ -21,8 +21,6 @@ const AllData = ({ children }) => {
   const [matchDay, setMatchDay] = useState([]);
   const [ranking, setRanking] = useState([]);
   const [season, setSeason] = useState("");
-  // const [squad, setSquad] = useState([]);
-  // const [teams, setTeams] = useState([]);
 
 
   const getData = useCallback(async () => {
