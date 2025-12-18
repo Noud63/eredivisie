@@ -30,7 +30,7 @@ const AllData = ({ children }) => {
 
     try {
       const response = await axios.get(
-        "/api/footballData"
+        "https://eredivisie-backend.vercel.app/api/footballData"
       );
 
       // console.log("Res:", response.data.teams.teams);
