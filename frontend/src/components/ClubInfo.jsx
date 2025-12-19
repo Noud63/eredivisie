@@ -84,7 +84,14 @@ const ClubInfo = () => {
                       <div key={shirt.id} className={styles.shirtsWrapper}>
                         {shirt.id === team.id && (
                           <div className={styles.coachShirts}>
-                            <div className={styles.shirtsUitEnThuis}>
+                            <div className={styles.teamLogoBox}>
+                              <img
+                                src={team.crest}
+                                className={styles.teamLogo}
+                                alt=""
+                              />
+                            </div>
+                            {/* <div className={styles.shirtsUitEnThuis}>
                               <div className={styles.shirtThuis}>
                                 <img
                                   src={`/shirts/${shirt.thuis}`}
@@ -101,16 +108,16 @@ const ClubInfo = () => {
                                 />
                                 <div className={styles.uitthuis}>uit</div>
                               </div>
-                             
+                            </div> */}
+                            {/* <div className={styles.shirtLabel}>Coach: </div> */}
+                            <div className={styles.coach}>
+                              <img
+                                src={`/coaches/${shirt.trainerImg}`}
+                                alt=""
+                                className={styles.coachImg}
+                              />
+                              <div className={styles.uitthuis}>{shirt.naam}</div>
                             </div>
-                             <div className={styles.coach}>
-                                <img
-                                  src={`/coaches/${shirt.trainerImg}`}
-                                  alt=""
-                                  className={styles.coachImg}
-                                />
-                                <div className={styles.uitthuis}>coach</div>
-                              </div>
                           </div>
                         )}
                       </div>

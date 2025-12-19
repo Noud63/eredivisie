@@ -176,6 +176,26 @@ background: white;
   width: 35px;
 }
 
+.teamLogoBox {
+   /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* width: 128px;
+  height: 128px;
+  border-radius: 50%; */
+  padding-top: 5px;
+  /* background: #fff; */
+  /* border: 2px solid rgb(101, 147, 216); */
+}
+
+.teamLogo {
+  width: 128px;
+  height: 128px;
+  /* border-radius: 50%; */
+  margin-right: .8em;
+  /* border: 2px solid rgb(255, 255, 255); */
+}
+
 .shirtsWrapper {
   width: 100%;
   padding-right: .8em;
@@ -293,16 +313,17 @@ background: white;
   }
 }
 
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 340px) {
   .coachShirts {
     flex-direction: column;
   }
   .coach {
     margin-left: 0;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    width: 128px;
-    /* align-items: center; */
+    width: 136px;
+    align-items: center;
     justify-content: center;
     margin-top: 1em;
   }
