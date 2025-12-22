@@ -79,50 +79,33 @@ const ClubInfo = () => {
                   </div>
 
                   <div>
-                    {/* <div className={styles.shirtLabel}>Shirts: </div> */}
-                    {shirts.map((shirt, index) => (
-                      <div key={shirt.id} className={styles.shirtsWrapper}>
-                        {shirt.id === team.id && (
-                          <div className={styles.coachShirts}>
-                            <div className={styles.teamLogoBox}>
-                              <img
-                                src={team.crest}
-                                className={styles.teamLogo}
-                                alt=""
-                              />
-                            </div>
-                            {/* <div className={styles.shirtsUitEnThuis}>
-                              <div className={styles.shirtThuis}>
-                                <img
-                                  src={`/shirts/${shirt.thuis}`}
-                                  alt=""
-                                  className={styles.shirt}
-                                />
-                                <div className={styles.uitthuis}>thuis</div>
-                              </div>
-                              <div className={styles.shirtUit}>
-                                <img
-                                  src={`/shirts/${shirt.uit}`}
-                                  alt=""
-                                  className={styles.shirt}
-                                />
-                                <div className={styles.uitthuis}>uit</div>
-                              </div>
-                            </div> */}
-                            {/* <div className={styles.shirtLabel}>Coach: </div> */}
-                            <div className={styles.coach}>
-                              <img
-                                src={`/coaches/${shirt.trainerImg}`}
-                                alt=""
-                                className={styles.coachImg}
-                              />
-                              <div className={styles.uitthuis}>{shirt.naam}</div>
-                            </div>
-                          </div>
-                        )}
+                    <div className={styles.coachShirts}>
+                      <div className={styles.teamLogoBox}>
+                        <img
+                          src={team.crest}
+                          className={styles.teamLogo}
+                          alt=""
+                        />
                       </div>
-                    ))}
+                    </div>
                   </div>
+                </div>
+
+                <div className={styles.clubCoach}>
+                  {shirts.map((shirt, index) => (
+                    <div className={styles.coach} key={index}>
+                      {shirt.id === team.id && (
+                        <div>
+                          <img
+                            src={`/coaches/${shirt.trainerImg}`}
+                            alt=""
+                            className={styles.coachImg}
+                          />
+                          <div className={styles.uitthuis}>{shirt.naam}</div>
+                        </div>
+                      )}
+                    </div>
+                  ))}
                 </div>
 
                 <div className={styles.allPlayers}>
