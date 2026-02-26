@@ -1,33 +1,60 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from '../styles/HeaderMenu.module.css'
+import { NavLink } from "react-router-dom";
 
 const HeaderMenu = () => {
   return (
     <div className={styles.links}>
-    
-                    <Link to="/" className={styles.link}>
-                        <div>Home</div>
-                    </Link>
-    
-                    <Link to="/uitslagen" className={styles.link}>
-                        <div >Wedstrijden</div>
-                    </Link>
-    
-                    <Link to="/recent" className={styles.link}>
-                        <div >Recent</div>
-                    </Link>
-    
-                    <Link to='/stand' className={styles.link}>
-                        <div >Stand</div>
-                    </Link>
-                    <Link to='/clubinfo' className={styles.link}>
-                        <div >Clubs</div>
-                    </Link>
-    
-    
-                </div>
-  )
-}
 
-export default HeaderMenu
+      <NavLink
+        to="/"
+        end
+        className={({ isActive }) =>
+          `${styles.link} ${isActive ? styles.active : ""}`
+        }
+      >
+        <div>Home</div>
+      </NavLink>
+
+      <NavLink
+        to="/uitslagen"
+        className={({ isActive }) =>
+          `${styles.link} ${isActive ? styles.active : ""}`
+        }
+      >
+        <div>Wedstrijden</div>
+      </NavLink>
+
+      <NavLink
+        to="/recent"
+        className={({ isActive }) =>
+          `${styles.link} ${isActive ? styles.active : ""}`
+        }
+      >
+        <div>Recent</div>
+      </NavLink>
+
+      <NavLink
+        to="/stand"
+        className={({ isActive }) =>
+          `${styles.link} ${isActive ? styles.active : ""}`
+        }
+      >
+        <div>Stand</div>
+      </NavLink>
+
+      <NavLink
+        to="/clubinfo"
+        className={({ isActive }) =>
+          `${styles.link} ${isActive ? styles.active : ""}`
+        }
+      >
+        <div>Clubs</div>
+      </NavLink>
+
+    </div>
+  );
+};
+
+export default HeaderMenu;

@@ -10,7 +10,7 @@ const Header = () => {
 
     const handleScroll = () => {
         const offset = window.scrollY;
-        if (offset > 50) {
+        if (offset > 140) {
             setScrolled(false);
         }
         else {
