@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from '../styles/Header.module.css'
 import HeaderMenu from './HeaderMenu';
-import logo from '../images/eredivisielogo.png'
+import logo from '../images/eredivisie_logo.png'
+import knvb from '../images/knvb_logo.png'
 
 const Header = () => {
 
@@ -22,10 +23,19 @@ const Header = () => {
 
     return (
         <div className={scrolled ? styles.header : styles.header + ' ' + styles.scrolled}>
-
+                <div className={styles.redwhiteandblue}>
+                    <div className={styles.stripe + ' ' + styles.red}></div>
+                    <div className={styles.stripe + ' ' + styles.white}></div>
+                    <div className={styles.stripe + ' ' + styles.blue}></div>
+                </div>
             <div className={styles.eredivisie}>
-                <img src={logo} alt="Eredivisie Logo" className={styles.logo} />
+              <div className={styles.banner}><img src={logo} alt="Eredivisie Logo" className={styles.logo} /></div>
+                <div className={styles.eredivisieText}>
+                    
                 KNVB Eredivisie 2025-2026
+                </div>
+                
+                        <div className={styles.banner}><img src={knvb} alt="Eredivisie Logo" className={styles.knvb} /></div>
                 </div>
 
             <HeaderMenu />
