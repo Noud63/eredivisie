@@ -16,10 +16,8 @@
     rgba(36, 79, 143, 1) 50%,
     rgba(0, 18, 31, 1) 100%
   );
-  height: 160px;
-  box-shadow: 0px 0px 10px black;
+  box-shadow: 0px 0px 12px black;
   z-index: 5;
-  /* border-bottom: 2px solid rgb(196, 160, 0); */
   transition: top 0.5s;
 }
 
@@ -70,36 +68,11 @@
 }
 
 @media only screen and (max-width: 800px) {
-  .header {
-    height: 130px;
-  }
   .scrolled {
     top: -130px;
   }
 }
 
-@media only screen and (max-width: 400px) {
-  .header {
-    height: 100px;
-  }
-  .scrolled {
-    top: -100px;
-  }
-  .red {
-    height: 3px;
-  }
-  .white {
-    height: 3px;
-  }
-  .blue {
-    height: 3px;
-  }
-
-  .redwhiteandblue {
-    margin-bottom: 17px;
-    height: 9px;
-  }
-}
 
 .eredivisie {
   color: white;
@@ -115,7 +88,6 @@
   font-size: calc(24px + (44 - 24) * ((100vw - 320px) / (1920 - 320)));
   font-weight: bold;
   color: rgb(255, 255, 255);
-  /* border: 1px solid red; */
   margin-bottom: 10px;
 }
 
@@ -212,6 +184,27 @@
   .logo {
     display: none;
   }
+  .header {
+    height: 100px;
+  }
+  .scrolled {
+    top: -100px;
+  }
+  .red {
+    height: 3px;
+  }
+  .white {
+    height: 3px;
+  }
+  .blue {
+    height: 3px;
+  }
+
+  .redwhiteandblue {
+    margin-top: 11px;
+    height: 9px;
+  }
+
 }
 
 .link:hover {
@@ -221,3 +214,4 @@
 .active {
   background-color: rgb(72, 117, 184);
 }
+
