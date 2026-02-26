@@ -24,6 +24,7 @@ const Header = () => {
     return (
         <div className={scrolled ? styles.header : styles.header + ' ' + styles.scrolled}>
                 <div className={styles.redwhiteandblue}>
+                    <div className={styles.gradient}/>
                     <div className={styles.stripe + ' ' + styles.red}></div>
                     <div className={styles.stripe + ' ' + styles.white}></div>
                     <div className={styles.stripe + ' ' + styles.blue}></div>
