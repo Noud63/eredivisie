@@ -52,7 +52,7 @@ const Home = () => {
           Eredivisie officieel opgericht. Zodoende zijn sinds 1956 de sterkste
           clubs van Nederland verenigd in één landelijke competitie.
           <br />
-          <Link href="/history" style={{ textDecoration: "none" }}>
+          <Link to="/history" style={{ textDecoration: "none" }}>
             <span className={styles.leeshiermeer}>Lees hier meer.......</span>
           </Link>
         </div>
