@@ -96,6 +96,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  
 }
 
 .banner {
@@ -174,6 +175,13 @@
     Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 430px) {
+  .eredivisie {
+    font-size: clamp(24px, 7vw, 48px);
+  }
+
 }
 
 @media only screen and (max-width: 400px) {
