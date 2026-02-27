@@ -131,7 +131,7 @@ column-gap: 20px;
   align-items: center;
   box-shadow: 0px 2px 8px rgb(0, 16, 41);
   border-radius: 0.6em;
-  border: 2px solid rgb(255, 255, 255);
+   border: 2px solid  rgb(196, 160, 0);
   padding: 0.6em 0 .7em 0.8em ;
   margin-bottom: 1em;
   font-weight: bold;
@@ -178,24 +178,11 @@ background: white;
   width: 35px;
 }
 
-/* .teamLogoBox { */
-   /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  /* width: 128px;
-  height: 128px;
-  border-radius: 50%; */
-  /* padding-top: 5px; */
-  /* background: #fff; */
-  /* border: 2px solid rgb(101, 147, 216); */
-/* } */
-
 .teamLogo {
   width: auto;
   height: 150px;
-  /* border-radius: 50%; */
   margin-right: .6em;
-  /* border: 2px solid rgb(255, 255, 255); */
+
 }
 
 .shirtsWrapper {
@@ -303,47 +290,11 @@ background: white;
   }
 }
 
-/* @media only screen and (max-width: 750px) {
-  .infoAndShirts {
-    flex-direction: column;
-    margin: .4em 0 1.4em 0;
-  }
-  .shirtsWrapper {
-    padding: 0 .8em;
-  }
-  .shirtThuis {
-    margin-right: .8em;
-  }
-  .shirtLabel {
-    display: flex;
-    margin-bottom: 1.4em;
-  }
-  .coachShirts {
-    padding-top: 1.4em;
-  }
-} */
-
 @media only screen and (max-width: 800px) {
   .spacer {
     height: 150px;
   }
 }
-
-/* @media only screen and (max-width: 340px) {
-  .coachShirts {
-    flex-direction: column;
-  }
-  .coach {
-    margin-left: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 136px;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1em;
-  }
-} */
 
 @media only screen and (max-width: 400px) {
   .spacer {
