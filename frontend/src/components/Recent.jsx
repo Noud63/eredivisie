@@ -115,7 +115,7 @@ const Recent = () => {
         </div>
       </div>
 
-      <div className={styles.container2}>
+      {program.length > 0 && <div className={styles.container2}>
         <div className={styles.matches}>
           <div className={styles.gamesnRound}>
             <div className={styles.alleWedstrijden}>Programma</div>
@@ -147,7 +147,7 @@ const Recent = () => {
             );
           })}
         </div>
-      </div>
+      </div>}
 
       {openModal && (
         <MatchInfoModal
