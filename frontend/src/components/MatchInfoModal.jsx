@@ -17,10 +17,10 @@ const MatchInfoModal = ({ showMatchInfo, program, ID }) => {
 
   const day = DateFormatter(match?.utcDate);
 
-useEffect(() => {
-  setImgLoaded(false);
-}, [stadion?.[0]?.image]);
-
+const stadion = useMemo(
+  () => GetStadium(match?.homeTeam?.id),
+  [match?.homeTeam?.id]
+);
 useEffect(() => {
   setImgLoaded(false);
 }, [stadion?.[0]?.image]);
