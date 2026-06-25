@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import styles from "../styles/Recent.module.css";
 import DateFormatter from "../utils/dateFormatter";
 import GetStadium from "../utils/getStadium";
