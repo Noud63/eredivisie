@@ -24,7 +24,7 @@ const Uitslagen = () => {
 
                 {state.loading ? <Loader /> :
 
-                    matchDays.map((game) => {
+                    matchDays?.map((game) => {
                         const { homeTeam, awayTeam, score, id } = game
 
                         return (
