@@ -19,8 +19,8 @@ const MatchInfoModal = ({ showMatchInfo, program, ID }) => {
 
 const stadion = useMemo(
   () => GetStadium(match?.homeTeam?.id),
-  [match?.homeTeam?.id]
-);
+  [match?.homeTeam?.id]);
+  
 useEffect(() => {
   setImgLoaded(false);
 }, [stadion?.[0]?.image]);
