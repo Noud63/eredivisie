@@ -15,6 +15,7 @@ const ClubInfo = () => {
 
   const [players, setPlayers] = useState([]);
 
+
   useEffect(() => {
     if (Array.isArray(teams) && teams.length > 0) {
       const squadArrays = teams.map((team) => team.squad || []);
@@ -30,7 +31,7 @@ const ClubInfo = () => {
         <Loader />
       ) : (
         <div className={styles.clubsInfo}>
-          {teams.map((team, index) => (
+          {teams?.map((team, index) => (
             <div className={styles.team} key={team.name} id={team.id}>
               <div className={styles.teamHeader}>
                 <img src={team.crest} alt={team.name} />
@@ -110,6 +111,13 @@ const ClubInfo = () => {
 
                 <div className={styles.allPlayers}>
                   <div className={styles.selectie}>Spelers selectie: </div>
+                  {players && players?.[index] && (
+                    <div
+                      style={{ width: "100%", color: "white", height: "50px" }}
+                    >
+                      Squad coming soon!
+                    </div>
+                  )}
                   <div className={styles.teamSelectionWrapper}>
                     <div className={styles.teamSelection}>
                       {players[index]?.map((player) => (

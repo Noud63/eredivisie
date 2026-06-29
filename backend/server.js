@@ -5,7 +5,7 @@ const dotenv = require('dotenv')
 const path = require('path')
 const router = express.Router()
 const footballDataRoute = require('./footballDataRoute')
-const PORT = process.env.REACT_APP_PORT || 5000
+const PORT = process.env.PORT || 5000
 
 app.use(cors())
 app.use(express.json())

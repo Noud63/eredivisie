@@ -13,7 +13,7 @@ const getFootballData = asyncHandler(async (req, res) => {
 try {
    const headers = {
       headers: {
-        "X-Auth-Token": process.env.FOOTBALL_API_KEY,
+        "X-Auth-Token": process.env.VITE_API_KEY,
       },
     };
 
@@ -27,6 +27,8 @@ try {
    
 
     const allData = { standings: response[0].data, matches: response[1].data, teams: response[2].data, topScorers: response[3].data };
+
+    console.log(allData)
 
     return res.status(200).json(allData);
 } catch (error) {

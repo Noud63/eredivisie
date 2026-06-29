@@ -20,10 +20,12 @@ const MatchInfoModal = ({ showMatchInfo, program, ID }) => {
 const stadion = useMemo(
   () => GetStadium(match?.homeTeam?.id),
   [match?.homeTeam?.id]);
-  
+
+const image = stadion?.[0]?.image
+
 useEffect(() => {
   setImgLoaded(false);
-}, [stadion?.[0]?.image]);
+}, [image]);
 
 
   return (
