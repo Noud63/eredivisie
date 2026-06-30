@@ -30,7 +30,7 @@ const AllData = ({ children }) => {
     try {
       const response = await axios.get(`${apiBase}/api/footballData`);
 
-      // console.log("Res:", response.data)
+      console.log("Res:", response.data)
 
       let season =
         response.data.standings.season.startDate.slice(0, 4) +
