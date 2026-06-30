@@ -22,13 +22,11 @@ const AllData = ({ children }) => {
   const [ranking, setRanking] = useState([]);
   const [season, setSeason] = useState("");
 
-  const apiBase = import.meta.env.VITE_API_URL ?? "";
-
   const getData = useCallback(async () => {
     dispatchState({ type: "DATA_REQUEST" });
 
     try {
-      const response = await axios.get(`${apiBase}/api/footballData`);
+      const response = await axios.get(`/api/footballData`);
 
       console.log("Res:", response.data)
 
