@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <div className={styles.spacer}></div>
-      <div className={styles.schaal}>
+       <div className={styles.schaal}>
         <img
           src={goal3}
           
@@ -70,7 +70,7 @@ const Home = () => {
           Eredivisie officieel opgericht. Zodoende zijn sinds 1956 de sterkste
           clubs van Nederland verenigd in één landelijke competitie.
           <br />
-          <Link href="/history" style={{ textDecoration: "none" }}>
+          <Link to="/history" style={{ textDecoration: "none" }}>
             <span className={styles.leeshiermeer}>Lees hier meer.......</span>
           </Link>
         </div>
