@@ -120,14 +120,6 @@
     "image": "/images/galgenwaard.jpg"
   },
   {
-     "id": 1919,
-    "club": "FC Volendam",
-    "stadion": "Kras Stadion",
-    "city": "Volendam",
-    "capacity": 7384,
-    "image": "/images/kras.jpg"
-  },
-  {
     "id": 1909,
     "club": "SC Cambuur",
     "stadion": "Kooi Stadion",
@@ -142,5 +134,13 @@
     "city": "Den Haag",
     "capacity": 15000,
     "image": "/images/werktalent.jpg"
+  },
+  {
+    "id": 672,
+    "club": "Wilem II",
+    "stadion": "Willem II Stadion",
+    "city": "Tilburg",
+    "capacity": 15000,
+    "image": "/images/willemII.jpg"
   }
 ]
