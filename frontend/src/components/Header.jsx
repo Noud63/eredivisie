@@ -3,10 +3,13 @@ import styles from '../styles/Header.module.css'
 import HeaderMenu from './HeaderMenu';
 import logo from '../images/eredivisie_logo.png'
 import knvb from '../images/knvb_logo.png'
+import { useGlobalContext } from "./Context";
 
 const Header = () => {
 
     const [scrolled, setScrolled] = React.useState(true);
+
+    const { season } = useGlobalContext();
 
     const handleScroll = () => {
         const offset = window.scrollY;
@@ -33,7 +36,7 @@ const Header = () => {
               <div className={styles.banner}><img src={logo} alt="Eredivisie Logo" className={styles.logo} /></div>
                 <div className={styles.eredivisieText}>
                     
-                KNVB Eredivisie 2025-2026
+                KNVB Eredivisie{season ? ` ${season}` : ""}
                 </div>
                 
                         <div className={styles.banner}><img src={knvb} alt="Eredivisie Logo" className={styles.knvb} /></div>
