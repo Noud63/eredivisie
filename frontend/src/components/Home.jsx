@@ -109,7 +109,7 @@ const Home = () => {
         <div className={styles.top}>Topscorers seizoen {season}</div>
         <div className={styles.scorers}>
           {topScorers &&
-            topScorers.slice(0, 3).map((scorer, index) => (
+            topScorers.slice(0, 5).map((scorer, index) => (
               <div className={styles.topScorers} key={index}>
                 <div className={styles.scorerInfo}>
                   <img
